@@ -14,39 +14,39 @@
     width: 98%; 
     height: 9%; 
     background: #d8d2d2e0; /* white */
-    border-radius: 26px; 
+    border-radius: 3em; 
   }
 
   /* Header menu 1 */
-.header-menu {
+/*.header-menu {
     position: absolute; 
-    top: 5px; 
-    left: 160px; 
-    width: 469px; 
-    height: 41px; 
+    top: 5%; 
+    left: 16%; 
+    width: 469%; 
+    height: 41%; 
     display: flex; 
     align-items: center; 
     font-family: Inter; /* Body */
-    font-size: 14px; 
+    /*font-size: 14px; 
     line-height: 22px; 
     opacity: 1; 
-  }
+}*/
   /* Header menu 1 - Arrow icon */
   .header-menu img.arrow-icon {
-    width: 12px; 
-    height: 12px; 
-    margin-left: 16px; 
+    width: 12%; 
+    height: 12%; 
+    margin-left: 16%; 
     fill: currentColor; 
   }
   /* Header menu 1 - Item */
   .header-menu .header-menu-item {
-    padding: 10px 27.75px; 
+    padding: 10% 27.75vh; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
     color: #565E6CFF; /* neutral-600 */
     background: #000000FF; /* transparent */
-    border-radius: 0px; 
+    border-radius: 0vh; 
     cursor: pointer; 
     white-space: nowrap; 
   }
@@ -66,8 +66,8 @@
   /* Textbox 1 */
 .textbox {
     position: absolute; 
-    top: 8px; 
-    left: 1028px; 
+    top: 18%; 
+    left: 72.3%; 
     opacity: 1; 
   }
   .textbox input {
@@ -116,8 +116,8 @@
   /* Button 1 */
 .button1{
     position: absolute; 
-    top: 8px; 
-    left: 1332px; 
+    top: 18%; 
+    left: 95%; 
     width: 52px; 
     height: 36px; 
     padding: 0 10px; 
