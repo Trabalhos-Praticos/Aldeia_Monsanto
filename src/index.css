@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Container 1 */
 .container {
     position: absolute; 
@@ -152,3 +153,25 @@
     height: 36px; 
     border-radius: 4px; /* border-m */
   }
+=======
+.Box_News_1{
+    position: absolute; 
+    top: 190px; 
+    left: 76px; 
+    width: 417px; 
+    height: 150px; 
+    background: #F8F9FAE0; /* neutral-150 */
+    border-radius: 8px 8px 8px 8px; /* border-tr-none border-br-none */
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+}
+.Box_News_2{
+    position: absolute; 
+  top: 190px; 
+  left: 947px; 
+  width: 417px; 
+  height: 150px; 
+  background: #F8F9FAEB; /* neutral-150 */
+  border-radius: 8px 8px 8px 8px; /* border-tr-none border-br-none */
+  box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
+}
+>>>>>>> 00f076c6bbcb4a34811337317f9558a2b36c0221
