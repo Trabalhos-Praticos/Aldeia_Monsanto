@@ -201,5 +201,23 @@ body{
 .Title_text{
   text-align: center;
 }
-
+.redes img{
+  width: 1.4%  ;
+}
+.redes a{
+  text-decoration: none;
+  color:#171a1f;
+  font-weight: bold;
+}
+footer{
+  display: flex;
+  text-align: center;
+  padding-top: 28%;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+.redes .action{
+  margin-top: 0%;
+  margin-left: 1%;
+}
 
