@@ -8,7 +8,6 @@
 .wrapper{
   position: fixed;
   top: 0;
-  /*left: -100%;*/
   right: -100%;
   height: 100%;
   width: 100%;
@@ -16,7 +15,7 @@
   transition: all 0.6s ease-in-out;
 }
 #active:checked ~ .wrapper{
-  /*left: 0;*/
+  /* left: 0; */
   right:0;
 }
 .menu-btn{
@@ -161,24 +160,30 @@ input[type="checkbox"]{
   transform: translateX(-100px);
 }
 /* ------------------------------------- */
+body{
+  background-image: url(Assets/img/fundo.JPG);
+  background-size: cover;
+}
 
 .Box_News_1{ 
+  position: relative;
   display: inline-block; 
   margin-left: 5%;
   margin-top: 5%;
   width: 30%;
   height: auto; 
-  background: #F8F9FAEB; /* neutral-150 */
+  background: #F0F4EF; /* neutral-150 */
   border-radius: 8px 8px 8px 8px; /* border-tr-none border-br-none */
   box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
 }
 .Box_News_2{
+  position: relative;
   display: inline-block;  
   margin-left: 30%;
   width: 30%;
   margin-top: -5%;
   height: auto; 
-  background: #F8F9FAEB; /* neutral-150 */
+  background: #F0F4EF; /* neutral-150 */
   border-radius: 8px 8px 8px 8px; /* border-tr-none border-br-none */
   box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
 }
@@ -196,5 +201,12 @@ input[type="checkbox"]{
 }
 .Title_text{
   text-align: center;
+}
+.fundo {
+  position: inherit;
+  width: max-content;
+  height: max-content;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
