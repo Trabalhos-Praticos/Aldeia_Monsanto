@@ -31,7 +31,7 @@
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  /*color: #fff;*/
+
   /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
   /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
@@ -45,7 +45,7 @@
   top: calc(50% - 1px);
   left: 30%;
   width: 40%;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #ffffff;
   transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .menu-btn:before{
@@ -163,11 +163,12 @@ input[type="checkbox"]{
 body{
   background-image: url(Assets/img/fundo.JPG);
   background-size: cover;
-  
+  background-blend-mode: color-burn;
+  background-clip: border-box;
 }
 
 .Box_News_1{ 
-  position: relative;
+  position: absolute;
   display: inline-block; 
   margin-left: 5%;
   margin-top: 5%;
@@ -178,7 +179,7 @@ body{
   box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
 }
 .Box_News_2{
-  position: relative;
+  position: absolute;
   display: inline-block;  
   margin-left: 30%;
   width: 30%;
@@ -203,11 +204,5 @@ body{
 .Title_text{
   text-align: center;
 }
-.fundo {
-  position: inherit;
-  width: max-content;
-  height: max-content;
-  margin-top: 0%;
-  margin-bottom: 0%;
-}
+
 
