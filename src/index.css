@@ -161,14 +161,12 @@ input[type="checkbox"]{
 }
 /* ------------------------------------- */
 body{
-  background-image: url(Assets/img/fundo.JPG);
-  background-size: cover;
+  background-image: url(Assets/img/226600056-5acbf129-a489-4262-93ed-faa3f644cc71.jpg);
   background-blend-mode: color-burn;
-  background-clip: border-box;
+  background-size: cover;
 }
 
 .Box_News_1{ 
-  position: absolute;
   display: inline-block; 
   margin-left: 5%;
   margin-top: 5%;
@@ -179,7 +177,6 @@ body{
   box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f;
 }
 .Box_News_2{
-  position: absolute;
   display: inline-block;  
   margin-left: 30%;
   width: 30%;
