@@ -1,9 +1,9 @@
 
 body{
-  /* background-image: url(Assets/img/226600056-5acbf129-a489-4262-93ed-faa3f644cc71.jpg); */
+  background-image: url(Assets/img/226600056-5acbf129-a489-4262-93ed-faa3f644cc71.jpg);
   background-color: rgb(207, 203, 203);
-  /* background-blend-mode: multiply;
-  background-size: cover; */
+  background-blend-mode: multiply;
+  background-size: cover; 
 }
 .Title_text{
   text-align: center;
