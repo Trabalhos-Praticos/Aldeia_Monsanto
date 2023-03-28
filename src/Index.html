@@ -56,18 +56,70 @@
             </div>
         </div>
     </header> 
-    <script>
-        hamburger = document.querySelector(".hamburger");
-        nav = document.querySelector("nav");
-        hamburger.onclick = function() {
-        nav.classList.toggle("active");
-}
+    <script src="Index.js">
+        
     </script>
     <div class="Text_Box">
         <div class="Title_text">
             <h1>Monsanto</h1>
         </div>
     </div>
+    <section>
+
+    
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="../src/Assets/img/Imagem1.jpeg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="../src/Assets/img/Imagem2.jpeg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="../src/Assets/img/Imagem3.jpeg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="../src/Assets/img/imagem4.jpeg" style="width:100%">
+        <div class="text">Caption Four</div>
+      </div>
+  
+      
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="../src/Assets/img/Imagem5.jpeg" style="width:100%">
+        <div class="text">Caption Five</div>
+      </div>
+    
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+
+    
+  </div>
+  </section>    
     <footer>
         <div class="redes">
             <h5>Project Developed by André Carvalho & Lucas Cruz</h5>
@@ -77,4 +129,7 @@
         </div>
     </footer>
 </body>
+
+<script src="/src/nav_Footer/nav.js"></script>
+
 </html>
