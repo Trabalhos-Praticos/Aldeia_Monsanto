@@ -7,25 +7,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="../../nav_Footer/nav.css">
+    <link rel="stylesheet" href="../../nav_Footer/nav_v2.css">
     <link rel="stylesheet" href="../../nav_Footer/footer.css">
     <title>Estadias</title>
 </head>
 <body>
     <!-- Start nav -->
-    <nav> 
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"><span></span></label>
-        <label for="active" class="close"></label>
-        <div class="wrapper">
-          <ul>
-                <li><a href="../História/Historia.html">Historia</a></li>
-                <li><a href="../ProgramasTurísticos/ProgramasTuristicos.html">Turismo</a></li>
-                <li><a href="../Estadias/Estadias.html">Estadias</a></li>
-                <li><a href="../Galeria/Galeria.html">Galeria</a></li>
-            </ul>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="../../Assets/Logo/Monsanto.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="../Estadias/Estadias.html">Estadias</a>
+                    </li>
+                    <li>
+                        <a href="../Galeria/Galeria.html">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="../História/Historia.html">História</a>
+                    </li>
+                    <li>
+                        <a href="../ProgramasTurísticos/ProgramasTuristicos.html">Atividades Turisticas</a>
+                    </li>
+                    <li>
+                        <a href="../Visitar/Visitar.html">Sitios Turisticos</a>
+                    </li>
+                </ul>
+                <!-- <div class="login-signup">
+                    <a href="">Login</a> or <a href="">Signup</a>
+                </div> -->
+            </nav>
         </div>
-    </nav>
+        <div class="header-right">
+            <!-- <div class="login-signup">
+                <a href="">Login</a> or <a href="">Signup</a>
+            </div> -->
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header> 
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+        nav.classList.toggle("active");
+}
+    </script>
 <!-- End nav -->
     <div class="text_box">
         <div class="title_box">
