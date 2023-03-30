@@ -10,7 +10,6 @@ body{
 }
 * {box-sizing:border-box}
 .Text_Box{
-  justify-content: center;
   background-color: #bbb;
   width: 90%;
   text-align: center;
