@@ -1,22 +1,25 @@
 
 body{
-  background-image: url(Assets/img/226600056-5acbf129-a489-4262-93ed-faa3f644cc71.jpg);
-  background-color: rgb(207, 203, 203);
+  /* background-image: url(Assets/img/226600056-5acbf129-a489-4262-93ed-faa3f644cc71.jpg); */
+  background-color: #C4FFB2;
   background-blend-mode: multiply;
   background-size: cover; 
 }
 .Title_text{
   text-align: center;
 }
-* {box-sizing:border-box}
+* {
+  box-sizing:border-box;
+  font-family: "ubuntu";
+}
 .Text_Box{
-  background-color: #bbb;
-  text-align: center;
-  border-radius: 1em;
-  box-shadow: 0px 0px 1px 1px;
+  text-align: center;   
   margin-bottom: 1%;
   margin-left: 20%;
   margin-right: 20%;
+}
+.Text_Box p{
+  color: #505A5B;
 }
 
 /* Slideshow container */

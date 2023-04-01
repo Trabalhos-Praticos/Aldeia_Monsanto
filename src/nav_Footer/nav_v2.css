@@ -15,7 +15,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    background: #4a4a4b;
+    background: #505A5B;
 }
 header .header-left {
     display: flex;
@@ -32,14 +32,14 @@ header .header-left nav ul {
 }
 nav ul li a {
     display: block;
-    color: #cfd9e0;
+    color: #F0F4EF;
     font-size: 18px;
     padding: 5px 10px;
     transition: 0.2s;
 }
 nav ul li a:hover,
 nav ul li a.active {
-    color: #fff;
+    color: #F0F4EF;
 }
 nav .login-signup {
     display: none;
