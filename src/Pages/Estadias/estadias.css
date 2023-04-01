@@ -1,0 +1,40 @@
+*{
+    padding: 0%;
+}
+.info_container{
+    padding-bottom: 1%;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 2px;
+    max-height: 100%;
+    min-height: 30%;
+    max-width: 100%;
+    min-width: 30%;
+}
+.container > div{
+    flex: 1 1 400px;
+}
+.box_estadia{
+background-color: rgb(201, 240, 233);
+border-radius: 0.5em;
+text-align: left;
+margin-top: 3px;
+margin-left: 3px;
+margin-right: 3px;
+font-size: 20px;
+}
+.box_estadia button{
+    font-size:24px;
+    text-decoration: none;
+    border-radius: 0.2em;
+    background-color: rgb(139, 139, 139);
+} 
+.box_estadia a{
+    color: rgb(0, 0, 0);
+}
+.box_estadia button i{
+    font-size: 20px;
+}

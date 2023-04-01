@@ -1,7 +1,7 @@
 
 body{
   /* background-image: url(Assets/img/226600056-5acbf129-a489-4262-93ed-faa3f644cc71.jpg); */
-  background-color: #C4FFB2;
+  background-color: #ffffff;
   background-blend-mode: multiply;
   background-size: cover; 
 }
@@ -12,8 +12,7 @@ body{
   box-sizing:border-box;
   font-family: "ubuntu";
 }
-.Text_Box{
-  text-align: center;   
+.Text_Box{   
   margin-bottom: 1%;
   margin-left: 20%;
   margin-right: 20%;
@@ -21,7 +20,23 @@ body{
 .Text_Box p{
   color: #505A5B;
 }
-
+#vid1{
+max-width: 500px;
+}
+.Box_Loc_Vid{
+  background-color: #428b8b56;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#maps{
+  max-width: 500px;
+}
+.Box_Loc_Vid #Box1{
+  margin-right: 90px;
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 700px;
@@ -40,7 +55,6 @@ body{
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
   color: white;
   font-weight: bold;
