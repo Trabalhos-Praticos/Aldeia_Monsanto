@@ -21,7 +21,10 @@ body{
   color: #505A5B;
 }
 #vid1{
-max-width: 500px;
+max-width: 400px;
+min-height: auto;
+min-width: auto;
+max-height: 315px;
 }
 .Box_Loc_Vid{
   background-color: #428b8b56;
@@ -32,11 +35,10 @@ max-width: 500px;
   justify-content: center;
 }
 #maps{
-  max-width: 500px;
+  max-height: 315px;
+  max-width: 400px;
 }
-.Box_Loc_Vid #Box1{
-  margin-right: 90px;
-}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 700px;
