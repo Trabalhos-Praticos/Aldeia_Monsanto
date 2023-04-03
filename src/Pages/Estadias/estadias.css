@@ -26,6 +26,7 @@ margin-left: 3px;
 margin-right: 3px;
 font-size: 20px;
 }
+
 .box_estadia  button{
     font-size:24px;
     text-decoration: none;
@@ -46,4 +47,7 @@ font-size: 20px;
     min-width: none;
     max-height: auto;
     min-height: auto;
+}
+.title_box{
+    text-align: center;
 }
