@@ -27,3 +27,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+let x = document.getElementById("myAudio");
+
+function PlayAudio(){
+      x.play();
+  }
+  function PauseAudio(){
+      x.pause();
+  }
