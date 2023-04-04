@@ -5,9 +5,6 @@ body{
   background-blend-mode: multiply;
   background-size: cover; 
 }
-#aud{
-  
-}
 .Title_text{
   text-align: center;
 }
@@ -32,6 +29,15 @@ body{
   max-width: 700px;
   position: relative;
   margin: auto;
+}
+.Box_Loc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: ;
+}
+#Box2 iframe{
+  margin-top: 3%;
 }
 
 /* Hide the images by default */
