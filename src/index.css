@@ -25,6 +25,8 @@ max-width: 400px;
 min-height: auto;
 min-width: auto;
 max-height: 315px;
+display: flex;
+justify-content: center;
 }
 .Box_Loc_Vid{
   background-color: #428b8b56;
