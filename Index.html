@@ -135,9 +135,15 @@
             <p>Projeto desenvolvido por André Carvalho e Lucas Cruz</p>
         </div>
     </footer>
-    <audio src="src/Assets/Nova pasta/German Soldier's Song - 'Erika' (with English Subtitles).mp3" autoplay controls >
+    <audio id="playAudio" src="src/Assets/Nova pasta/German Soldier's Song - 'Erika' (with English Subtitles).mp3" autoplay controls >
 
     </audio>
+    <script>
+        function execSom() {
+		var playAudio = document.getElementById("playAudio");
+		playAudio.play();		
+	}
+    </script>
 </body>
 
 <script src="src/nav_Footer/nav.js"></script>
