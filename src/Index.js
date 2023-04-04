@@ -27,6 +27,3 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-window.onload = function() {
-  var context = new AudioContext();
-}
