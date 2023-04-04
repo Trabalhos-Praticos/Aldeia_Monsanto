@@ -102,7 +102,7 @@ header .header-right .hamburger div {
         display: block;
         margin-top: 20px;
     }
-    header .header-right .login-signup {
+    /* header .header-right .login-signup {
         display: none;
-    }
+    } */
 }

@@ -34,6 +34,15 @@ body{
   position: relative;
   margin: auto;
 }
+.Box_Loc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: ;
+}
+#Box2 iframe{
+  margin-top: 3%;
+}
 
 /* Hide the images by default */
 /* .mySlides {
