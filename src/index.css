@@ -22,6 +22,7 @@ body{
 #vid1{
   width: 850px;
   height: 500px;
+  border-style: groove;
 }
 /* Slideshow container */
 .slideshow-container {
