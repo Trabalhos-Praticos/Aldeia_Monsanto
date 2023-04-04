@@ -18,12 +18,15 @@ body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* border-style: groove;
+  border-color: #505a5b;
+  border-width: 10px; */
+  
 }
 #vid1{
   width: 850px;
   height: 500px;
-  margin-bottom: 10px;
-  border-style: groove;
+  
 }
 
 .Box_Loc{
