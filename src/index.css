@@ -5,15 +5,7 @@ body{
   background-blend-mode: multiply;
   background-size: cover; 
 }
-@media only screen and (max-width:750px) {
-  
-  #vid1{
-    width: 850px;
-    /* height: 500px; */
-    margin-bottom: 10px;
-    border-style: groove;
-  }
-}
+
   
 .Title_text{
   text-align: center;
