@@ -9,6 +9,7 @@ body{
   
 .Title_text{
   text-align: center;
+  margin: 30px;
 }
 * {
   
@@ -43,9 +44,16 @@ body{
   background-color: #ffffff;
 }
 .Box_Loc #tex{
-  
   box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6); 
 }
+.Box_Loc #tex p{
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 17px;
+  }
 .Box_Loc #maps{
   box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6); 
 }
