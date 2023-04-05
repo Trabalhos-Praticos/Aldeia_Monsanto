@@ -1,0 +1,51 @@
+*{
+    padding: 0%;
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+}
+.info_visitar{
+    padding-bottom: 1%;
+}
+.container_visitar{
+    margin-top: 2%;
+    display: grid;
+    justify-content: baseline; 
+    column-gap: 15px;
+    background-color: #ffffff;
+}
+.box_visitar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 300px;
+padding: 25px;
+text-align: justify;
+box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
+}
+/* .box_estadia  button{
+    font-size:24px;
+    text-decoration: none;
+    border-radius: 0.2em;
+    background-color: rgb(255, 255, 255);
+}  */
+/* .box_estadia .btn1 img{
+    max-width: 35px;
+    min-width: none;
+    max-height: auto;
+    min-height: auto;
+} */
+.box_visitar a{
+    color: rgb(0, 0, 0);
+}
+.box_visitar .btn2 img{
+    max-width: 35px;
+    min-width: none;
+    max-height: auto;
+    min-height: auto;
+}
+.title_box_visitar{
+    text-align: center;
+}
+.imagem img{
+    width: 250px;
+}
