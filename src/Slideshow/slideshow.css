@@ -8,6 +8,9 @@
       text-align: center;
     }
   }
+  .container_1 img{
+    width: 100%;
+  }
   .cont_Tit_1{
     margin-left: 5%;
     padding-top: 1%;
