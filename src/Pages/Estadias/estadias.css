@@ -11,17 +11,22 @@
     margin-top: 2%;
     display: flex;
     justify-content: center;
-    column-gap: 15px;
+    column-gap: 50px;
     background-color: #ffffff;
+    flex-wrap: wrap;
+}
+.container > div{
+    flex:1 1 200px;
 }
 .box_estadia{
-gap: 30px;
-flex-direction: column;
-justify-content: center;
-width: 300px;
-padding: 25px;
-text-align: justify;
-box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
+    padding-top: 12px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
+    border-radius: 1em;
+    max-width: 400px;
+
 }
 .box_estadia  button{
     font-size:24px;
@@ -47,11 +52,34 @@ box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
 .title_box{
     text-align: center;
 }
-.imagem img{
-    width: 250px;
+.imagem{
+    text-align: center;
 }
 
+@media only screen and (max-width:1500px) {
+    .imagem img{
+        width: 80%;
+    
+    }
+}
+.imagem img{
+    width: 50%;
+}
 
 #mais{
     display: none;
+}
+.container h3{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 3px;
+    bottom: 3px;
+}
+.container h5{
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+}
+.container p{
+    margin:10px;
 }
