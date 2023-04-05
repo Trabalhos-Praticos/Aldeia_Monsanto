@@ -1,0 +1,20 @@
+.container_prog{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+}
+.info_prog{
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: justify; */
+    box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
+    border-radius: 1em;
+    max-width: 400px;
+}
+.title_box_prog{
+    text-align: center;
+}

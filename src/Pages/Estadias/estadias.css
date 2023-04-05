@@ -9,9 +9,10 @@
 }
 .container{
     margin-top: 2%;
+    margin: 20px;
     display: flex;
     justify-content: center;
-    column-gap: 50px;
+    column-gap: 15px;
     background-color: #ffffff;
     flex-wrap: wrap;
 }
@@ -51,6 +52,7 @@
 }
 .title_box{
     text-align: center;
+    margin: 20px;
 }
 .imagem{
     text-align: center;
