@@ -1,5 +1,17 @@
 .Container_1{
     background-color: #bbbbbb8c;
+    padding-bottom: 10px;
+  }
+  @media only screen and (max-width:800px){
+    .cont_Tit_1{
+      text-align: center;
+    }
+  }
+  .cont_Tit_1{
+    margin-left: 5%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+    color: #06AED5 ;
   }
   /* Slideshow container */
   .slideshow-container {
