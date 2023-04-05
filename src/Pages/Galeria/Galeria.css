@@ -46,13 +46,8 @@ object-fit:cover;
 
   }
 
-  .grid-image{
-    display: block;
-    flex-basis: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-
-
+  .grid-image1{
+    width: 100px;
   }
 
   @media only screen and (min-width: 640px){
