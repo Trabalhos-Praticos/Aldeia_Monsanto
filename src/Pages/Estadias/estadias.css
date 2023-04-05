@@ -26,10 +26,8 @@ padding: 25px;
 text-align: justify;
 box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
 }
-.info{
-    height: 215px;
-    overflow: hidden;
-    position: relative;
+.mais{
+    display: none;
 }
 .info ::before{
     content: " ";
@@ -44,7 +42,7 @@ box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.6);
     border-radius: 2px;
     margin-top: 15px;
     cursor: pointer;
-    
+
 }
 .box_estadia  button{
     font-size:24px;

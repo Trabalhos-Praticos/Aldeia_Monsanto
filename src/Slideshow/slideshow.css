@@ -1,6 +1,7 @@
 .Container_1{
     background-color: #bbbbbb8c;
     padding-bottom: 10px;
+    box-shadow: 0px 0px 5px 5px #4b494952;
   }
   @media only screen and (max-width:800px){
     .cont_Tit_1{
