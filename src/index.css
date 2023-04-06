@@ -4,8 +4,8 @@ body{
   background-color: #ffffff;
   background-blend-mode: multiply;
   background-size: cover; 
+  overflow: scroll;
 }
-
   
 .Title_text{
   text-align: center;
