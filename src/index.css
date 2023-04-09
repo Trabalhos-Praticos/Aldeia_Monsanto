@@ -5,15 +5,13 @@ body{
   background-blend-mode: multiply;
   background-size: cover; 
   overflow: scroll;
+  font-family: 'Dosis', sans-serif;
+
 }
   
 .Title_text{
   text-align: center;
   margin: 30px;
-}
-* {
-  
-  font-family: 'Dosis', sans-serif;
 }
 
 #Box1{
