@@ -14,6 +14,7 @@ $titulo = '- Registro';
     <main>
       <section>
         <?php
+        include_once __DIR__ . '../../nf/nav.php';
         # MOSTRA AS MENSAGENS DE SUCESSO E DE ERRO VINDA DO CONTROLADOR-UTILIZADOR
         if (isset($_SESSION['sucesso'])) {
           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';

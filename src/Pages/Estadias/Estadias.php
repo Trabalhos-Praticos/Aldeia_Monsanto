@@ -8,15 +8,12 @@
     <link rel="stylesheet" href="estadias.css">
 
     
-    <title>O Que Visitar</title>
+    <title>Estadias Monsanto</title>
 </head>
 <body>
    <?php
-
-   include_once __DIR__ . '/src/nf/nav.php';
-   
+   include_once __DIR__ . '../../nf/nav.php';
    ?>
- 
     <div class="info_container">
         <div class="title_box">
             <h1>Melhores Estadias de Monsanto</h1>
