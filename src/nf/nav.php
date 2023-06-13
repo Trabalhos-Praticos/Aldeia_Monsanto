@@ -31,16 +31,16 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="..\..\Pages\Estadias\Estadias.php">Estadias</a>
+          <a class="nav-link" href="src\Pages\Estadias\Estadias.php">Estadias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="..\..\..\Pages\Historia\Historia.php">Historia</a>
+          <a class="nav-link" href="..\..\Pages\Historia\Historia.php">Historia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="..\..\..\Pages\ProgramasTuristicos\ProgramasTuristicos.php">Programas Turisticos</a>
+          <a class="nav-link" href="..\..\Pages\ProgramasTuristicos\ProgramasTuristicos.php">Programas Turisticos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="..\..\..\Pages\Visitar\Visitar.php">Visitar</a>
+          <a class="nav-link" href="..\..\Pages\Visitar\Visitar.php">Visitar</a>
         </li>
       </ul>
       <!-- Left links -->

@@ -14,9 +14,7 @@
 <body>
      <!-- Start nav -->
 <?php
-
 include_once __DIR__ . '/src/nf/nav.php';
-
 ?>
 <div class = 'container'>
     <div class="Text_Box">
@@ -48,6 +46,7 @@ include_once __DIR__ . '/src/nf/nav.php';
         </div>
     </div>
 </div>
+
 <?php
 require_once __DIR__ . '/src/nf/footer.php';
 ?>
