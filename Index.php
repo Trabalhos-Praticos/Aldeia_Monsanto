@@ -16,7 +16,7 @@
 </head>
 <body>
      <!-- Start nav -->
-     <?php
+<?php
 include '/src/nav_Footer/nav_v2.php';
 ?>
     
