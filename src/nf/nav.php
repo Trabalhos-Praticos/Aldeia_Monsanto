@@ -1,4 +1,6 @@
+
 <!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- Container wrapper -->
   <div class="container-fluid">
@@ -18,10 +20,10 @@
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <a class="navbar-brand mt-2 mt-lg-0" href="..\..\index.php">
         <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
+          src="https://iili.io/H6zuJ4e.webp"
+          height="20"
           alt="MDB Logo"
           loading="lazy"
         />
@@ -29,13 +31,16 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="..\..\src\Pages\Estadias\Estadias.php">Estadias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
+          <a class="nav-link" href="..\..\src\Pages\Historia\Historia.php">Historia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+          <a class="nav-link" href="..\..\src\Pages\ProgramasTuristicos\ProgramasTuristicos.php">Programas Turisticos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\..\src\Pages\Visitar\Visitar.php">Visitar</a>
         </li>
       </ul>
       <!-- Left links -->

@@ -4,52 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../nav_Footer/nav_v2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="Visitar.css">
-    <link rel="stylesheet" href="../../nav_Footer/footer.css">
+
     <title>O Que Visitar</title>
 </head>
 <body>
-    <!-- Start nav -->
-    <header>
-        <div class="header-left">
-            <div class="logo">
-                <a href="../../../Index.html"><img src="../../Assets/Logo/Monsanto.png" alt=""></a>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../Estadias/Estadias.html">Estadias</a>
-                    </li>
-                    
-                    <li>
-                        <a href="../História/Historia.html">História</a>
-                    </li>
-                    <li>
-                        <a href="../ProgramasTurísticos/ProgramasTuristicos.html">Atividades Turisticas</a>
-                    </li>
-                    <li>
-                        <a href="../Visitar/Visitar.html">Sitios Turisticos</a>
-                    </li>
-                </ul>
-                <!-- <div class="login-signup">
-                    <a href="">Login</a> or <a href="">Signup</a>
-                </div> -->
-            </nav>
-        </div>
-        <div class="header-right">
-            <!-- <div class="login-signup">
-                <a href="">Login</a> or <a href="">Signup</a>
-            </div> -->
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </header> 
+<?php
 
-<!-- End nav -->
+include_once __DIR__ . '../../../nf/nav.php';
+
+?>
     
     <div class="info_container_visitar">
             <div class="title_box_visitar">
@@ -184,16 +149,10 @@
             <h3>ENTRE MUITOS OUTROS...</h3>
         </div>
     </div>
-   
-
-    <footer>
-        <div class="redes">
-            <h5>Project Developed by André Carvalho & Lucas Cruz</h5>
-            <a href="" class="action" target="_blank"><img src="../../Assets/img/tiktok.png" alt="TikTok">TikTok</a>
-            <a href="" class="action" target="_blank"><img src="../../Assets/img/instagram.png" alt="instagram">Instagram</a>
-            <a href="" class="action" target="_blank"><img src="../../Assets/img/twitter.png" alt="Twitter">Twitter</a>
-        </div>
-    </footer>
-    <script src="../../nav_Footer/nav.js"></script>
+    <?php
+require_once __DIR__ . '../../../nf/footer.php';
+?>
+<script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
