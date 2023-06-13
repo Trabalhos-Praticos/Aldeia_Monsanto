@@ -24,7 +24,7 @@ $titulo = ' - Login';
         }
         ?>
       </section>
-      <form action="" method="post">
+      <form action="../../Controladores/Autenticacao.php" method="post">
         <h1 class="h3 mb-3 fw-normal">Login</h1>
         <div class="form-floating mb-2">
           <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">

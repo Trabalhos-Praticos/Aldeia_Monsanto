@@ -1,6 +1,6 @@
 <?php
 # MIDDLEWARE PARA GARANTIR QUE APENAS UTILIZADORES NÃO AUTENTICADOS VEJAM A PÁGINA DE REGISTO
-//require_once __DIR__ . '/../middleware/middleware-nao-autenticado.php';
+require_once __DIR__ . '../../middleware/middleware-nao-autenticado.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = '- Registro';

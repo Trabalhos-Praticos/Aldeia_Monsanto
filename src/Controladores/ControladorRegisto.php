@@ -2,7 +2,7 @@
     //Começa ou continua uma sessão a partir do identificador passado atravez dos cockies ou com os metodos get ou post 
     session_start();
 
-    require_once __DIR__ .'.\..\Infraestrutura\Repositorio.php';
+    require_once __DIR__ .'..\..\Infraestrutura\Repositorio.php';
     require_once __DIR__ .'..\..\..\Validacao\Registo.php';
 
     //Se for criado um metodo post do tipo utilizador
