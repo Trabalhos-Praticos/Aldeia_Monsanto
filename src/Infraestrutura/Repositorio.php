@@ -1,6 +1,6 @@
 <?php
 # INSERE DADOS DA CONEXÃO COM O PDO
-require_once __DIR__ . '/criar-conexao.php';
+require_once __DIR__ . 'conexao.php';
 
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
