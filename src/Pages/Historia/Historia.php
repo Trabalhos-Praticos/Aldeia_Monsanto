@@ -13,7 +13,7 @@
 <body>
 <?php
 
-include_once __DIR__ . '../../../nf/nav.php';
+include_once __DIR__ . '/src/nf/nav.php';
 
 ?>
 
