@@ -4,7 +4,7 @@
 
 # INSERE DADOS DA CONEXÃO COM O PDO UTILIZANDO SQLITE
 
-require __DIR__ . '/criar-conexao.php';
+require __DIR__ . '/conexao.php';
 
 # APAGA TABELA SE ELA EXISTIR
 $pdo->exec('DROP TABLE IF EXISTS utilizadores;');
