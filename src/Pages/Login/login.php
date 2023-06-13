@@ -1,6 +1,6 @@
  <?php
 # MIDDLEWARE PARA GARANTIR QUE APENAS UTILIZADORES NÃO AUTENTICADOS VEJAM A PÁGINA DE LOGIN
-//require_once __DIR__ . '../../../../../middleware/middleware-nao-autenticado.php';
+require_once __DIR__ . 'src\middleware\middleware-nao-autenticado.php';
 # DEFINI O TÍTULO DA PÁGINA
 $titulo = ' - Login';
 ?>
@@ -23,7 +23,7 @@ $titulo = ' - Login';
         }
         ?>
       </section>
-      <form action="/src/controlador/aplicacao/controlar-autenticacao.php" method="post">
+      <form action="../../src/controlador/aplicacao/controlar-autenticacao.php" method="post">
         <h1 class="h3 mb-3 fw-normal">CRUD PHP</h1>
         <div class="form-floating mb-2">
           <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">
