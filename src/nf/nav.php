@@ -20,7 +20,7 @@
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="..\..\index.php">
+      <a class="navbar-brand mt-2 mt-lg-0" href="../../../index.php">
         <img
           src="https://iili.io/H6zuJ4e.webp"
           height="20"
@@ -31,16 +31,16 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="..\..\src\Pages\Estadias\Estadias.php">Estadias</a>
+          <a class="nav-link" href="..\..\Pages\Estadias\Estadias.php">Estadias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="..\..\src\Pages\Historia\Historia.php">Historia</a>
+          <a class="nav-link" href="..\..\..\Pages\Historia\Historia.php">Historia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="..\..\src\Pages\ProgramasTuristicos\ProgramasTuristicos.php">Programas Turisticos</a>
+          <a class="nav-link" href="..\..\..\Pages\ProgramasTuristicos\ProgramasTuristicos.php">Programas Turisticos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="..\..\src\Pages\Visitar\Visitar.php">Visitar</a>
+          <a class="nav-link" href="..\..\..\Pages\Visitar\Visitar.php">Visitar</a>
         </li>
       </ul>
       <!-- Left links -->
