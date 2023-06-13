@@ -14,7 +14,7 @@ $titulo = '- Registro';
     <main>
       <section>
         <?php
-        include_once __DIR__ . '../../nf/nav.php';
+        //include_once __DIR__ . '../../nf/nav.php';
         # MOSTRA AS MENSAGENS DE SUCESSO E DE ERRO VINDA DO CONTROLADOR-UTILIZADOR
         if (isset($_SESSION['sucesso'])) {
           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
@@ -33,7 +33,7 @@ $titulo = '- Registro';
         ?>
       </section>
       <form action="../../controladores/ControladorRegisto.php" method="post">
-        <h1 class="h3 mb-3 fw-normal">REGISTRO CRUD PHP</h1>
+        <h1 class="h3 mb-3 fw-normal">Registo</h1>
         <div class="form-floating mb-2">
           <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
           <label for="nome">Nome:</label>

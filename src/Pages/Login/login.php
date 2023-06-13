@@ -12,7 +12,7 @@ $titulo = ' - Login';
     <main>
       <section>
         <?php
-        include_once __DIR__ . '../../nf/nav.php';
+        //include_once __DIR__ . '../../nf/nav.php';
         # MOSTRA AS MENSAGENS DE ERRO CASO LOGIN SEJA INVÁLIDO
         if (isset($_SESSION['erros'])) {
           echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
@@ -25,7 +25,7 @@ $titulo = ' - Login';
         ?>
       </section>
       <form action="" method="post">
-        <h1 class="h3 mb-3 fw-normal">CRUD PHP</h1>
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
         <div class="form-floating mb-2">
           <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">
           <label for="Email">Endereço de Email</label>

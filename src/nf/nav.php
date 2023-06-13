@@ -11,7 +11,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <!-- < <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
@@ -32,7 +32,7 @@
       <li><a href="/src/Pages/Login/login.php"><span class="glyphicon glyphicon-user"></span>Login</a></li>
       <li><a href="/src/Pages/Registo/registo.php"><span style="margin-left:5px" class="glyphicon glyphicon-log-in"></span>Sign up</a></li>
     </ul>
-      </span>
+      </span>-->
     </div>
   </div>
 </nav>

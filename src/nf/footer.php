@@ -1,5 +1,5 @@
 
-<footer class="bg-dark text-center text-white">
+<footer class="bg-dark text-center text-white fixed-bottom">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -28,7 +28,6 @@
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-linkedin-in"></i
       ></a>
-
       <!-- Github -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-github"></i
