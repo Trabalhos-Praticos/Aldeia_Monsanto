@@ -55,6 +55,12 @@ function registo($requisicao)
         }
     }
 }
+
+
+
+
+
+
 //Se for criado um metodo post do tipo utilizador
 if(isset($_POST['infoReg'])){
     //e se esse metodo estiver como registo
