@@ -15,7 +15,7 @@ $titulo = ' - Utilizador';
 </head>
 <main class="bg-light">
   <section class="py-4">
-    <a href="/admin/"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
+    <a href="../Admin/index.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
   </section>
   <section>
     <?php
@@ -37,7 +37,7 @@ $titulo = ' - Utilizador';
     ?>
   </section>
   <section class="pb-4">
-    <form enctype="multipart/form-data" action="/src/controlador/admin/controlar-utilizador.php" method="post" class="form-control py-3">
+    <form enctype="multipart/form-data" action="../../Controladores/controlar-utilizador.php" method="post" class="form-control py-3">
       <div class="input-group mb-3">
         <span class="input-group-text">Nome</span>
         <input type="text" class="form-control" name="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>

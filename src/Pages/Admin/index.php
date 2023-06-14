@@ -18,7 +18,7 @@ $titulo = ' - Painel de Administração';
 <main class="bg-light">
   <section class="py-4">
     <div class="d-flex justify-content">
-      <a href="/admin/utilizador.php"><button class="btn btn-success px-4 me-2">Criar Utilizador</button></a>
+      <a href="../Perfil/utilizador.php"><button class="btn btn-success px-4 me-2">Criar Utilizador</button></a>
       <a href="/aplicacao/"><button class="btn btn-info px-2 me-2">Sair Administração</button></a>
       <form action="/src/controlador/aplicacao/controlar-autenticacao.php" method="post">
         <button class="btn btn-danger px-4" type="submit" name="utilizador" value="logout">Fazer Logout</button>
@@ -72,7 +72,7 @@ $titulo = ' - Painel de Administração';
               <td><?= $utilizador['administrador'] == '1' ? 'Sim' : 'Não' ?></td>
               <td>
                 <div class="d-flex justify-content">
-                  <a href="/src/Controladores/controlar-utilizador.php?<?= 'utilizador=atualizar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
+                  <a href="../../Controladores/controlar-utilizador.php?<?= 'utilizador=atualizar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
                   <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $utilizador['id'] ?>">Deletar</button>
                 </div>
               </td>
@@ -105,7 +105,6 @@ $titulo = ' - Painel de Administração';
   </section>
   <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
 </main>
 
 <?php
