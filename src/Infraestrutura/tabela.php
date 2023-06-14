@@ -4,7 +4,7 @@
 
 # INSERE DADOS DA CONEXÃO COM O PDO UTILIZANDO SQLITE
 
-require __DIR__ . '/conexao.php';
+require __DIR__ . '/Conexao.php';
 
 # APAGA TABELA SE ELA EXISTIR
 $pdo->exec('DROP TABLE IF EXISTS utilizadores;');
@@ -30,16 +30,17 @@ echo 'Tabela utilizadores criada!' . PHP_EOL;
 
 # ABAIXO UM ARRAY SIMULANDO A DADOS DE UM UTILIZADOR 
 $utilizador = [
-    'nome' => 'André',
-    'apelido' => 'Carvalho',
-    'nif' => '12345689',
-    'telemovel' => '937137187',
-    'email' => 'andre.filipe.carvalho@outlook.pt',
+    'nome' => 'Wenderson',
+    'apelido' => 'Wanzeller',
+    'nif' => '294733167',
+    'telemovel' => '917315200',
+    'email' => 'wendersonwanzeller@estg.ipvc.pt',
     'foto' => null,
     'administrador' => true,
     'dono' => true,
-    'palavra_passe' => 'Andre123'
+    'palavra_passe' => '123456'
 ];
+
 # CRIPTOGRAFA PALAVRA PASSE
 $utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
 
@@ -81,60 +82,6 @@ $sucesso = $PDOStatement->execute([
     ':administrador' => $utilizador['administrador'],
     ':dono' => $utilizador['dono'],
     ':palavra_passe' => $utilizador['palavra_passe']
-]);
-
-$utilizador2 =[
-    'nome' => 'Lucas',
-    'apelido' => 'Cruz',
-    'nif' => '12345689',
-    'telemovel' => '937137187',
-    'email' => 'lucas@ipvc.pt',
-    'foto' => null,
-    'administrador' => true,
-    'dono' => true,
-    'palavra_passe' => 'Lucas123'
-];
-# CRIPTOGRAFA PALAVRA PASSE
-$utilizador2['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
-
-# INSERE UTILIZADOR
-$sqlCreate = "INSERT INTO 
-    utilizadores (
-        nome, 
-        apelido, 
-        nif, 
-        telemovel, 
-        email, 
-        foto, 
-        administrador, 
-        dono, 
-        palavra_passe) 
-    VALUES (
-        :nome, 
-        :apelido, 
-        :nif, 
-        :telemovel, 
-        :email, 
-        :foto, 
-        :administrador, 
-        :dono,
-        :palavra_passe
-    )";
-
-# PREPARA A QUERY
-$PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
-
-# EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
-$sucesso = $PDOStatement->execute([
-    ':nome' => $utilizador2['nome'],
-    ':apelido' => $utilizador2['apelido'],
-    ':nif' => $utilizador2['nif'],
-    ':telemovel' => $utilizador2['telemovel'],
-    ':email' => $utilizador2['email'],
-    ':foto' => $utilizador2['foto'],
-    ':administrador' => $utilizador2['administrador'],
-    ':dono' => $utilizador2['dono'],
-    ':palavra_passe' => $utilizador2['palavra_passe']
 ]);
 
 echo 'Utilizador padrão criado!';
