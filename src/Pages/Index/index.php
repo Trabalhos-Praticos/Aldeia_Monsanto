@@ -58,7 +58,7 @@ include_once __DIR__ . '/../nf/nav.php';
 </div>
 
 <?php
-require_once __DIR__ . '../../nf/footer.php';
+require_once __DIR__ . '/../nf/footer.php';
 ?>
 </body>
 <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
