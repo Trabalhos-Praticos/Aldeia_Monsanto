@@ -22,7 +22,7 @@ include_once __DIR__ . '../../nf/nav.php';
 <div class="info_container_prog">
     <div class="title_box_prog">
 
-        <h1>Programas Turísticos</h1>
+        <h1 style="text-align: center;">Programas Turísticos</h1>
 
     </div>
 
@@ -400,8 +400,8 @@ include_once __DIR__ . '../../nf/nav.php';
             </div>
         </div>
 
-    </div>
-</div> -->
+    </div>-->
+</div> 
 <?php
 require_once __DIR__ . '/../nf/footer.php';
 ?>
