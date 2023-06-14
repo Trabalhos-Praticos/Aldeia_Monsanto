@@ -1,6 +1,6 @@
 <?php
 # MIDDLEWARE PARA GARANTIR QUE APENAS UTILIZADORES NÃO AUTENTICADOS VEJAM A PÁGINA DE REGISTO
-//require_once __DIR__ . '/../src/middleware/middleware-nao-autenticado.php';
+require_once __DIR__ . '../../middleware/middleware-nao-autenticado.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = '- Registro';
@@ -14,6 +14,7 @@ $titulo = '- Registro';
     <main>
       <section>
         <?php
+        //include_once __DIR__ . '../../nf/nav.php';
         # MOSTRA AS MENSAGENS DE SUCESSO E DE ERRO VINDA DO CONTROLADOR-UTILIZADOR
         if (isset($_SESSION['sucesso'])) {
           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
@@ -31,8 +32,8 @@ $titulo = '- Registro';
         }
         ?>
       </section>
-      <form action="/src/controlador/aplicacao/controlar-registo.php" method="post">
-        <h1 class="h3 mb-3 fw-normal">REGISTRO CRUD PHP</h1>
+      <form action="../../controladores/ControladorRegisto.php" method="post">
+        <h1 class="h3 mb-3 fw-normal">Registo</h1>
         <div class="form-floating mb-2">
           <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
           <label for="nome">Nome:</label>

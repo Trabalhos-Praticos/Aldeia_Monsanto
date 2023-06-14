@@ -1,5 +1,5 @@
 
-<footer class="bg-dark text-center text-white fixed-bottom">
+<footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -28,6 +28,7 @@
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-linkedin-in"></i
       ></a>
+
       <!-- Github -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-github"></i
@@ -40,7 +41,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    All Rights reserved to André Carvalho and Lucas Cruz
+    <a class="text-white" href="https://mdbootstrap.com/">Made by André Carvalho e Lucas Cruz</a>
   </div>
   <!-- Copyright -->
  

@@ -13,6 +13,8 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./../index.php">Home</a>
+        <!-- < <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="./../src/Pages/Historia/Historia.php">História</a>
@@ -29,10 +31,10 @@
       </ul>
       <span class="navbar-text">
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="/src/Pages/Login/login.php"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+      <li><a href="/src/Pages/Registo/registo.php"><span style="margin-left:5px" class="glyphicon glyphicon-log-in"></span>Sign up</a></li>
     </ul>
-      </span>
+      </span>-->
     </div>
   </div>
 </nav>
