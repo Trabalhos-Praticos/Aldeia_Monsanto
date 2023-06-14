@@ -1,6 +1,6 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES AUTENTICADOS ACESSEM ESTE SITIO
-require_once __DIR__ . '/../src/middleware/middleware-utilizador.php';
+require_once __DIR__ . '../../../middleware/middleware-utilizador.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = ' - Perfil';
@@ -8,10 +8,13 @@ $titulo = ' - Perfil';
 
 # ACESSA DE FUNÇÕES AUXILIADORAS. 
 # NOTA: O SIMBOLO ARROBA SERVE PARA NÃO MOSTRAR MENSAGEM DE WARNING, POIS A FUNÇÃO ABAIXO TAMBÉM INICIA SESSÕES
-@require_once __DIR__ . '/../src/auxiliadores/auxiliador.php';
+@require_once __DIR__ . '../../../auxiliadores/auxiliador.php';
 $utilizador = utilizador();
 ?>
-
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+</head>
 <body class="container bg-light">
   <div class="pt-1 ">
     <div class="p-5 mb-2 bg-info text-white">
@@ -21,8 +24,8 @@ $utilizador = utilizador();
     <main class="bg-light">
       <section class="py-4">
         <div class="d-flex justify-content">
-          <a href="/aplicacao/"><button type="button" class="btn btn-secondary px-5 me-2">Voltar</button></a>
-          <a href="/aplicacao/palavra-passe.php"><button class="btn btn-warning px-2 me-2">Alterar Palavra Passe</button></a>
+          <a href="../Index/index.php"><button type="button" class="btn btn-secondary px-5 me-2">Voltar</button></a>
+          <a href="../AlterPP/palavra-passe.php"><button class="btn btn-warning px-2 me-2">Alterar Palavra Passe</button></a>
         </div>
       </section>
       <section>
@@ -76,6 +79,9 @@ $utilizador = utilizador();
         </form>
       </section>
     </main>
+    <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
     <?php
-    include_once __DIR__ . '/templates/rodape.php';
+    include_once __DIR__ . '../../nf/footer.php';
     ?>

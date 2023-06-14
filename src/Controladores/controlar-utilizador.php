@@ -3,10 +3,10 @@
 ####################
 ### DEPENDÊNCIAS ###
 ####################
-require_once __DIR__ . '/../../infraestrutura/basededados/repositorio-utilizador.php';
-require_once __DIR__ . '/../../validacao/admin/validar-utilizador.php';
-require_once __DIR__ . '/../../validacao/admin/validar-palavra-passe.php';
-require_once __DIR__ . '/../../auxiliadores/auxiliador.php';
+require_once __DIR__ . '../../Infraestrutura/Repositorio.php';
+require_once __DIR__ . '../../Validacao/validar-utilizador.php';
+require_once __DIR__ . '../../validacao/validar-palavra-passe.php';
+require_once __DIR__ . '../../auxiliadores/auxiliador.php';
 
 
 ##############
