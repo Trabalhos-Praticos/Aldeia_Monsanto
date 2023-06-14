@@ -63,7 +63,7 @@ if (isset($_GET['utilizador'])) {
         # ENVIA PARÂMETROS COM DADOS DO UTILIZADOR PARA A PÁGINA UTILIZADOR RECUPERAR DADOS PARA MANIPULAR A ALTERAÇÃO
         $params = '?' . http_build_query($utilizador);
 
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /src/Pages/Perfil/utilizador.php' . $params);
     }
 
     ## CONTROLA A ROTA PARA A EXCLUSÃO DE UTILIZADORES
@@ -121,7 +121,7 @@ function criar($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /src/Pages/Perfil/utilizador.php' . $params);
 
         return false;
     }
@@ -164,7 +164,7 @@ function atualizar($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /src/Pages/Perfil/utilizador.php' . $params);
 
         return false;
     }
@@ -205,7 +205,7 @@ function atualizar($requisicao)
         $params = '?' . http_build_query($dados);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /src/Pages/Perfil/utilizador.php' . $params);
     }
 }
 
@@ -227,7 +227,7 @@ function atualizarPerfil($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../aplicacao/perfil.php' . $params);
+        header('location: /src/Pages/Perfil/perfil.php' . $params);
     } else {
 
         # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
@@ -258,7 +258,7 @@ function atualizarPerfil($requisicao)
             $params = '?' . http_build_query($dados);
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../aplicacao/perfil.php' . $params);
+            header('location: /src/Pages/Perfil/perfil.php' . $params);
         }
     }
 }
@@ -281,7 +281,7 @@ function alterarPalavraPasse($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../aplicacao/palavra-passe.php' . $params);
+        header('location: /src/Pages/AleterPP/palavra-passe.php' . $params);
     } else {
 
         # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
@@ -297,7 +297,7 @@ function alterarPalavraPasse($requisicao)
             $_SESSION['sucesso'] = 'Palavra passe alterada com sucesso!';
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../aplicacao/palavra-passe.php');
+            header('location: /src/Pages/Perfil/palavra-passe.php');
         }
     }
 }
