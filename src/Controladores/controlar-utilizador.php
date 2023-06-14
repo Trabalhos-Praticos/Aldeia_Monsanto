@@ -94,7 +94,8 @@ if (isset($_GET['utilizador'])) {
             $_SESSION['sucesso'] = 'Utilizador deletado com sucesso!';
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../admin/');
+            header('location: /src/Pages/Admin/index.php');
+            
         }
     }
 }

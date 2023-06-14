@@ -9,6 +9,7 @@ require __DIR__ . '/Conexao.php';
 # APAGA TABELA SE ELA EXISTIR
 $pdo->exec('DROP TABLE IF EXISTS utilizadores;');
 
+
 echo 'Tabela utilizadores apagada!' . PHP_EOL;
 
 # CRIA A TABELA UTILIZADORES
@@ -83,5 +84,52 @@ $sucesso = $PDOStatement->execute([
     ':dono' => $utilizador['dono'],
     ':palavra_passe' => $utilizador['palavra_passe']
 ]);
-
 echo 'Utilizador padrão criado!';
+
+$pdo->exec('DROP TABLE IF EXISTS infos');
+echo 'Tabela infos apagada!' . PHP_EOL;
+# CRIA A TABELA UTILIZADORES
+$pdo->exec(
+    'CREATE TABLE infos (
+    id INTEGER PRIMARY KEY, 
+    nome CHAR,  
+    texto TEXT, 
+    tipo CHAR,
+    imagem char  
+    );'
+);
+
+$info = [
+    'nome' => 'BIKE TOUR',
+    'texto'=>'A beleza desta Bike Tour permite pedalar em locais de elevada natureza histórica',
+    'tipo' => 'Programa Turistico',
+    'imagem' => null
+];
+
+# INSERE info
+$sqlCreate = "INSERT INTO 
+    infos (
+        nome, 
+        texto, 
+        tipo,
+        imagem
+        ) 
+    VALUES (
+        :nome, 
+        :texto, 
+        :tipo, 
+        :imagem
+    )";
+
+# PREPARA A QUERY
+$PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
+# EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+$sucesso2 = $PDOStatement->execute([
+    ':nome' => $info['nome'],
+    ':texto' => $info['texto'],
+    ':tipo' => $info['tipo'],
+    ':imagem' => $info['imagem']
+]);
+echo 'Tabela infos padrão criada!';
+
+?>

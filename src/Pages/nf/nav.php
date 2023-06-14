@@ -26,18 +26,14 @@
         </li>
         <li class="nav-item">
         <a class="nav-link" href="../Visitar/Visitar.php">Monumentos</a>
-        </li>
+        <?php
+          if (autenticado() && $utilizador['administrador']) {
+            echo '<li class="nav-item"><a class="nav-item" href="../Admin/index.php">Administração</a></li>';
+              }
+                ?>
       </ul>
       <span class="navbar-text">
       <ul class="nav navbar-nav navbar-right">
-        <li><img
-            src=<?= $utilizador['nome'] ?? null ?>
-            class="rounded-circle"
-            height="25"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          /></li>
-        <li></li>
         <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-light" type="button">Editar Perfil</button></a></li>
         <li><form action="/src/Controladores/Autenticacao.php" method="post">
               <button class="btn btn-outline-danger" type="submit" name="utilizador" value="logout">Logout</button>

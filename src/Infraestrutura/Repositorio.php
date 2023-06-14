@@ -57,6 +57,43 @@ function criarUtilizador($utilizador)
     return $sucesso;
 }
 
+function criarinfo($info){
+    #insere info
+    $sqlCreate = "INSERT INTO 
+    infos (
+        nome, 
+        texto, 
+        tipo,
+        imagem
+        ) 
+    VALUES (
+        :nome, 
+        :texto, 
+        :tipo, 
+        :imagem
+    )";
+
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
+
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    $sucesso = $PDOStatement->execute([
+        ':nome' => $info['nome'],
+        ':texto' => $info['texto'],
+        ':tipo' => $info['tipo'],
+        ':imagem' => $info['imagem']
+    ]);
+
+    # RECUPERA ID DO UTILIZADOR CRIADO
+    if ($sucesso) {
+        $info['id'] = $GLOBALS['pdo']->lastInsertId();
+    }
+    # RETORNO RESULTADO DA INSERSÃO 
+    return $sucesso;
+}
+
+
+
 /**
  * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR
  */
@@ -178,6 +215,28 @@ function atualizarUtilizador($utilizador)
         ':administrador' => $utilizador['administrador']
     ]);
 }
+function atualizarinfos($info)
+{
+    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
+    $sqlUpdate = "UPDATE  
+    infos SET
+    nome = :nome, 
+    texto = :texto, 
+    tipo = :tipo,  
+    foto = :foto 
+    WHERE id = :id;";
+
+    $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
+
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    return $PDOStatement->execute([
+        ':id' => $info['id'],
+        ':nome' => $info['nome'],
+        ':texto' => $info['texto'],
+        ':tipo' => $info['tipo'],
+        ':foto' => $info['foto']
+    ]);
+}
 
 /**
  * FUNÇÃO RESPONSAVEL POR ATUALIZAR A PALAVRA PASSE DO UTILIZADOR NO SISTEMA
@@ -213,6 +272,17 @@ function deletarUtilizador($id)
 {
     # PREPARA A CONSULTA
     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM utilizadores WHERE id = ?;');
+
+    # REALIZA O BIND
+    $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
+
+    # EXECUTA A CONSULTA E RETORNA OS DADOS
+    return $PDOStatement->execute();
+}
+function deletarinfo($id)
+{
+    # PREPARA A CONSULTA
+    $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM infos WHERE id = ?;');
 
     # REALIZA O BIND
     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
@@ -257,6 +327,42 @@ function registarUtilizador($utilizador)
 
         # RETORNO RESULTADO DA INSERSÃO 
         return $utilizador;
+    }
+    return false;
+}
+function registarinfo($info)
+{
+    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION
+    $sqlCreate = "INSERT INTO 
+    infos (
+        nome, 
+        texto, 
+        tipo,
+        imagem
+        ) 
+    VALUES (
+        :nome, 
+        :texto, 
+        :tipo, 
+        :imagem
+    )";
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
+
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    $sucesso = $PDOStatement->execute([
+        ':nome' => $info['nome'],
+        ':texto' => $info['texto'],
+        ':tipo' => $info['tipo'],
+        ':imagem' => $info['imagem']
+    ]);
+
+    # RECUPERA ID DO UTILIZADOR CRIADO
+    if ($sucesso) {
+        $utilizador['id'] = $GLOBALS['pdo']->lastInsertId();
+
+        # RETORNO RESULTADO DA INSERSÃO 
+        return $info;
     }
     return false;
 }
