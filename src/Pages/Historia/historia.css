@@ -2,9 +2,10 @@
     font-family: 'Dosis', sans-serif;
 }
 .container{
-    margin-top: 2%;
+    /* margin-top: 1%; */
     display: flex;
     background-color: #ffffff;
+    margin-bottom:2%;
 }
 .container_texto{
     margin: 10px;
