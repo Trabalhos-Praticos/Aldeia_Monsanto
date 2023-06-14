@@ -26,11 +26,7 @@
         </li>
         <li class="nav-item">
         <a class="nav-link" href="../Visitar/Visitar.php">Monumentos</a>
-        <?php
-          if (autenticado() && $utilizador['administrador']) {
-            echo '<li class="nav-item"><a class="nav-item" href="../Admin/index.php">Administração</a></li>';
-              }
-                ?>
+        </li>
       </ul>
       <span class="navbar-text">
       <ul class="nav navbar-nav navbar-right">
