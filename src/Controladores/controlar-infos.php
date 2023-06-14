@@ -15,17 +15,17 @@ require_once __DIR__ . '../../auxiliadores/auxiliador.php';
 
 # VERBOS POST
 ## CONTROLA A ROTA PARA CRIAÇÃO E ATUALIZAÇÃO DE UM UTILIZADOR NA PÁGINA UTILIZADOR
-if (isset($_POST['info'])) {
+if (isset($_POST['infoReg'])) {
 
     ## CONTROLA A CRIAÇÃO DE NOVOS UTILIZADORES
-    if ($_POST['info'] == 'criar') {
+    if ($_POST['infoReg'] == 'criar') {
 
         # CRIA UM UTILIZADOR
         criarinfo($_POST);
     }
 
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DOS UTILIZADORES
-    if ($_POST['info'] == 'atualizar') {
+    if ($_POST['infoReg'] == 'atualizar') {
 
         # ATUALIZA UM UTILIZADOR
         atualizarinfo($_POST);
@@ -49,30 +49,11 @@ if (isset($_GET['info'])) {
         # ENVIA PARÂMETROS COM DADOS DO UTILIZADOR PARA A PÁGINA UTILIZADOR RECUPERAR DADOS PARA MANIPULAR A ALTERAÇÃO
         $params = '?' . http_build_query($utilizador);
 
-        header('location: /src/Pages/Perfil/utilizador.php' . $params);
+        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
     }
 
-    ## CONTROLA A ROTA PARA A EXCLUSÃO DE UTILIZADORES
-    if ($_GET['utilizador'] == 'deletar') {
-
-        # RECUPERA DADOS DO UTILIZADOR
-        $utilizador = lerUtilizador($_GET['id']);
-
-        # VALIDAÇÃO PARA NÃO PERMITIR DELETAR UTILIZADOR SE ELE FOR O DONO DO SISTEMA (SEGURANÇA)
-        if ($utilizador['dono']) {
-
-            # DEFINE MENSAGEM ESPECÍFICA DE ERRO E RETORNO PARA PAINEL DE ADM
-            $_SESSION['erros'] = ['Este utilizador é proprietário do sistema e não pode ser apagado.'];
-
-            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../admin');
-
-            # RETORNA FALSO PARA EVITAR QUE PROGRAMA SIGA
-            return false;
-        }
-
         # DELETA UTILIZADOR
-        $sucesso = deletar($utilizador);
+        $sucesso = deletarinfo($utilizador);
 
         # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
         if ($sucesso) {
@@ -80,10 +61,9 @@ if (isset($_GET['info'])) {
             $_SESSION['sucesso'] = 'Utilizador deletado com sucesso!';
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /src/Pages/Admin/index.php');
+            header('location: /src/Pages/CrudSitios/index.php');
             
         }
-    }
 }
 
 ###############
@@ -96,7 +76,7 @@ if (isset($_GET['info'])) {
 function criarinfo($requisicao)
 {
     # VALIDA DADOS DO UTILIZADOR. FICHEIRO VALIDAÇÃO->APLICAÇAO->ADMIN->VALIDAR-UTILIZADOR.PHP
-    $dados = utilizadorValido($requisicao);
+    $dados = infoValida($requisicao);
 
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
     if (isset($dados['invalido'])) {
@@ -108,7 +88,7 @@ function criarinfo($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/Perfil/utilizador.php' . $params);
+        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
 
         return false;
     }
@@ -117,16 +97,16 @@ function criarinfo($requisicao)
     $dados = guardaFotoinfo($dados);
 
     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
-    $sucesso = criarUtilizador($dados);
+    $sucesso = registarinfo($dados);
 
     # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
     if ($sucesso) {
 
         # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
+        $_SESSION['sucesso'] = 'info criado com sucesso!';
 
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-        header('location: /src/Pages/Admin/index.php');
+        header('location: /src/Pages/CrudSitios/index.php');
         
     }
 }
@@ -152,7 +132,7 @@ function atualizarinfo($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/CrudSitios/infos.php' . $params);
+        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
 
         return false;
     }
@@ -178,7 +158,7 @@ function atualizarinfo($requisicao)
         $params = '?' . http_build_query($dados);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/CrudSitios/infos.php' . $params);
+        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
     }
 }
 

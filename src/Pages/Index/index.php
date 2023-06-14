@@ -76,7 +76,7 @@ include_once __DIR__ . '/../nf/nav.php';
             <h2>Painel de Administração de registos de sitios e monumentos</h2>
             <p>Este painel é exclusivo para utilizadores REGISTADOS e que tenham o perfil de ADMINISTRADOR. Aqui você poderá criar,
                 alterar, apagar, promover e despromover outros utilizadores a administradores do sistema.</p>
-            <a href="../Admin/index.php"><button class="btn btn-outline-success" type="button">Administração</button></a>
+            <a href="../CrudSitios/index.php"><button class="btn btn-outline-success" type="button">Administração</button></a>
         </div>
         </div>';
         }

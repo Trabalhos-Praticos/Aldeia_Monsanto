@@ -5,7 +5,7 @@ require_once __DIR__ . '../../../Infraestrutura/Repositorio.php';
 require_once __DIR__ . '../../../middleware/middleware-administrador.php';
 
 # FAZ O CARREGAMENTO DE TODOS OS UTILIZADORES PARA MOSTRAR AO ADMINISTRADOR
-$utilizadores = lerTodosUtilizadores();
+$utilizadores = lerTodasinfos();
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = ' - Painel de Administração';
@@ -18,11 +18,8 @@ $titulo = ' - Painel de Administração';
 <main class="bg-light">
   <section class="py-4">
     <div class="d-flex justify-content">
-      <a href="/admin/utilizador.php"><button class="btn btn-success px-4 me-2">Criar Utilizador</button></a>
-      <a href="/aplicacao/"><button class="btn btn-info px-2 me-2">Sair Administração</button></a>
-      <form action="/src/controlador/aplicacao/controlar-autenticacao.php" method="post">
-        <button class="btn btn-danger px-4" type="submit" name="utilizador" value="logout">Fazer Logout</button>
-      </form>
+      <a href="registo.php"><button class="btn btn-success px-4 me-2">Criar info</button></a>
+      <a href="../Index/index.php"><button class="btn btn-info px-2 me-2">Sair Painel infos</button></a>
     </div>
   </section>
   <section>
@@ -50,12 +47,8 @@ $titulo = ' - Painel de Administração';
         <thead class="table-secondary">
           <tr>
             <th scope="col">Nome</th>
-            <th scope="col">Apelido</th>
-            <th scope="col">NIF</th>
-            <th scope="col">Telemóvel</th>
-            <th scope="col">Email</th>
-            <th scope="col">Administrador</th>
-            <th scope="col">Gerenciar</th>
+            <th scope="col">Texto</th>
+            <th scope="col">Tipo</th>
           </tr>
         </thead>
         <tbody>
@@ -65,14 +58,11 @@ $titulo = ' - Painel de Administração';
           ?>
             <tr>
               <th scope="row"><?= $utilizador['nome'] ?></th>
-              <td><?= $utilizador['apelido'] ?></td>
-              <td><?= $utilizador['nif'] ?></td>
-              <td><?= $utilizador['telemovel'] ?></td>
-              <td><?= $utilizador['email'] ?></td>
-              <td><?= $utilizador['administrador'] == '1' ? 'Sim' : 'Não' ?></td>
+              <td><?= $utilizador['texto'] ?></td>
+              <td><?= $utilizador['tipo'] ?></td>
               <td>
                 <div class="d-flex justify-content">
-                  <a href="/src/controlador/admin/controlar-utilizador.php?<?= 'utilizador=atualizar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
+                  <a href="/src/controlador/admin/controlar-infos.php?<?= 'info=atualizar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
                   <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $utilizador['id'] ?>">Deletar</button>
                 </div>
               </td>
@@ -82,15 +72,15 @@ $titulo = ' - Painel de Administração';
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Deletar Utilizador</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Deletar info</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    Esta operação não poderá ser desfeita. Tem certeza que deseja deletar este utilizador?
+                    Esta operação não poderá ser desfeita. Tem certeza que deseja deletar esta info?
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="/src/controlador/admin/controlar-utilizador.php?<?= 'utilizador=deletar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-danger">Confirmar</button></a>
+                    <a href="/src/controlador/admin/controlar-infos.php?<?= 'info=deletar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-danger">Confirmar</button></a>
                   </div>
                 </div>
               </div>

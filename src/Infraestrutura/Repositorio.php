@@ -57,40 +57,6 @@ function criarUtilizador($utilizador)
     return $sucesso;
 }
 
-function criarinfo($info){
-    #insere info
-    $sqlCreate = "INSERT INTO 
-    infos (
-        nome, 
-        texto, 
-        tipo,
-        imagem
-        ) 
-    VALUES (
-        :nome, 
-        :texto, 
-        :tipo, 
-        :imagem
-    )";
-
-    # PREPARA A QUERY
-    $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
-
-    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
-    $sucesso = $PDOStatement->execute([
-        ':nome' => $info['nome'],
-        ':texto' => $info['texto'],
-        ':tipo' => $info['tipo'],
-        ':imagem' => $info['imagem']
-    ]);
-
-    # RECUPERA ID DO UTILIZADOR CRIADO
-    if ($sucesso) {
-        $info['id'] = $GLOBALS['pdo']->lastInsertId();
-    }
-    # RETORNO RESULTADO DA INSERSÃO 
-    return $sucesso;
-}
 
 
 
@@ -111,6 +77,24 @@ function lerUtilizador($id)
     # RETORNA OS DADOS
     return $PDOStatement->fetch();
 }
+/**
+ * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR
+ */
+function lerinfo($id)
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM info WHERE id = ?;');
+
+    # FAZ O BIND
+    $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
+
+    # EXECUTA A CONSULTA
+    $PDOStatement->execute();
+
+    # RETORNA OS DADOS
+    return $PDOStatement->fetch();
+}
+
 
 /**
  * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR PELO EMAIL
@@ -149,6 +133,39 @@ function lerTodosUtilizadores()
     # RETORNA UTLIZADORES
     return $utilizadores;
 }
+function lerTodasinfos()
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM infos;');
+
+    # ININIA ARRAY DE UTILIZADORES
+    $utilizadores = [];
+
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    while ($listaDeUtilizadores = $PDOStatement->fetch()) {
+        $utilizadores[] = $listaDeUtilizadores;
+    }
+
+    # RETORNA UTLIZADORES
+    return $utilizadores;
+}
+function lerinfosProgramasTuristicos()
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM infos WHERE tipos = "Programas Turisticos" ;');
+
+    # ININIA ARRAY DE UTILIZADORES
+    $infos = [];
+
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    while ($infoslista = $PDOStatement->fetch()) {
+        $infos[] = $infoslista;
+    }
+
+    # RETORNA UTLIZADORES
+    return $infos;
+}
+
 
 /**
  * FUNÇÃO RESPONSAVEL POR ATUALIZAR OS DADOS DE UM UTILIZADOR NO SISTEMA
@@ -359,10 +376,12 @@ function registarinfo($info)
 
     # RECUPERA ID DO UTILIZADOR CRIADO
     if ($sucesso) {
-        $utilizador['id'] = $GLOBALS['pdo']->lastInsertId();
+        $info['id'] = $GLOBALS['pdo']->lastInsertId();
 
         # RETORNO RESULTADO DA INSERSÃO 
         return $info;
     }
     return false;
 }
+
+

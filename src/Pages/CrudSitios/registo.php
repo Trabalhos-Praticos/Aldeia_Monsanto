@@ -32,7 +32,7 @@ $titulo = '- Registro';
         }
         ?>
       </section>
-      <form action="../../Controladores/ControladorRegisto.php" method="post">
+      <form action="../../Controladores/controlar-infos.php" method="post">
         <h1 class="h3 mb-3 fw-normal">Registo</h1>
         <div class="form-floating mb-2">
           <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
