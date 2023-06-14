@@ -1,6 +1,6 @@
  <?php
 # MIDDLEWARE PARA GARANTIR QUE APENAS UTILIZADORES NÃO AUTENTICADOS VEJAM A PÁGINA DE LOGIN
-require_once __DIR__ . '/../../middleware/middleware-nao-autenticado.php';
+require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
 # DEFINI O TÍTULO DA PÁGINA
 $titulo = ' - Login';
 ?>

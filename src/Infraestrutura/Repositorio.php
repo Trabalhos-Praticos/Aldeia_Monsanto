@@ -1,8 +1,6 @@
 <?php
 # INSERE DADOS DA CONEXÃO COM O PDO
 require_once __DIR__ . '../../Infraestrutura/conexao.php';
-
-
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
  */
@@ -51,7 +49,6 @@ function criarUtilizador($utilizador)
         ':palavra_passe' => $utilizador['palavra_passe']
     ]);
 
-
     # RECUPERA ID DO UTILIZADOR CRIADO
     if ($sucesso) {
         $utilizador['id'] = $GLOBALS['pdo']->lastInsertId();
@@ -59,7 +56,6 @@ function criarUtilizador($utilizador)
     # RETORNO RESULTADO DA INSERSÃO 
     return $sucesso;
 }
-
 
 /**
  * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR
@@ -262,6 +258,5 @@ function registarUtilizador($utilizador)
         # RETORNO RESULTADO DA INSERSÃO 
         return $utilizador;
     }
-    
     return false;
 }

@@ -71,7 +71,7 @@ function verificaErros($dados, $requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR PARA FORMULÁRIO DE LOGIN INFORMANDO ERROS
-        header('location: /../Pages/Login/login.php' . $params);
+        header('location: ../../Pages/Login/login.php' . $params);
 
         return false;
     }
@@ -86,6 +86,8 @@ function verificaErros($dados, $requisicao)
 /**
  * FUNÇÃ PARA SIMULAR LOGIN DE UTILIZADOR.
  */
+
+
 function fazerLogin($dados)
 {
     # FAZ O LOGIN DO UTILIZADOR
@@ -97,7 +99,7 @@ function fazerLogin($dados)
     setcookie("nome", $dados['nome'], time() + (60 * 60 * 24 * 30), "/");
 
     # REDIRECIONA PARA A PÁGINA APLICAÇÃO
-    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/aplicacao/';
+    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '../../Pages/Index/index.php';
     header('Location: ' . $home_url);
 }
 

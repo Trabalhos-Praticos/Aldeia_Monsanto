@@ -51,7 +51,7 @@ function registo($requisicao)
             $_SESSION['sucesso'] = 'Bem-vindo(a) ao nosso sistema. Por vaor, atualize o seu perfil.';
 
             # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-            header('location: /../../aplicacao/perfil.php');
+            header('location: ../Pages/Perfil/perfil.php');
         }
     }
 }
