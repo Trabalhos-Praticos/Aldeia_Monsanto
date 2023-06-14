@@ -1,6 +1,6 @@
 <?php
 # MIDDLEWARE PARA GARANTIR QUE APENAS UTILIZADORES NÃO AUTENTICADOS VEJAM A PÁGINA DE REGISTO
-require_once __DIR__ . '/../../middleware/middleware-nao-autenticado.php';
+//require_once __DIR__ . '/../../middleware/middleware-nao-autenticado.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = '- Registro';
@@ -34,13 +34,12 @@ $titulo = '- Registro';
       </section>
       <form action="../../Controladores/ControladorRegisto.php" method="post">
         <h1 class="h3 mb-3 fw-normal">Registo</h1>
-        <select class="form-control">
-            <option>Default select</option>
-            <option>Estadias</option>
-            <option>Programas Turisticos</option>
-            <option>Monumentos</option>
+        <select class="form-control" >
+            <option>Estadia</option>
+            <option>Programa Turistico</option>
+            <option>Monumento</option>
         </select>
-        <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="utilizador" value="registo">Registar</button>
+        <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="infoReg" value="registo">Registar</button>
       </form>
       <a href="/index.php"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
     </main>
