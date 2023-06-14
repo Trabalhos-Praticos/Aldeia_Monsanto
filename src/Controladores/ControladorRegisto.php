@@ -3,7 +3,7 @@
     session_start();
 
     require_once __DIR__ .'..\..\Infraestrutura\Repositorio.php';
-    require_once __DIR__ .'..\..\..\Validacao\Registo.php';
+    require_once __DIR__ .'/../Validacao/Registo.php';
 
     //Se for criado um metodo post do tipo utilizador
     if(isset($_POST['utilizador'])){
