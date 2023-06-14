@@ -34,11 +34,26 @@ $titulo = '- Registro';
       </section>
       <form action="../../Controladores/ControladorRegisto.php" method="post">
         <h1 class="h3 mb-3 fw-normal">Registo</h1>
-        <select class="form-control" >
-            <option>Estadia</option>
-            <option>Programa Turistico</option>
-            <option>Monumento</option>
-        </select>
+        <div class="form-floating mb-2">
+          <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
+          <label for="nome">Nome:</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input type="text" class="form-control" name="texto" placeholder="texto" maxlength="500" size="500" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : null ?>" required>
+          <label for="texto">Texto:</label>
+        </div>
+        <div class='input-group mb-2'>
+        <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>
+            <select id="TipoDeRegisto" class="form-control" name='tipo'>
+                <option value='Estadia'>Estadia</option>
+                <option value='Programa Turistico'>Programa Turistico</option>
+                <option value='Monumento'>Monumento</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupFile01">Imagem</label>
+        <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
+      </div>
         <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="infoReg" value="registo">Registar</button>
       </form>
       <a href="/index.php"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
