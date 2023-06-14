@@ -19,61 +19,59 @@ require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
    <?php
    include_once __DIR__ . '../../nf/nav.php';
    ?>
+   
     <div class="info_container">
         <div class="title_box">
             <h1>Melhores Estadias de Monsanto</h1>
         </div>
-        <div class="container">
-            <div class="box_estadia b1">
-                <div class="imagem">
-                    <img src="../../Assets/img/casas da vila.jpg" alt="png">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../Assets/img/casas da vila.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title">Casas da Vila</h3>
+                    <h5 class="card-title">R. do Pardieiro nº 6 e 7, 6060-094 Monsanto - 6060-094 Monsanto 351960281677</h5>
+                        <p class="card-text">As Casas da Villa são o resultado de uma paixão por Monsanto, aquela que é considerada 
+                                como a aldeia mais portuguesa de Portugal; são também a consequência de uma forte ligação 
+                                à terra pelo seu proprietário. 
+                                    Mas o que torna as Casas da Villa um empreendimento turístico tão especial é que foi
+                                    concebido para respeitar as suas origens, para estar ao serviço de Monsanto, da aldeia e
+                                    das suas gentes. Cada uma das casas que faz parte das Casas da Villa foi fruto de um
+                                    processo minucioso de recuperação, com a preocupação de manter inalterada a traça original,
+                                    numa homenagem à região e à sua história. Acrescentámos as comodidades dos tempos modernos
+                                    de forma a proporcionarmos uma experiência única e genuína. Algumas das paredes originais,
+                                    em pedra, foram protegidas por “montras”, para que os nossos hóspedes possam sentir a
+                                    essência do lugar sem abdicar do bem-estar que se exige na atualidade.
+                                    A localização das casas, em pleno coração de Monsanto, proporciona uma vivência única e
+                                    um esplendoroso horizonte que não irá esquecer! A partir dos terraços das Casas da Villa,
+                                    o visitante pode também apreciar o esplendoroso horizonte que o rodeia, num ambiente de
+                                    calma e de liberdade.</p>
+                    <a href="https://goo.gl/maps/VwYGrosbiWtKesLaA" class="btn btn-primary">Ver no Mapa</a>
+                    <a href="https://www.booking.com/Share-Z4M24i" target="_blank" class="btn btn-primary">Reserve já</a>
                 </div>
-                <div>
-                    <h3>Casas da Vila</h3>
-                    <h5>R. do Pardieiro nº 6 e 7, 6060-094 Monsanto - 6060-094 Monsanto 351960281677</h5>
-                    <p>
-                        As Casas da Villa são o resultado de uma paixão por Monsanto, aquela que é considerada 
-                        como a aldeia mais portuguesa de Portugal; são também a consequência de uma forte ligação 
-                        à terra pelo seu proprietário. 
-                            Mas o que torna as Casas da Villa um empreendimento turístico tão especial é que foi
-                            concebido para respeitar as suas origens, para estar ao serviço de Monsanto, da aldeia e
-                            das suas gentes. Cada uma das casas que faz parte das Casas da Villa foi fruto de um
-                            processo minucioso de recuperação, com a preocupação de manter inalterada a traça original,
-                            numa homenagem à região e à sua história. Acrescentámos as comodidades dos tempos modernos
-                            de forma a proporcionarmos uma experiência única e genuína. Algumas das paredes originais,
-                            em pedra, foram protegidas por “montras”, para que os nossos hóspedes possam sentir a
-                            essência do lugar sem abdicar do bem-estar que se exige na atualidade.
-                            A localização das casas, em pleno coração de Monsanto, proporciona uma vivência única e
-                            um esplendoroso horizonte que não irá esquecer! A partir dos terraços das Casas da Villa,
-                            o visitante pode também apreciar o esplendoroso horizonte que o rodeia, num ambiente de
-                            calma e de liberdade.</span>
-                            </p>
-                        </div>
-                        <button class="btn1"><a target="_blank" href="https://goo.gl/maps/VwYGrosbiWtKesLaA"><img src="../../Assets/img/Location-icon-design-on-transparent-background-PNG.png" alt=""></a></button>
-                        <button class="btn2"><a href="https://www.booking.com/Share-Z4M24i" target="_blank"><img src="../../Assets/img/clipart4179936.png" alt=""></a></button>
-                    </div>
-                <br>
-            <div class="box_estadia 2">
-                <div class="imagem">
-                    <img src="../../Assets/img/2.jpg" alt="png">
                 </div>
-                <h3>Casa Pires Mateus</h3>
-                <h5>Rua Fernando Namora, Nº 4 - 6060-091 967086530, 918110179</h5>
-                <p>A Casa Pires Mateus está situada na aldeia histórica de Monsanto. 
-                    É uma típica casa recentemente reconstruída de forma a manter o estilo tradicional da aldeia, com suas paredes exteriores 
-                    de granito. O Castelo de Monsanto fica a 400 metros.
-                Esta pousada inclui vários quartos com camas de casal e casas de banho privativas. Há um quarto para pessoas com mobilidade 
-                condicionada, uma sala comum e uma cozinha partilhada, onde os hóspedes podem preparar refeições. Os clientes poderão 
-                descontrair-se no terraço com vista para a aldeia
-                A Casa Mateus Pires apresenta uma decoração tradicional local, acesso Wi-Fi 
-                gratuito, aquecimento e uma televisão em todos os quartos.
-                A Casa Pires Mateus fica a 25 km da vila de Idanha-a-nova, a 50 km 
-                da cidade de Castelo Branco e a 30 km da fronteira com Espanha, vindo de Monfortinho.</p>
-                <a target="_blank" href="https://goo.gl/maps/7XGNTMBG9zYys4G2A"><button class="btn1"><img src="../../Assets/img/Location-icon-design-on-transparent-background-PNG.png" alt=""></button></a>
-                <a href="https://www.booking.com/hotel/pt/casa-pires-mateus-monsanto.pt-pt.html?aid=311098&label=Share-LRkDE7%401680713602&sid=e2bb036a3e1a0ec52bc07562857e56e9&dest_id=-2169626;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1680714432;srpvid=65f3785f5b8d01c4;type=total;ucfs=1&#hotelTmpl" target="_blank"><button class="btn2"><img src="../../Assets/img/clipart4179936.png" alt=""></button></a>
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../Assets/img/2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title">Casa Pires Mateus</h3>
+                    <h5 class="card-title">Rua Fernando Namora, Nº 4 - 6060-091 967086530, 918110179</h5>
+                        <p class="card-text">A Casa Pires Mateus está situada na aldeia histórica de Monsanto. 
+                                            É uma típica casa recentemente reconstruída de forma a manter o estilo tradicional da aldeia, com suas paredes exteriores 
+                                            de granito. O Castelo de Monsanto fica a 400 metros.
+                                            Esta pousada inclui vários quartos com camas de casal e casas de banho privativas. Há um quarto para pessoas com mobilidade 
+                                            condicionada, uma sala comum e uma cozinha partilhada, onde os hóspedes podem preparar refeições. Os clientes poderão 
+                                            descontrair-se no terraço com vista para a aldeia
+                                            A Casa Mateus Pires apresenta uma decoração tradicional local, acesso Wi-Fi 
+                                            gratuito, aquecimento e uma televisão em todos os quartos.
+                                            A Casa Pires Mateus fica a 25 km da vila de Idanha-a-nova, a 50 km 
+                                            da cidade de Castelo Branco e a 30 km da fronteira com Espanha, vindo de Monfortinho.</p>
+                    <a href="https://goo.gl/maps/7XGNTMBG9zYys4G2A" class="btn btn-primary">Ver no Mapa</a>
+                    <a href="https://www.booking.com/hotel/pt/casa-pires-mateus-monsanto.pt-pt.html?aid=311098&label=Share-LRkDE7%401680713602&sid=e2bb036a3e1a0ec52bc07562857e56e9&dest_id=-2169626;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1680714432;srpvid=65f3785f5b8d01c4;type=total;ucfs=1&#hotelTmpl" target="_blank" class="btn btn-primary">Reserve já</a>
+                </div>
+                </div>
+        
+              
             
-            </div>
-                <br>
             <div class="box_estadia 3">
                 <div class="imagem">
                     <img src="../../Assets/img/3.jpg" alt="png">
