@@ -25,7 +25,7 @@
         <a class="nav-link" href="../ProgramasTuristicos/ProgramasTuristicos.php">Programas Turísticos</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../Visitar/Visitar.php">Visitar</a>
+        <a class="nav-link" href="../Visitar/Visitar.php">Monumentos</a>
         </li>
       </ul>
       <span class="navbar-text">
