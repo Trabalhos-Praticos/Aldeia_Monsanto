@@ -15,9 +15,9 @@
     }
 function registo($requisicao)
 {
+    $info = registarinfo($requisicao);
     # VALIDA DADOS DO UTILIZADOR
     $dados = validarRegistoinfo($requisicao);
-
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
     if (isset($dados['invalido'])) {
 
@@ -30,7 +30,6 @@ function registo($requisicao)
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /../Pages/Registo/registo.php' . $params);
     } else {
-
         # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
         $info = registarinfo($dados);
     }

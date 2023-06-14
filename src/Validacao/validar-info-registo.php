@@ -16,7 +16,7 @@
         }
         # VALIDANDO O CAMPO tipo
         if (empty($requisicao['tipo']) || strlen($requisicao['tipo']) < 3 || strlen($requisicao['tipo']) > 400) {
-            $erros['nome'] = 'O campo Nome não pode estar vazio e deve ter entre 3 e 255 caracteres.';
+            $erros['tipo'] = 'O campo Nome não pode estar vazio e deve ter entre 3 e 255 caracteres.';
         }
         
         # RETORNA ERROS

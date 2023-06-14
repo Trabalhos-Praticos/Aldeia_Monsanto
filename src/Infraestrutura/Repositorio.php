@@ -136,23 +136,23 @@ function lerTodosUtilizadores()
 function lerTodasinfos()
 {
     # PREPARA A QUERY
-    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM infos;');
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info;');
 
     # ININIA ARRAY DE UTILIZADORES
-    $utilizadores = [];
+    $info = [];
 
     # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
-    while ($listaDeUtilizadores = $PDOStatement->fetch()) {
-        $utilizadores[] = $listaDeUtilizadores;
+    while ($listaDeInfos = $PDOStatement->fetch()) {
+        $info[] = $listaDeInfos;
     }
 
     # RETORNA UTLIZADORES
-    return $utilizadores;
+    return $info;
 }
 function lerinfosProgramasTuristicos()
 {
     # PREPARA A QUERY
-    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM infos WHERE tipos = "Programas Turisticos" ;');
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipos = "Programas Turisticos" ;');
 
     # ININIA ARRAY DE UTILIZADORES
     $infos = [];
@@ -299,7 +299,7 @@ function deletarUtilizador($id)
 function deletarinfo($id)
 {
     # PREPARA A CONSULTA
-    $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM infos WHERE id = ?;');
+    $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id = ?;');
 
     # REALIZA O BIND
     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
@@ -351,7 +351,7 @@ function registarinfo($info)
 {
     # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION
     $sqlCreate = "INSERT INTO 
-    infos (
+    info (
         nome, 
         texto, 
         tipo,

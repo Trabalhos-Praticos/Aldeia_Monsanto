@@ -80,7 +80,7 @@ $titulo = ' - Painel de Administração';
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="/src/controlador/admin/controlar-infos.php?<?= 'info=deletar&id=' . $info['id'] ?>"><button type="button" class="btn btn-danger">Confirmar</button></a>
+                    <a href="/src/Controladores/controlar-infos.php?<?= 'info=deletar&id=' . $info['id'] ?>"><button type="button" class="btn btn-danger">Confirmar</button></a>
                   </div>
                 </div>
               </div>

@@ -27,7 +27,7 @@ if (isset($_POST['info'])) {
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DOS UTILIZADORES
     if ($_POST['info'] == 'atualizar') {
 
-        # ATUALIZA UM UTILIZADOR
+        
         atualizarinfo($_POST);
     }
 }

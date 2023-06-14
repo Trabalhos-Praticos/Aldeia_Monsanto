@@ -86,11 +86,11 @@ $sucesso = $PDOStatement->execute([
 ]);
 echo 'Utilizador padrão criado!';
 
-$pdo->exec('DROP TABLE IF EXISTS infos');
+$pdo->exec('DROP TABLE IF EXISTS info');
 echo 'Tabela infos apagada!' . PHP_EOL;
 # CRIA A TABELA UTILIZADORES
 $pdo->exec(
-    'CREATE TABLE infos (
+    'CREATE TABLE info (
     id INTEGER PRIMARY KEY, 
     nome CHAR,  
     texto TEXT, 
@@ -108,7 +108,7 @@ $info = [
 
 # INSERE info
 $sqlCreate = "INSERT INTO 
-    infos (
+    info (
         nome, 
         texto, 
         tipo,
