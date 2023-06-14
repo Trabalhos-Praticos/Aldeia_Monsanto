@@ -308,7 +308,7 @@ function alterarPalavraPasse($requisicao)
 function deletar($utilizador)
 {
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/../../../recursos/imagens/uploads/';
+    $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
 
     # VALIDA DADOS DO UTILIZADOR
     $retorno = deletarUtilizador($utilizador['id']);
@@ -341,7 +341,7 @@ function guardaFoto($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/../../../recursos/imagens/uploads/';
+    $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;

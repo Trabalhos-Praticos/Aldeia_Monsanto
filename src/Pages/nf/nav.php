@@ -30,12 +30,26 @@
       </ul>
       <span class="navbar-text">
       <ul class="nav navbar-nav navbar-right">
-      <li><p></p></li>
-      <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-light" type="button">Editar Perfil</button></a></li>
-      <li><form action="/src/Controladores/Autenticacao.php" method="post">
-              <button class="btn btn-danger" type="submit" name="utilizador" value="logout">Logout</button>
-            </form></li>
-    </ul>
+        <li><img
+            src=<?= $utilizador['nome'] ?? null ?>
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          /></li>
+        <li><?php
+                # MOSTRA CARD APENAS SE UTILIZDOR FOR ADMINISTRADOR
+                if (autenticado() && $utilizador['administrador']) {
+                    echo '<div class="col-md-6">
+                    <a href="/admin/"><button class="btn btn-outline-success" type="button">Administração</button></a>';
+                }
+                ?></li>
+        <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-light" type="button">Editar Perfil</button></a></li>
+        <li><form action="/src/Controladores/Autenticacao.php" method="post">
+              <button class="btn btn-outline-danger" type="submit" name="utilizador" value="logout">Logout</button>
+            </form>
+        </li>
+      </ul>
       </span>
     </div>
   </div>
