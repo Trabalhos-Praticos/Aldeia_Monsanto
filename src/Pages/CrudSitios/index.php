@@ -5,7 +5,7 @@ require_once __DIR__ . '../../../Infraestrutura/Repositorio.php';
 require_once __DIR__ . '../../../middleware/middleware-administrador.php';
 
 # FAZ O CARREGAMENTO DE TODOS OS UTILIZADORES PARA MOSTRAR AO ADMINISTRADOR
-$utilizadores = lerTodasinfos();
+$info = lerTodasinfos();
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = ' - Painel de Administração';
@@ -54,21 +54,21 @@ $titulo = ' - Painel de Administração';
         <tbody>
           <?php
           # VARRE TODOS OS UTILIZADORES PARA CONSTRUÇÃO DA TABELA
-          foreach ($utilizadores as $utilizador) {
+          foreach ($info as $info) {
           ?>
             <tr>
-              <th scope="row"><?= $utilizador['nome'] ?></th>
-              <td><?= $utilizador['texto'] ?></td>
-              <td><?= $utilizador['tipo'] ?></td>
+              <th scope="row"><?= $info['nome'] ?></th>
+              <td><?= $info['texto'] ?></td>
+              <td><?= $info['tipo'] ?></td>
               <td>
                 <div class="d-flex justify-content">
-                  <a href="/src/controlador/admin/controlar-infos.php?<?= 'info=atualizar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $utilizador['id'] ?>">Deletar</button>
+                  <a href="../../Controladores/controlar-infos.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
+                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $info['id'] ?>">Deletar</button>
                 </div>
               </td>
             </tr>
             <!-- Modal -->
-            <div class="modal fade" id="deletar<?= $utilizador['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="deletar<?= $info['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -80,7 +80,7 @@ $titulo = ' - Painel de Administração';
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="/src/controlador/admin/controlar-infos.php?<?= 'info=deletar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-danger">Confirmar</button></a>
+                    <a href="/src/controlador/admin/controlar-infos.php?<?= 'info=deletar&id=' . $info['id'] ?>"><button type="button" class="btn btn-danger">Confirmar</button></a>
                   </div>
                 </div>
               </div>

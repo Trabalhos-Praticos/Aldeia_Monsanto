@@ -15,17 +15,17 @@ require_once __DIR__ . '../../auxiliadores/auxiliador.php';
 
 # VERBOS POST
 ## CONTROLA A ROTA PARA CRIAÇÃO E ATUALIZAÇÃO DE UM UTILIZADOR NA PÁGINA UTILIZADOR
-if (isset($_POST['infoReg'])) {
+if (isset($_POST['info'])) {
 
     ## CONTROLA A CRIAÇÃO DE NOVOS UTILIZADORES
-    if ($_POST['infoReg'] == 'criar') {
+    if ($_POST['info'] == 'criar') {
 
         # CRIA UM UTILIZADOR
-        criarinfo($_POST);
+        criar($_POST);
     }
 
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DOS UTILIZADORES
-    if ($_POST['infoReg'] == 'atualizar') {
+    if ($_POST['info'] == 'atualizar') {
 
         # ATUALIZA UM UTILIZADOR
         atualizarinfo($_POST);
@@ -73,7 +73,7 @@ if (isset($_GET['info'])) {
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
  */
-function criarinfo($requisicao)
+function criar($requisicao)
 {
     # VALIDA DADOS DO UTILIZADOR. FICHEIRO VALIDAÇÃO->APLICAÇAO->ADMIN->VALIDAR-UTILIZADOR.PHP
     $dados = infoValida($requisicao);

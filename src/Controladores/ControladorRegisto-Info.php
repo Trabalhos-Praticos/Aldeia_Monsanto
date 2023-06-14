@@ -6,9 +6,9 @@
     require_once __DIR__ .'/../Validacao/Registo.php';
 
     //Se for criado um metodo post do tipo utilizador
-    if(isset($_POST['utilizador'])){
+    if(isset($_POST['info'])){
         //e se esse metodo estiver como registo
-        if($_POST['utilizador']=='registo'){
+        if($_POST['info']=='registo'){
             //então criamos um utilizador com o post que nos foi enviado
             registo($_POST);
         }
@@ -16,7 +16,7 @@
 function registo($requisicao)
 {
     # VALIDA DADOS DO UTILIZADOR
-    $dados = validarRegisto($requisicao);
+    $dados = validarRegistoinfo($requisicao);
 
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
     if (isset($dados['invalido'])) {
@@ -32,27 +32,8 @@ function registo($requisicao)
     } else {
 
         # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
-        $utilizador = registarUtilizador($dados);
-
-        # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
-        if ($utilizador) {
-
-            # FAZ LOGIN DE UTILIZADOR
-            $_SESSION['id'] = $utilizador['id'];
-            $_SESSION['nome'] = $utilizador['nome'];
-            
-            // 30 Dias = Data atual + 60 minutos * 60 segundos * 24 horas * 30 dias
-            setcookie("id", $dados['id'], time() + (60 * 60 * 24 * 30), "/");
-            setcookie("nome", $dados['nome'], time() + (60 * 60 * 24 * 30), "/");
-
-
-
-            # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Bem-vindo(a) ao nosso sistema. Por vaor, atualize o seu perfil.';
-
-            # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-            header('location: ../Pages/Perfil/perfil.php');
-        }
+        $info = registarinfo($dados);
     }
 }
+
 ?>
