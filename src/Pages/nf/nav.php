@@ -37,13 +37,7 @@
             alt="Black and White Portrait of a Man"
             loading="lazy"
           /></li>
-        <li><?php
-                # MOSTRA CARD APENAS SE UTILIZDOR FOR ADMINISTRADOR
-                if (autenticado() && $utilizador['administrador']) {
-                    echo '<div class="col-md-6">
-                    <a href="/admin/"><button class="btn btn-outline-success" type="button">Administração</button></a>';
-                }
-                ?></li>
+        <li></li>
         <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-light" type="button">Editar Perfil</button></a></li>
         <li><form action="/src/Controladores/Autenticacao.php" method="post">
               <button class="btn btn-outline-danger" type="submit" name="utilizador" value="logout">Logout</button>
