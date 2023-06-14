@@ -2,7 +2,7 @@
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES ACESSE O SITIO
 require_once __DIR__ . '/../../middleware/middleware-autenticado.php';
 
-
+$utilizador = utilizador();
 ?>
 
 
@@ -27,7 +27,7 @@ include_once __DIR__ . '/../nf/nav.php';
 <div class = 'container'>
     <div class="Text_Box">
         <div class="Title_text">
-            <h1>Bem Vindo a Monsanto</h1>
+            <h1>Bem Vindo a Monsanto <?= $utilizador['nome'] ?? null ?> <?= $utilizador['apelido'] ?? null ?> </h1>
         </div>
     </div>
     <div id="Box1">
