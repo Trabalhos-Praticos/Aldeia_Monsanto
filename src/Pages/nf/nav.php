@@ -3,7 +3,7 @@
     width:15%;
   }
 </style>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-black">
   <div class="container-fluid">
     <a class="navbar-brand" href="../../../../index.php"><img id="imagem" src="../../Assets/Logo/Monsanto.webp"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

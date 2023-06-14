@@ -1,6 +1,6 @@
 <?php
 # INSERE DADOS DA CONEXÃO COM O PDO
-require_once __DIR__ . 'conexao.php';
+require_once __DIR__ . '../../Infraestrutura/conexao.php';
 
 
 /**

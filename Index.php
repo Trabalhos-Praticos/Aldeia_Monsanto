@@ -1,4 +1,9 @@
 
+<?php
+    require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

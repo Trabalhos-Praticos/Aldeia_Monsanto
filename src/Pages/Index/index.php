@@ -14,7 +14,7 @@
 <body>
      <!-- Start nav -->
 <?php
-include_once __DIR__ . '/src/nf/nav.php';
+include_once __DIR__ . '/../nf/nav.php';
 ?>
 <div class = 'container'>
     <div class="Text_Box">
@@ -48,7 +48,7 @@ include_once __DIR__ . '/src/nf/nav.php';
 </div>
 
 <?php
-require_once __DIR__ . '/src/nf/footer.php';
+require_once __DIR__ . '/../nf/footer.php';
 ?>
 </body>
 <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
