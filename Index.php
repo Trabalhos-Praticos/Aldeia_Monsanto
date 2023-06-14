@@ -1,6 +1,6 @@
 
 <?php
-   // require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
+require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
     
 ?>
 

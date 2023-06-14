@@ -1,6 +1,6 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES ACESSE O SITIO
-require_once __DIR__ . '/../../middleware/middleware-utilizador.php.php';
+require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
 
 ?>
 <!DOCTYPE html>
