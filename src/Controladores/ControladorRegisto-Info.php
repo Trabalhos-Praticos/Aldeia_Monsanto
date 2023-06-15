@@ -3,7 +3,7 @@
     session_start();
 
     require_once __DIR__ .'..\..\Infraestrutura\Repositorio.php';
-    require_once __DIR__ .'/../Validacao/Registo.php';
+    require_once __DIR__ .'/../Validacao/validar-info-registo.php';
 
     //Se for criado um metodo post do tipo utilizador
     if(isset($_POST['info'])){
@@ -15,9 +15,8 @@
     }
 function registo($requisicao)
 {
-    $info = registarinfo($requisicao);
-    # VALIDA DADOS DO UTILIZADOR
-    $dados = validarRegistoinfo($requisicao);
+    # VALIDA DADOS DA INFO
+    $dados = validarRegistoInfo($requisicao);
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
     if (isset($dados['invalido'])) {
 
@@ -28,11 +27,12 @@ function registo($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../Pages/Registo/registo.php' . $params);
+        header('location: /../Pages/CrudSitios/infoPerfil' . $params);
     } else {
         # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
         $info = registarinfo($dados);
+        # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
+        header('location: ../Pages/CrudSitios/index.php');
     }
 }
-
 ?>
