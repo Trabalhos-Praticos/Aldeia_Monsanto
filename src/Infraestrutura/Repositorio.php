@@ -296,27 +296,15 @@ function deletarUtilizador($id)
     # EXECUTA A CONSULTA E RETORNA OS DADOS
     return $PDOStatement->execute();
 }
-// function deletarinfo($id)
-// {
-//     # PREPARA A CONSULTA
-//     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id = ?;');
-//     # REALIZA O BIND
-//     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
-
-//     # EXECUTA A CONSULTA E RETORNA OS DADOS
-//     return $PDOStatement->execute();
-// }
 function deletarinfo($id)
-{
-    # PREPARA A CONSULTA
-    $PDOStatement = $GLOBALS['pdo']->prepare("DELETE FROM info WHERE id = ?;");
-    
-    # REALIZA O BIND
+ {
+     # PREPARA A CONSULTA
+     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id = ?;');
+     # REALIZA O BIND
      $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
-    # EXECUTA A CONSULTA E RETORNA OS DADOS
-     return $PDOStatement->execute();
-    
+     # EXECUTA A CONSULTA E RETORNA OS DADOS
+     return $PDOStatement->execute(); 
 }
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
