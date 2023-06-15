@@ -175,7 +175,7 @@ function deleteinfo($info)
     $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
 
     # VALIDA DADOS DO UTILIZADOR
-    $retorno = deletarinfo($info['id']);
+    $retorno = deletarinfo($info);
 
     # COMANDO PARA APAGAR O FICHEIRO
     unlink($caminhoFicheiro . $info['foto']);
