@@ -48,9 +48,7 @@ if (isset($_GET['info'])) {
 
         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
     }
-    if($_GET['info']=='deletar'){
-
-        $info = lerinfo($_GET['id']); 
+    if($_GET['info']=='deletar'){ 
         
         # DELETA info
         $sucesso = deleteinfo($info);
