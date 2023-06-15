@@ -30,7 +30,7 @@ include_once __DIR__ . '../../nf/nav.php';
 
 
 
-    <div id="carouselExampleCaptions" class="carousel slide mh-100">
+   <!--<div id="carouselExampleCaptions" class="carousel slide mh-100">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -230,6 +230,7 @@ include_once __DIR__ . '../../nf/nav.php';
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+-->
 
 
 
@@ -241,22 +242,11 @@ include_once __DIR__ . '../../nf/nav.php';
 
 
 
-
-
-
-
-
-
-
-
-
- 
-
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/biketour2.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/biketour1.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -266,14 +256,32 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
+ 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/caminhada1.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/bicileta_nova.jpg" class="img-fluid rounded-start" alt="..." >
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title">PASSEIO DE BICICLETA NAS ALDEIAS HISTÓRICAS PORTUGUESAS</h3>
+                <p class="card-text">Este passeio de bicicleta permite-lhe descobrir a história da mais antiga fronteira europeia. Encontre doze aldeias espalhadas pelo Centro de Portugal, cada uma mais surpreendente que a anterior.</p>   
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="card mb-3 align-items-center " >
+    <div class="row d-flex align-items-center w-100">
+        <div class="col p-2 ">
+            <img src="../../Assets/img/imagens carrossel/caminhada1.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -283,13 +291,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div> 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/biketour3.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/pexels-philipp-m-100582.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -299,14 +307,14 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/biketour4.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/pexels-pixabay-161172.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -316,14 +324,14 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/ilhapedra.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/ilhadapedra_atualizado.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -333,14 +341,14 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/sagradoaoprofano.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/sagradoaoprofano.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -350,14 +358,14 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/rioeges.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/rioeges.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -367,14 +375,14 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/egitania.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/egitania.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -384,13 +392,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/got.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/got.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -400,13 +408,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/egitania2.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/egitania2.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -416,13 +424,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/btt.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/pexels-pixabay-38296.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -432,14 +440,14 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/geomonumento.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/geomonumento.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -449,13 +457,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/aldeiahist.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/aldeiahist.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -465,13 +473,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/aldeiamedie.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/aldeiamedie.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -481,13 +489,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/kayak.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/kayak.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -497,13 +505,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div> 
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/belmonte.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/belmonte.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -513,13 +521,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+ <div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/covaodosconchos.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/covaodosconchos.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -529,13 +537,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/gravurarupestre.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/gravurarupestre.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -545,13 +553,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/miradourofaia.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/Miradouro-da-Faia-Pinhel.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -561,13 +569,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/pordosol.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/pordosol.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -577,13 +585,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/idanha.png" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/idanha.png" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -593,13 +601,13 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 
-<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
+<div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
-            <img src="../../Assets/img/fosseis.jpg" class="img-fluid rounded-start" alt="..." >
+            <img src="../../Assets/img/imagens carrossel/fosseis.jpg" class="img-fluid rounded-start" alt="..." >
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -609,7 +617,7 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div> -->
+</div>
 </div> 
 <?php
 require_once __DIR__ . '/../nf/footer.php';
