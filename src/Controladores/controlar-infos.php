@@ -30,7 +30,7 @@ if (isset($_POST['info'])) {
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
     if ($_POST['info'] == 'perfil') {
         # ATUALIZA UM UTILIZADOR
-        atualizarinfo($_POST);
+        atualizarinfos($_POST);
     }
 }
 
@@ -143,7 +143,7 @@ function atualizar($requisicao)
     }
 
     # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
-    if (!empty($_FILES['foto']['name'])) {
+    if (!empty($_FILES['imagem']['name'])) {
         $dados = guardaFotoinfo($dados, $requisicao);
     }
 
@@ -164,57 +164,6 @@ function atualizar($requisicao)
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
-    }
-}
-
-function atualizarInfo($requisicao)
-{
-    # VALIDA DADOS DO UTILIZADOR (VALIDAÇÃO)
-    $dados = infoValida($requisicao);
-
-    # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
-    if (isset($dados['invalido'])) {
-
-        # RECUPERA MENSAGEM DE ERRO, CASO EXISTA
-        $_SESSION['erros'] = $dados['invalido'];
-
-        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-        $params = '?' . http_build_query($requisicao);
-
-        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
-    } else {
-
-        // # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
-        // $utilizador = utilizador(); // RECUPERA UTILIZADOR LOGADO
-        // $dados['id'] = $utilizador['id']; // ATRIBUI O PRÓPRIO ID
-        // $dados['administrador'] = $utilizador['administrador']; // ATRIBUI O PAPEL ATUAL
-
-        # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
-        if (!empty($_FILES['foto']['name'])) {
-
-            # GUARDA FOTOS EM DIRETÓRIO LOCAL
-            $dados = guardaFotoinfo($dados); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
-        }
-
-        # ATUALIZA UTILIZADOR
-        $sucesso = atualizarinfos($dados);
-
-        # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
-        if ($sucesso) {
-
-            # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
-
-            # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
-            $_SESSION['acao'] = 'atualizar';
-
-            # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-            $params = '?' . http_build_query($dados);
-
-            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
-        }
     }
 }
 
@@ -246,7 +195,7 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $nomeFicheiro = $_FILES['foto']['name'];
 
     # PAGA O FICHEIRO TEMPORÁRIO
-    $ficheiroTemporario = $_FILES['imagem']['tmp_name'];
+    $ficheiroTemporario = $_FILES['foto']['tmp_name'];
 
     # PEGA TIPO DE EXTENSÃO DA FOTO
     $extensao = pathinfo($nomeFicheiro, PATHINFO_EXTENSION);
@@ -255,7 +204,7 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $extensao = strtolower($extensao);
 
     # CRIA UM NOME ÚNICO PARA O FICHEIRO
-    $novoNome = uniqid('imagem_') . '.' . $extensao;
+    $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
     $caminhoFicheiro = __DIR__ . '../../Assets/upload';
@@ -270,10 +219,10 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
         $dados['foto'] = $novoNome;
 
         # APAGA FICHEIRO ANTERIOR, CASO SEJA UMA ATUALIZAÇÃO DE FOTO DE PERFIL
-        if (isset($dados['info']) && ($dados['info'] == 'atualizar') || ($dados['info'] == 'imagem')) {
+        if (isset($dados['info']) && ($dados['info'] == 'atualizar') || ($dados['info'] == 'foto')) {
 
             # COMANDO PARA APAGAR O FICHEIRO
-            unlink($caminhoFicheiro . $fotoAntiga['imagem']);
+            unlink($caminhoFicheiro . $fotoAntiga['foto']);
         }
     }
 
