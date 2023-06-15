@@ -25,7 +25,7 @@ include_once __DIR__ . '/src/nf/nav.php';
 
 <div class="container">
     <div class="jumbotron ">
-        <h1 class="display-4 ">Seja Bem vindo</h1>
+        <h1 class="display-4 p-4 ">Seja Bem vindo</h1>
         <p class="lead ">Para aceder ao site primeiro precisa de estar logado.</p>
         <p>Caso não tenha uma conta faça um registo.</p>
         <hr class="my-4 ">
