@@ -188,4 +188,5 @@ $sucesso2 = $PDOStatement->execute([
 ]);
 echo 'Tabela infos padrão criada!';
 
+
 ?>

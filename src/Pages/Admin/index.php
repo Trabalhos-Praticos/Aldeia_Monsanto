@@ -8,13 +8,18 @@ require_once __DIR__ . '../../../middleware/middleware-administrador.php';
 $utilizadores = lerTodosUtilizadores();
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
-$titulo = ' - Painel de Administração';
+$titulo = 'Painel de Administração';
 //require_once __DIR__ . '/templates/cabecalho.php';
 ?>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-
+<body class="container bg-light">
+  <div class="pt-1 ">
+    <div class="p-5 mb-2 bg-info text-white">
+      <h1><?php echo $titulo; ?></h1>
+      <p>CRUD | Front-end Bootstrap | Back-end PHP</p>
+    </div>
 <main class="bg-light">
   <section class="py-4">
     <div class="d-flex justify-content">

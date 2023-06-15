@@ -34,8 +34,6 @@ if (isset($_POST['info'])) {
 # VERBOS GET
 ## CONTROLA A ROTA PARA O CARREGAMENTO DE UM UTILIZADOR NA PÁGINA ATUALIZAR-UTILIZADOR
 if (isset($_GET['info'])) {
-
-    ## CONTROLA A ROTA PARA A CRIAÇÃO DE NOVOS UTILIZADORES
     if ($_GET['info'] == 'atualizar') {
 
         # RECUPERA DADOS DO UTILIZADOR PELO ID RECEBIDO
@@ -50,20 +48,22 @@ if (isset($_GET['info'])) {
 
         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
     }
+    if($_GET['info']=='deletar'){
+     # DELETA info
+     $sucesso = deletarinfo($info);
 
-        # DELETA info
-        $sucesso = deletarinfo($info);
+     # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
+     if ($sucesso) {
+         # DEFINE MENSAGEM DE SUCESSO
+         $_SESSION['sucesso'] = 'Info deletado com sucesso!';
 
-        # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
-        if ($sucesso) {
-            # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Info deletado com sucesso!';
-
-            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /src/Pages/CrudSitios/index.php');
-            
-        }
+         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+         header('location: /src/Pages/CrudSitios/index.php');
+         
+     }
+    }
 }
+
 
 ###############
 ### FUNÇÕES ###
