@@ -138,7 +138,7 @@ function lerTodasinfos()
     # PREPARA A QUERY
     $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info;');
 
-    # ININIA ARRAY DE UTILIZADORES
+    # INICIA ARRAY DE UTILIZADORES
     $info = [];
 
     # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
@@ -296,16 +296,17 @@ function deletarUtilizador($id)
     # EXECUTA A CONSULTA E RETORNA OS DADOS
     return $PDOStatement->execute();
 }
-function deletarinfo($id)
- {
-     # PREPARA A CONSULTA
-     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id = ?;');
-     # REALIZA O BIND
-     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
-     # EXECUTA A CONSULTA E RETORNA OS DADOS
-     return $PDOStatement->execute(); 
-}
+// function deletarinfo($id1)
+//  {
+//      # PREPARA A CONSULTA
+//      $PDOStatement2 = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id1 = ?;');
+//      # REALIZA O BIND
+//      $PDOStatement2->bindValue(1, $id1, PDO::PARAM_INT);
+
+//      # EXECUTA A CONSULTA E RETORNA OS DADOS
+//      return $PDOStatement2->execute(); 
+// }
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
  */
