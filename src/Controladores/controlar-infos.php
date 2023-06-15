@@ -53,7 +53,7 @@ if (isset($_GET['info'])) {
         $info = lerinfo($_GET['id']); 
 
         # DELETA info
-        $sucesso = deletarinfo($info);
+        $sucesso = deletarinfo($info['id']);
 
      # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
      if ($sucesso) {
