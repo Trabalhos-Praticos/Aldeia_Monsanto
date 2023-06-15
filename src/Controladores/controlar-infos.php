@@ -4,8 +4,7 @@
 ### DEPENDÊNCIAS ###
 ####################
 require_once __DIR__ . '../../Infraestrutura/Repositorio.php';
-require_once __DIR__ . '../../Validacao/validar-utilizador.php';
-require_once __DIR__ . '../../validacao/validar-palavra-passe.php';
+require_once __DIR__ . '../../Validacao/infoRegisto.php';
 require_once __DIR__ . '../../auxiliadores/auxiliador.php';
 
 
@@ -47,18 +46,18 @@ if (isset($_GET['info'])) {
         $utilizador['acao'] = 'atualizar';
 
         # ENVIA PARÂMETROS COM DADOS DO UTILIZADOR PARA A PÁGINA UTILIZADOR RECUPERAR DADOS PARA MANIPULAR A ALTERAÇÃO
-        $params = '?' . http_build_query($utilizador);
+        $params = '?' . http_build_query($info);
 
         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
     }
 
-        # DELETA UTILIZADOR
-        $sucesso = deletarinfo($utilizador);
+        # DELETA info
+        $sucesso = deletarinfo($info);
 
         # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
         if ($sucesso) {
             # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Utilizador deletado com sucesso!';
+            $_SESSION['sucesso'] = 'Info deletado com sucesso!';
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
             header('location: /src/Pages/CrudSitios/index.php');
@@ -116,7 +115,7 @@ function criar($requisicao)
  */
 function atualizarinfo($requisicao)
 {
-    # VALIDA DADOS DO UTILIZADOR
+    # VALIDA DADOS DA INFO
     $dados = infoValida($requisicao);
 
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
@@ -149,7 +148,7 @@ function atualizarinfo($requisicao)
     if ($sucesso) {
 
         # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
+        $_SESSION['sucesso'] = 'INFO alterado com sucesso!';
 
         # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
         $dados['acao'] = 'atualizar';
