@@ -18,7 +18,7 @@ if (!isset($_SESSION['id'])) {
   } else {
 
     # REDIRECIONA UTILIZADOR PARA TELA DE LOGIN, CASO TENTE ACESSAR ÁREA PROTEGIDA
-    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/../Pages/Login/login.php';
+    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/src/Pages/Login/login.php';
     header('Location: ' . $home_url);
   }
 }
