@@ -24,7 +24,7 @@ include_once __DIR__ . '../../nf/nav.php';
     <div class="info_container_visitar">
             <div class="title_box_visitar">
 
-                <h1>O que visitar</h1>
+                <h1>Monumentos</h1>
 
             </div>
 
