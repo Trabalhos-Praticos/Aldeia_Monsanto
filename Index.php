@@ -22,12 +22,13 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
 <?php
 include_once __DIR__ . '/src/nf/nav.php';
 ?>
+
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Seja Bem vindo</h1>
-        <p class="lead">Para aceder ao site primeiro precisa de estar logado.</p>
+    <div class="jumbotron ">
+        <h1 class="display-4 ">Seja Bem vindo</h1>
+        <p class="lead ">Para aceder ao site primeiro precisa de estar logado.</p>
         <p>Caso não tenha uma conta faça um registo.</p>
-        <hr class="my-4">
+        <hr class="my-4 ">
         <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
         <a href="src/Pages/Login/login.php"><button type="button" class="btn btn-primary">Login</button></a>
         <a href="/src/Pages/Registo/registo.php"><button type="button" class="btn btn-info">Registo</button></a>
