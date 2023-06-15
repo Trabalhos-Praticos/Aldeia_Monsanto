@@ -23,7 +23,7 @@ $titulo = 'Atualizar info';
     <main class="bg-light">
       <section class="py-4">
         <div class="d-flex justify-content">
-          <a href="../Index/index.php"><button type="button" class="btn btn-secondary px-5 me-2">Voltar</button></a>
+          <a href="index.php"><button type="button" class="btn btn-secondary px-5 me-2">Voltar</button></a>
         </div>
       </section>
       <section>
