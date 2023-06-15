@@ -343,7 +343,7 @@ function guardaFoto($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
+    $caminhoFicheiro = __DIR__ . '../../assets/Uploads';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
