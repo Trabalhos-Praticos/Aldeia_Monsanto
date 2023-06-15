@@ -85,6 +85,62 @@ $sucesso = $PDOStatement->execute([
     ':palavra_passe' => $utilizador['palavra_passe']
 ]);
 echo 'Utilizador padrão criado!';
+# ABAIXO UM ARRAY SIMULANDO A DADOS DE UM UTILIZADOR 
+$utilizador = [
+    'nome' => 'Lucas',
+    'apelido' => 'Cruz',
+    'nif' => '294733168',
+    'telemovel' => '962411462',
+    'email' => 'lucas@gmail.com',
+    'foto' => null,
+    'administrador' => true,
+    'dono' => true,
+    'palavra_passe' => 'Lucas123'
+];
+
+# CRIPTOGRAFA PALAVRA PASSE
+$utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
+
+# INSERE UTILIZADOR
+$sqlCreate = "INSERT INTO 
+    utilizadores (
+        nome, 
+        apelido, 
+        nif, 
+        telemovel, 
+        email, 
+        foto, 
+        administrador, 
+        dono, 
+        palavra_passe) 
+    VALUES (
+        :nome, 
+        :apelido, 
+        :nif, 
+        :telemovel, 
+        :email, 
+        :foto, 
+        :administrador, 
+        :dono,
+        :palavra_passe
+    )";
+
+# PREPARA A QUERY
+$PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
+
+# EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+$sucesso = $PDOStatement->execute([
+    ':nome' => $utilizador['nome'],
+    ':apelido' => $utilizador['apelido'],
+    ':nif' => $utilizador['nif'],
+    ':telemovel' => $utilizador['telemovel'],
+    ':email' => $utilizador['email'],
+    ':foto' => $utilizador['foto'],
+    ':administrador' => $utilizador['administrador'],
+    ':dono' => $utilizador['dono'],
+    ':palavra_passe' => $utilizador['palavra_passe']
+]);
+echo 'Utilizador padrão criado!';
 
 $pdo->exec('DROP TABLE IF EXISTS info');
 echo 'Tabela infos apagada!' . PHP_EOL;
