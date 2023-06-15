@@ -52,7 +52,7 @@ $titulo = '- Registro';
         </div>
         <div class="input-group mb-3">
         <label class="input-group-text" for="inputGroupFile01">Imagem</label>
-        <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="imagem" />
+        <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
       </div>
         <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="info" value="registo">Registar</button>
       </form>

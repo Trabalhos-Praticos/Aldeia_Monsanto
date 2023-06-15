@@ -234,13 +234,18 @@ function atualizarUtilizador($utilizador)
 }
 function atualizarinfos($info)
 {
+    # VERIFICA SE AS CHAVES EXISTEM NO ARRAY
+    if (!isset($info['id']) || !isset($info['foto'])) {
+        # LIDA COM O ERRO AQUI (REDIRECIONAMENTO, EXIBIÇÃO DE MENSAGEM DE ERRO, ETC.)
+        return false;
+    }
     # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
     $sqlUpdate = "UPDATE  
     info SET
     nome = :nome, 
     texto = :texto, 
     tipo = :tipo,  
-    imagem = :imagem 
+    foto = :foto 
     WHERE id = :id;";
 
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
@@ -251,7 +256,7 @@ function atualizarinfos($info)
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
         ':tipo' => $info['tipo'],
-        ':imagem' => $info['imagem']
+        ':foto' => $info['foto']
     ]);
 }
 
@@ -354,13 +359,13 @@ function registarinfo($info)
         nome, 
         texto, 
         tipo,
-        imagem
+        foto
         ) 
     VALUES (
         :nome, 
         :texto, 
         :tipo, 
-        :imagem
+        :foto
     )";
     # PREPARA A QUERY
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
@@ -370,7 +375,7 @@ function registarinfo($info)
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
         ':tipo' => $info['tipo'],
-        ':imagem' => $info['imagem']
+        ':foto' => $info['foto']
     ]);
 
     # RECUPERA ID DO UTILIZADOR CRIADO

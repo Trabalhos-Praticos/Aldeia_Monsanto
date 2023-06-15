@@ -151,7 +151,7 @@ $pdo->exec(
     nome CHAR,  
     texto TEXT, 
     tipo CHAR,
-    imagem char  
+    foto char  
     );'
 );
 
@@ -159,7 +159,7 @@ $info = [
     'nome' => 'BIKE TOUR',
     'texto'=>'A beleza desta Bike Tour permite pedalar em locais de elevada natureza histórica',
     'tipo' => 'Programa Turistico',
-    'imagem' => null
+    'foto' => null
 ];
 
 # INSERE info
@@ -168,13 +168,13 @@ $sqlCreate = "INSERT INTO
         nome, 
         texto, 
         tipo,
-        imagem
+        foto
         ) 
     VALUES (
         :nome, 
         :texto, 
         :tipo, 
-        :imagem
+        :foto
     )";
 
 # PREPARA A QUERY
@@ -184,9 +184,8 @@ $sucesso2 = $PDOStatement->execute([
     ':nome' => $info['nome'],
     ':texto' => $info['texto'],
     ':tipo' => $info['tipo'],
-    ':imagem' => $info['imagem']
+    ':foto' => $info['foto']
 ]);
 echo 'Tabela infos padrão criada!';
-
 
 ?>

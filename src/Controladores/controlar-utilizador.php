@@ -235,7 +235,7 @@ function atualizarPerfil($requisicao)
         # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
         $utilizador = utilizador(); // RECUPERA UTILIZADOR LOGADO
         $dados['id'] = $utilizador['id']; // ATRIBUI O PRÓPRIO ID
-        $dados['administrador'] = $utilizador['administrador']; // ATRIBUI O PAPEL ATUAL
+        
 
         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
         if (!empty($_FILES['foto']['name'])) {
