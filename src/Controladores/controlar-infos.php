@@ -51,9 +51,9 @@ if (isset($_GET['info'])) {
     if($_GET['info']=='deletar'){
 
         $info = lerinfo($_GET['id']); 
-
+        
         # DELETA info
-        $sucesso = deletarinfo($info['id']);
+        $sucesso = deleteinfo($info['id']);
 
      # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
      if ($sucesso) {
@@ -175,7 +175,7 @@ function deleteinfo($info)
     $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
 
     # VALIDA DADOS DO UTILIZADOR
-    $retorno = deletarinfo($info);
+    $retorno = deletarinfo($info['id']);
 
     # COMANDO PARA APAGAR O FICHEIRO
     unlink($caminhoFicheiro . $info['foto']);
