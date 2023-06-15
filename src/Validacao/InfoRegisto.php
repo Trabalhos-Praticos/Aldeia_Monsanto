@@ -16,13 +16,13 @@ function infoValida($requisicao)
     }
 
     # VALIDANDO O CAMPO APELIDO
-    if (empty($requisicao['texto']) || strlen($requisicao['text']) < 3 || strlen($requisicao['text']) > 255) {
-        $erros['apelido'] = 'O campo Apelido não pode estar vazio e deve ter entre 3 e 255 caracteres.';
+    if (empty($requisicao['texto']) || strlen($requisicao['texto']) < 3 || strlen($requisicao['texto']) > 255) {
+        $erros['texto'] = 'O campo Texto não pode estar vazio e deve ter entre 3 e 255 caracteres.';
     }
-    # VALIDANDO O CAMPO APELIDO
-    if (empty($requisicao['tipo']) || strlen($requisicao['tipo']) < 3 || strlen($requisicao['tipo']) > 255) {
-        $erros['tipo'] = 'O campo Apelido não pode estar vazio e deve ter entre 3 e 255 caracteres.';
-    }
+    // # VALIDANDO O CAMPO APELIDO
+    // if (empty($requisicao['tipo']) || strlen($requisicao['tipo']) < 3 || strlen($requisicao['tipo']) > 255) {
+    //     $erros['tipo'] = 'O campo Tipo não pode estar vazio e deve ter entre 3 e 255 caracteres.';
+    // }
     # RETORNA ERROS
     if (isset($erros)) {
         return ['invalido' => $erros];

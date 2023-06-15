@@ -236,11 +236,11 @@ function atualizarinfos($info)
 {
     # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
     $sqlUpdate = "UPDATE  
-    infos SET
+    info SET
     nome = :nome, 
     texto = :texto, 
     tipo = :tipo,  
-    foto = :foto 
+    imagem = :imagem 
     WHERE id = :id;";
 
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
@@ -251,7 +251,7 @@ function atualizarinfos($info)
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
         ':tipo' => $info['tipo'],
-        ':foto' => $info['foto']
+        ':imagem' => $info['imagem']
     ]);
 }
 

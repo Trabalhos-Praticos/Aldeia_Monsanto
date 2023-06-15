@@ -68,7 +68,7 @@ $titulo = 'Painel de Administração de Informações';
               <td><?= $info['tipo'] ?></td>
               <td>
                 <div class="d-flex justify-content">
-                  <!-- <a href="../../Controladores/controlar-infos.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a> -->
+                 <a href="../../Controladores/controlar-infos.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
                   <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $info['id'] ?>">Deletar</button>
                 </div>
               </td>

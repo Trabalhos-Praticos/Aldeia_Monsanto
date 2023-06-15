@@ -25,8 +25,11 @@ if (isset($_POST['info'])) {
 
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DOS UTILIZADORES
     if ($_POST['info'] == 'atualizar') {
-
-        
+        atualizar($_POST);
+    }
+    ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
+    if ($_POST['info'] == 'perfil') {
+        # ATUALIZA UM UTILIZADOR
         atualizarinfo($_POST);
     }
 }
@@ -116,7 +119,7 @@ function criar($requisicao)
 /**
  * FUNÇÃO RESPONSÁVEL POR ATUALIZAR UMA INFO
  */
-function atualizarinfo($requisicao)
+function atualizar($requisicao)
 {
     # VALIDA DADOS DA INFO
     $dados = infoValida($requisicao);
@@ -145,7 +148,7 @@ function atualizarinfo($requisicao)
     }
 
     # ATUALIZA UTILIZADOR (REPOSITÓRIO PDO)
-    $sucesso = atualizarinfo($dados);
+    $sucesso = atualizarinfos($dados);
 
     # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
     if ($sucesso) {
@@ -164,6 +167,56 @@ function atualizarinfo($requisicao)
     }
 }
 
+function atualizarInfo($requisicao)
+{
+    # VALIDA DADOS DO UTILIZADOR (VALIDAÇÃO)
+    $dados = infoValida($requisicao);
+
+    # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
+    if (isset($dados['invalido'])) {
+
+        # RECUPERA MENSAGEM DE ERRO, CASO EXISTA
+        $_SESSION['erros'] = $dados['invalido'];
+
+        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+        $params = '?' . http_build_query($requisicao);
+
+        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
+    } else {
+
+        // # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
+        // $utilizador = utilizador(); // RECUPERA UTILIZADOR LOGADO
+        // $dados['id'] = $utilizador['id']; // ATRIBUI O PRÓPRIO ID
+        // $dados['administrador'] = $utilizador['administrador']; // ATRIBUI O PAPEL ATUAL
+
+        # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
+        if (!empty($_FILES['foto']['name'])) {
+
+            # GUARDA FOTOS EM DIRETÓRIO LOCAL
+            $dados = guardaFotoinfo($dados); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+        }
+
+        # ATUALIZA UTILIZADOR
+        $sucesso = atualizarinfos($dados);
+
+        # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
+        if ($sucesso) {
+
+            # DEFINE MENSAGEM DE SUCESSO
+            $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
+
+            # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
+            $_SESSION['acao'] = 'atualizar';
+
+            # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+            $params = '?' . http_build_query($dados);
+
+            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+            header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
+        }
+    }
+}
 
 
 /**
@@ -178,7 +231,7 @@ function deleteinfo($info)
     $retorno = deletarinfo($info);
 
     # COMANDO PARA APAGAR O FICHEIRO
-    unlink($caminhoFicheiro . $info['foto']);
+    unlink($caminhoFicheiro . $info['imagem']);
 
     # RETORNA RESULTADO DO BANCO DE DADOS
     return $retorno;
@@ -193,7 +246,7 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $nomeFicheiro = $_FILES['foto']['name'];
 
     # PAGA O FICHEIRO TEMPORÁRIO
-    $ficheiroTemporario = $_FILES['foto']['tmp_name'];
+    $ficheiroTemporario = $_FILES['imagem']['tmp_name'];
 
     # PEGA TIPO DE EXTENSÃO DA FOTO
     $extensao = pathinfo($nomeFicheiro, PATHINFO_EXTENSION);
@@ -202,10 +255,10 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $extensao = strtolower($extensao);
 
     # CRIA UM NOME ÚNICO PARA O FICHEIRO
-    $novoNome = uniqid('foto_') . '.' . $extensao;
+    $novoNome = uniqid('imagem_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/upload';
+    $caminhoFicheiro = __DIR__ . '../../Assets/upload';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
@@ -217,10 +270,10 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
         $dados['foto'] = $novoNome;
 
         # APAGA FICHEIRO ANTERIOR, CASO SEJA UMA ATUALIZAÇÃO DE FOTO DE PERFIL
-        if (isset($dados['info']) && ($dados['info'] == 'atualizar') || ($dados['info'] == 'foto')) {
+        if (isset($dados['info']) && ($dados['info'] == 'atualizar') || ($dados['info'] == 'imagem')) {
 
             # COMANDO PARA APAGAR O FICHEIRO
-            unlink($caminhoFicheiro . $fotoAntiga['foto']);
+            unlink($caminhoFicheiro . $fotoAntiga['imagem']);
         }
     }
 

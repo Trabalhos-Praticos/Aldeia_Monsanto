@@ -31,7 +31,7 @@ function registo($requisicao)
     } else {
         # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
         $info = registarinfo($dados);
-        
+
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
         header('location: ../Pages/CrudSitios/index.php');
     }
