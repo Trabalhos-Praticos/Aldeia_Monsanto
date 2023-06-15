@@ -30,7 +30,7 @@ include_once __DIR__ . '../../nf/nav.php';
 
 
 
-   <!--<div id="carouselExampleCaptions" class="carousel slide mh-100">
+  <div id="carouselExampleCaptions" class="carousel slide mh-100">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -66,154 +66,154 @@ include_once __DIR__ . '../../nf/nav.php';
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/biketour2.jpg" class="d-block w-100 " alt="...">
+    <img src="../../Assets/img/imagens carrossel/bicileta_nova.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5><b>PASSEIO DE BICICLETA NAS ALDEIAS HISTÓRICAS PORTUGUESAS</b></h5>
         <p>Este passeio de bicicleta permite-lhe descobrir a história da mais antiga fronteira europeia. Encontre doze aldeias espalhadas pelo Centro de Portugal, cada uma mais surpreendente que a anterior.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../../Assets/img/caminhada1.jpg" class="d-block w-100" alt="...">
+      <img src="../../Assets/img/imagens carrossel/caminhada1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>CAMINHADA PELAS ALDEIAS HISTÓRICAS – MONSANTO</h5>
         <p>Caminhe e inspire-se nas paisagens únicas do interior de Portugal e deguste iguarias regionais como o queijo, vinho, cabrito, borrego e enchidos.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/biketour3.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/pexels-philipp-m-100582.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>CICLOTURISMO NAS ALDEIAS HISTÓRICAS – CASTELO RODRIGO</h5>
         <p>Envolva-se numa experiência medieval por entre as muralhas da aldeia histórica de Castelo Rodrigo, local de excepcional interesse histórico pelos monumentos que conserva.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/biketour4.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/pexels-pixabay-161172.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>CICLOTURISMO NAS ALDEIAS HISTÓRICAS – MONSANTO</h5>
         <p>Mergulhe numa experiência incrível que mistura aldeias medievais idílicas, conheça aquela que é distinguida como sendo a “aldeia mais portuguesa de Portugal”.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/ilhapedra.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/ilhadapedra_atualizado.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>DA ILHA DA PEDRA À EGITÂNIA</h5>
         <p>Monsanto surge imponente na paisagem clamando desde logo a sua importância e majestosidade. Esta ilha de pedra rodeada de curiosas formações rochosas possui um mundo de recantos por descobrir.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/sagradoaoprofano.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/santuario-de-nossa-senhora-de-mercoles.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>DO SAGRADO E DO PROFANO</h5>
         <p>Gosta do inesperado? Quer conhecer uma aldeia que poucos conhecem? Neste passeio a Proença-a-Velha, uma das mais antigas povoações de Portugal, percorremos os seus caminhos entre oliveiras e lugares sagrados.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/rioeges.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/rioeges.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>ERGES: CAMINHADA SENSORIAL</h5>
         <p>Quer fazer uma pausa? Temos uma experiência de tranquilidade, natureza e cultura para si: nas margens do rio Erges despertamos todos os sentidos, e saboreamos a cultura local.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/egitania.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/egitania.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>ILUMINANDO O PASSADO</h5>
         <p>Caminhe e inspire-se nas paisagens únicas do interior de Portugal e deguste iguarias regionais como o queijo, vinho, cabrito, borrego e enchidos.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/got.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/got.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>LENDAS E DRAGÕES</h5>
         <p>É fã da Guerra dos Tronos ? Esta atividade é para si! Visite os misteriosos cenários da Casa do Dragão, e “mergulhe” nas lendas da aldeia histórica de Monsanto.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/egitania2.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/egitania2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>RETRATOS DOS TEMPOS</h5>
         <p>Viaje no tempo. Pise caminhos percorridos por romanos, visigodos e templários. Sinta e respire História na antiga cidade de Egitânia, um local com mais de 2 mil anos, onde deuses foram adorados e diferentes povos se cruzaram.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/btt.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/pexels-pixabay-38296.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>PASSEIO DE BTT NAS ALDEIAS HISTÓRICAS PORTUGUESAS</h5>
         <p>Viaje no tempo. Pise caminhos percorridos por romanos, visigodos e templários. Sinta e respire História na antiga cidade de Egitânia, um local com mais de 2 mil anos, onde deuses foram adorados e diferentes povos se cruzaram.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/geomonumento.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/geomonumento.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>PEDRAS COM HISTÓRIA</h5>
         <p>Envolva-se num cenário em que a Natureza e o Homem são um só. Deixe-se devorar por uma paisagem avassaladora. Toque em geomonumentos, conheça a história e estratégias de guerra que se transformaram em lendas vivas.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/aldeiahist.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/aldeiahist.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR ALDEIAS HISTÓRICAS</h5>
         <p>Tour de van pelas Aldeias Históricas, mais propriamente, por Almeida, Castelo Mendo e Castelo Rodrigo.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/aldeiamedie.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/aldeiamedie.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR ALDEIAS MEDIEVAIS</h5>
         <p>Guardadas durante séculos por muralhas inabaláveis, vigiadas por torres e castelos ancestrais, as suas ruas de granito foram calcorreadas por diversos povos e as suas casas viram nascer personalidades marcantes da história do país.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/kayak.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/kayak.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR AVENTURA DE KAYAK NO RIO CÔA</h5>
         <p>Tour Aventura de Kayak No Rio Côa, com piquenique e visita às gravuras Rupestres do Vale do Côa.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/belmonte.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/belmonte.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR BELMONTE E MUSEUS</h5>
         <p>Visita a Belmonte, com passagem por Centum Cellas, pelo Museu dos Descobrimentos, Museu do azeite, Castelo de Belmonte, Igreja de Santiago e Panteão dos Cabrais e pelo Ecomuseu do Zêzere.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/covaodosconchos.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/covaodosconchos.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR COVÃO DOS CONCHOS</h5>
         <p>Covão dos Conchos é uma lagoa artificial localizada no Parque Natural da Serra da Estrela, em Portugal, no território da aldeia de montanha do Sabugueiro. O Covão dos Conchos tornou-se famoso pelo vertedouro de boca do sino.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/gravurarupestre.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/gravurarupestre.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR GRAVURAS RUPESTRES</h5>
         <p>Tour Diurna ou Noturna. Como uma imensa galeria ao ar livre, o Vale do Côa apresenta mais de mil rochas com manifestações rupestres, identificadas em mais de 80 sítios distintos, sendo predominantes as gravuras paleolíticas.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/miradourofaia.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/miradourofaia.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR MIRADOURO DA FAIA</h5>
         <p>Covão dos Conchos é uma lagoa artificial localizada no Parque Natural da Serra da Estrela, em Portugal, no território da aldeia de montanha do Sabugueiro. O Covão dos Conchos tornou-se famoso pelo vertedouro de boca do sino.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/pordosol.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/pordosol.jpg class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR PÔR DO SOL</h5>
         <p>Desfrute de um maravilhoso pôr do sol, junto de quem mais gosta. Experiência acompanhada com espumante.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/idanha.png" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/idanha.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>UM MANJAR DOS DEUSES</h5>
         <p>Vamos saborear o passado! Nesta atividade em Idanha -a- Velha, trilhamos caminhos percorridos por romanos, suevos, visigodos e templários e deliciamo-nos com a cozinha de autor da Chef Maria Caldeira de Sousa na Casa da Velha Fonte.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/fosseis.jpg" class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/fosseis.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black-bold">
         <h5>UM MAR DE FÓSSEIS</h5>
         <p>Quer “mergulhar numa terra que já foi mar? Que tal, tocar em fósseis com mais de 400 milhões de anos? Tudo isto é possível, nesta visita a um local por onde passaram garimpeiros e contrabandistas!</p>
@@ -235,7 +235,7 @@ include_once __DIR__ . '../../nf/nav.php';
 
 
 
-
+<!-- 2500X905px -->
 
 
 
