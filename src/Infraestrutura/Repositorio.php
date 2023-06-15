@@ -300,7 +300,7 @@ function deletarUtilizador($id)
 function deletarinfo($id)
  {
      # PREPARA A CONSULTA
-     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id1 = ?;');
+     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id = ?;');
      # REALIZA O BIND
      $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
