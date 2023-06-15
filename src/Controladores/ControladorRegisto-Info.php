@@ -27,10 +27,11 @@ function registo($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../Pages/CrudSitios/infoPerfil' . $params);
+        header('location: /../Pages/CrudSitios/infoPerfil.php' . $params);
     } else {
         # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
         $info = registarinfo($dados);
+        
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
         header('location: ../Pages/CrudSitios/index.php');
     }

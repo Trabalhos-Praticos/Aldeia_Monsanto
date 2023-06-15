@@ -172,7 +172,7 @@ function atualizarinfo($requisicao)
 function deleteinfo($info)
 {
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
+    $caminhoFicheiro = __DIR__ . '/src/Assets/upload';
 
     # VALIDA DADOS DO UTILIZADOR
     $retorno = deletarinfo($info);
@@ -205,7 +205,7 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
+    $caminhoFicheiro = __DIR__ . '/src/Assets/upload';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
