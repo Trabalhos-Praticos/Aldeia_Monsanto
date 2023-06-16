@@ -97,8 +97,8 @@ function criarin($requisicao)
         return false;
     }
 
-     # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
-     $dados = guardaFotoinfo($dados);
+    # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
+    $dados = guardaFotoinfo($dados);
 
     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
     $sucesso = registarinfo($dados);
