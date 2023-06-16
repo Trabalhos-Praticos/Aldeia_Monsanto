@@ -135,15 +135,11 @@ function atualizarinfoPerfil($requisicao)
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /src/Pages/Perfil/perfil.php' . $params);
     } else {
-
-        # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
-        $info = lerinfo($dados);
-        $dados['id'] = $info['id']; // ATRIBUI O PRÓPRIO ID
     
         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
         if (!empty($_FILES['foto']['name'])) {
             # GUARDA FOTOS EM DIRETÓRIO LOCAL
-            $dados = guardaFotoinfo($dados, $info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+            $dados = guardaFotoinfo($dados); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
         }
 
         # ATUALIZA UTILIZADOR
