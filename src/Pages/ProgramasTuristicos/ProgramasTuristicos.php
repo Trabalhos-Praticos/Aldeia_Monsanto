@@ -199,7 +199,7 @@ include_once __DIR__ . '../../nf/nav.php';
       </div>
     </div>
     <div class="carousel-item">
-    <img src="../../Assets/img/imagens carrossel/pordosol.jpg class="d-block w-100" alt="...">
+    <img src="../../Assets/img/imagens carrossel/pordosol.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>TOUR PÔR DO SOL</h5>
         <p>Desfrute de um maravilhoso pôr do sol, junto de quem mais gosta. Experiência acompanhada com espumante.</p>
