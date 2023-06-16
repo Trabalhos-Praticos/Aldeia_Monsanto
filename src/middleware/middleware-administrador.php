@@ -14,6 +14,6 @@ require_once __DIR__ . '/../auxiliadores/auxiliador.php';
 # SE UTILIZADOR NÃO TIVER SESSÃO INICIADA, ENVIA PARA TELA DE LOGIN
 if (!administrador()) {
     # REDIRECIONA UTILIZADOR PARA TELA INICIAL
-    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/src/Pages/Inde/index.php';
+    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/src/Pages/Index/index.php';
     header('Location: ' . $home_url);
 }
