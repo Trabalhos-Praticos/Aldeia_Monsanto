@@ -29,7 +29,7 @@ include_once __DIR__ . '../../nf/nav.php';
 
 
 
-
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div id="carouselExampleCaptions" class="carousel slide mh-100">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -230,19 +230,20 @@ include_once __DIR__ . '../../nf/nav.php';
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+    </div>
 
 
 
 
 
-<!-- 2500X905px -->
 
 
 
 
 
 
-<div class="container d-flex align-items-center justify-content-center mt-3">
+
+<!-- <div class="container d-flex align-items-center justify-content-center mt-3">
 <div class="card mb-3 align-items-center " >
     <div class="row d-flex align-items-center w-100">
         <div class="col p-2 ">
@@ -618,7 +619,7 @@ include_once __DIR__ . '../../nf/nav.php';
     </div>
 </div>
 </div>
-</div> 
+</div>  -->
 <?php
 require_once __DIR__ . '/../nf/footer.php';
 ?>
