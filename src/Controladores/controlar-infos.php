@@ -97,8 +97,8 @@ function criarin($requisicao)
         return false;
     }
 
-     # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
-     $dados = guardaFotoinfo($dados);
+    # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
+    $dados = guardaFotoinfo($dados);
 
     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
     $sucesso = registarinfo($dados);
@@ -207,7 +207,7 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '../../Assets/Uploads';
+    $caminhoFicheiro = __DIR__ . '../../Imagem/Uploads';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
