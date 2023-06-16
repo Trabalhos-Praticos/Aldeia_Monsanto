@@ -618,8 +618,8 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
 </div>
-</div>
-</div>  -->
+</div> -->
+</div> 
 <?php
 require_once __DIR__ . '/../nf/footer.php';
 ?>
