@@ -57,7 +57,7 @@ include_once __DIR__ . '../../nf/nav.php';
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="22" aria-label="Slide 23"></button>
 
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner pb-3">
     <div class="carousel-item active">
     <img  src="../../Assets/img/imagens carrossel/biketour1.jpg" class="d-block w-100"  alt="..." > 
       <div class="carousel-caption d-none d-md-block text-black">

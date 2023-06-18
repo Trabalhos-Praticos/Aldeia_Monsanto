@@ -20,7 +20,8 @@ if (isset($_POST['info'])) {
     if ($_POST['info'] == 'criar') {
 
         # CRIA UM UTILIZADOR
-        criarin($_POST);
+        // criarin($_POST);
+        salvarInformacao($_POST,$_FILES['foto']);
     }
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
     if ($_POST['info'] == 'perfil') {
@@ -77,42 +78,79 @@ if (isset($_GET['info'])) {
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
  */
-function criarin($requisicao)
-{
-    # VALIDA DADOS DO UTILIZADOR. FICHEIRO VALIDAÇÃO->APLICAÇAO->ADMIN->VALIDAR-UTILIZADOR.PHP
-    $dados = infoValida($requisicao);
+// function criarin($requisicao)
+// {
+//     # VALIDA DADOS DO UTILIZADOR. FICHEIRO VALIDAÇÃO->APLICAÇAO->ADMIN->VALIDAR-UTILIZADOR.PHP
+//     $dados = infoValida($requisicao);
 
-    # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
-    if (isset($dados['invalido'])) {
+//     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
+//     if (isset($dados['invalido'])) {
 
-        # RECUPERA MENSAGEM DE ERRO, CASO EXISTA, E COLOCA EM SESSÃO PARA RECUPERANÃO NO FORMULARIO UTILIZADOR
-        $_SESSION['erros'] = $dados['invalido'];
+//         # RECUPERA MENSAGEM DE ERRO, CASO EXISTA, E COLOCA EM SESSÃO PARA RECUPERANÃO NO FORMULARIO UTILIZADOR
+//         $_SESSION['erros'] = $dados['invalido'];
 
-        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-        $params = '?' . http_build_query($requisicao);
+//         # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+//         $params = '?' . http_build_query($requisicao);
 
-        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
+//         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+//         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
 
-        return false;
-    }
+//         return false;
+//     }
 
-    # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
-    $dados = guardaFotoinfo($dados);
+//     # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
+//     $dados = guardaFotoinfo($dados);
 
-    # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
-    $sucesso = registarinfo($dados);
+//     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
+//     $sucesso = registarinfo($dados);
 
-    # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
-    if ($sucesso) {
+//     # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
+//     if ($sucesso) {
 
-        # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
+//         # DEFINE MENSAGEM DE SUCESSO
+//         $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
 
-        # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-        header('location: /src/Pages/Admin/index.php');
+//         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
+//         header('location: /src/Pages/Admin/index.php');
         
+//     }
+// }
+
+
+function salvarInformacao($info, $foto)
+{
+    // Diretório onde as fotos serão armazenadas
+    $diretorioFotos = '../';
+
+    // Verifica se o diretório de fotos existe
+    if (!file_exists($diretorioFotos)) {
+        // Se não existir, tenta criar o diretório
+        if (!mkdir($diretorioFotos, 0777, true)) {
+            // Se não for possível criar o diretório, retorna falso
+            return false;
+        }
     }
+
+    // Verifica se foi fornecida uma foto
+    if ($foto['error'] === UPLOAD_ERR_OK) {
+        // Gera um nome único para a foto, usando um timestamp e uma extensão baseada no tipo de arquivo
+        $nomeFoto = time() . '.' . pathinfo($foto['name'], PATHINFO_EXTENSION);
+
+        // Move o arquivo da foto para o diretório de fotos
+        $caminhoFoto = $diretorioFotos . $nomeFoto;
+        if (!move_uploaded_file($foto['tmp_name'], $caminhoFoto)) {
+            // Se não for possível mover o arquivo, retorna falso
+            return false;
+        }
+
+        // Adiciona o nome do arquivo da foto às informações
+        $info['foto'] = $nomeFoto;
+    }
+
+    // Insere as informações na base de dados
+    $sucesso = registarinfo($info);
+
+    return $sucesso;
 }
 
 /**
