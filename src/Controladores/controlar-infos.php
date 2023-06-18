@@ -135,11 +135,14 @@ function atualizarinfoPerfil($requisicao)
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /src/Pages/Perfil/perfil.php' . $params);
     } else {
-    
+
+        $info=lerinfo($dados['id']);
+        $dados['id']=$info;
+        
         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
         if (!empty($_FILES['foto']['name'])) {
             # GUARDA FOTOS EM DIRETÓRIO LOCAL
-            $dados = guardaFotoinfo($dados); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+            $dados = guardaFotoinfo($dados,$info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
         }
 
         # ATUALIZA UTILIZADOR
@@ -149,7 +152,7 @@ function atualizarinfoPerfil($requisicao)
         if ($sucesso) {
 
             # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
+            $_SESSION['sucesso'] = 'Informação alterado com sucesso!';
 
             # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
             $_SESSION['acao'] = 'atualizar';
@@ -158,7 +161,7 @@ function atualizarinfoPerfil($requisicao)
             $params = '?' . http_build_query($dados);
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /src/Pages/Perfil/perfil.php' . $params);
+            header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
         }
     }
 }
