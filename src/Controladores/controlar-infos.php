@@ -174,14 +174,14 @@ function atualizarinfoPerfil($requisicao)
         header('location: /src/Pages/Perfil/perfil.php' . $params);
     } else {
 
-        $info=lerinfo($dados['id']);
-        $dados['id']=$info;
+        // $info=lerinfo($dados['id']);
+        // $dados['id']=$info;
         
-        # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
-        if (!empty($_FILES['foto']['name'])) {
-            # GUARDA FOTOS EM DIRETÓRIO LOCAL
-            $dados = guardaFotoinfo($dados,$info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
-        }
+        // # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
+        // if (!empty($_FILES['foto']['name'])) {
+        //     # GUARDA FOTOS EM DIRETÓRIO LOCAL
+        //     $dados = guardaFotoinfo($dados,$info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+        // }
 
         # ATUALIZA UTILIZADOR
         $sucesso = atualizarinfos($dados);

@@ -69,7 +69,7 @@ $titulo = 'Painel de Administração de Informações';
               <td>
                 <div class="d-flex justify-content">
                  <a href="../../Controladores/controlar-infos.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $info['id'] ?>">Deletar</button>
+                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $info['id'] ?>">Excluir</button>
                 </div>
               </td>
             </tr>
@@ -78,11 +78,11 @@ $titulo = 'Painel de Administração de Informações';
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Deletar info</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir info</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    Esta operação não poderá ser desfeita. Tem certeza que deseja deletar esta info?
+                    Esta operação não poderá ser desfeita. Tem certeza que deseja excluir esta info?
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
