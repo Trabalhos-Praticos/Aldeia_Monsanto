@@ -1,8 +1,9 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES ACESSE O SITIO
 require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
+require_once __DIR__ . "../../../Infraestrutura/Repositorio.php";
 
-$info= lerinfosProgramasTuristicos();
+$info = lerinfosProgramasTuristicos();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,12 +28,9 @@ include_once __DIR__ . '../../nf/nav.php';
 
     </div>
 
-
-
-
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div id="carouselExampleCaptions" class="carousel slide mh-100">
-  <div class="carousel-indicators">
+    <div id="carouselExampleCaptions" class="carousel slide mh-100">
+    <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -58,7 +56,23 @@ include_once __DIR__ . '../../nf/nav.php';
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="22" aria-label="Slide 23"></button>
 
   </div>
-  <div class="carousel-inner pb-3">
+  <?php 
+    foreach($info as $infos){
+  ?>
+   <div class="carousel-inner pb-3">
+    <div class="carousel-item active">
+    <img  src="../../Assets/img/imagens carrossel/biketour1.jpg" class="d-block w-100"  alt="..." > 
+      <div class="carousel-caption d-none d-md-block text-black">
+        <h5><?= $infos['nome'] ?></h5>
+        <p><?= $infos['texto'] ?></p>
+      </div>
+    </div>
+    </div>
+  <?php 
+    }
+  ?>
+  
+  <!-- <div class="carousel-inner pb-3">
     <div class="carousel-item active">
     <img  src="../../Assets/img/imagens carrossel/biketour1.jpg" class="d-block w-100"  alt="..." > 
       <div class="carousel-caption d-none d-md-block text-black">
@@ -231,7 +245,7 @@ include_once __DIR__ . '../../nf/nav.php';
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-    </div>
+    </div> -->
 
 
 
