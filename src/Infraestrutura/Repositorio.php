@@ -152,7 +152,39 @@ function lerTodasinfos()
 function lerinfosProgramasTuristicos()
 {
     # PREPARA A QUERY
-    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipos = "Programas Turisticos" ;');
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipos like "Programas Turisticos";');
+
+    # ININIA ARRAY DE UTILIZADORES
+    $infos = [];
+
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    while ($infoslista = $PDOStatement->fetch()) {
+        $infos[] = $infoslista;
+    }
+
+    # RETORNA UTLIZADORES
+    return $infos;
+}
+function lerinfosMonumentos()
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipos like "Monumentos";');
+
+    # ININIA ARRAY DE UTILIZADORES
+    $infos = [];
+
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    while ($infoslista = $PDOStatement->fetch()) {
+        $infos[] = $infoslista;
+    }
+
+    # RETORNA UTLIZADORES
+    return $infos;
+}
+function lerinfosEstadias()
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipos like "Estadias";');
 
     # ININIA ARRAY DE UTILIZADORES
     $infos = [];
