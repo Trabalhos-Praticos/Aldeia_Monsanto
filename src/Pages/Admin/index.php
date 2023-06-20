@@ -78,7 +78,7 @@ $titulo = 'Painel de Administração';
               <td>
                 <div class="d-flex justify-content">
                   <a href="../../Controladores/controlar-utilizador.php?<?= 'utilizador=atualizar&id=' . $utilizador['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $utilizador['id'] ?>">Deletar</button>
+                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deletar<?= $utilizador['id'] ?>">Excluir</button>
                 </div>
               </td>
             </tr>
@@ -91,7 +91,7 @@ $titulo = 'Painel de Administração';
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    Esta operação não poderá ser desfeita. Tem certeza que deseja deletar este utilizador?
+                    Esta operação não poderá ser desfeita. Tem certeza que deseja excluir este utilizador?
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
