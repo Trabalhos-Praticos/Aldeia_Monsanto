@@ -20,8 +20,8 @@ if (isset($_POST['info'])) {
     if ($_POST['info'] == 'criar') {
 
         # CRIA UM UTILIZADOR
-        // criarin($_POST);
-        salvarInformacao($_POST,$_FILES['foto']);
+         criarin($_POST);
+        //salvarInformacao($_POST,$_FILES['foto']);
     }
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
     if ($_POST['info'] == 'perfil') {
@@ -78,43 +78,43 @@ if (isset($_GET['info'])) {
 /**
  * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
  */
-// function criarin($requisicao)
-// {
-//     # VALIDA DADOS DO UTILIZADOR. FICHEIRO VALIDAÇÃO->APLICAÇAO->ADMIN->VALIDAR-UTILIZADOR.PHP
-//     $dados = infoValida($requisicao);
+function criarin($requisicao)
+{
+    # VALIDA DADOS DO UTILIZADOR. FICHEIRO VALIDAÇÃO->APLICAÇAO->ADMIN->VALIDAR-UTILIZADOR.PHP
+    $dados = infoValida($requisicao);
 
-//     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
-//     if (isset($dados['invalido'])) {
+    # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
+    if (isset($dados['invalido'])) {
 
-//         # RECUPERA MENSAGEM DE ERRO, CASO EXISTA, E COLOCA EM SESSÃO PARA RECUPERANÃO NO FORMULARIO UTILIZADOR
-//         $_SESSION['erros'] = $dados['invalido'];
+        # RECUPERA MENSAGEM DE ERRO, CASO EXISTA, E COLOCA EM SESSÃO PARA RECUPERANÃO NO FORMULARIO UTILIZADOR
+        $_SESSION['erros'] = $dados['invalido'];
 
-//         # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-//         $params = '?' . http_build_query($requisicao);
+        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+        $params = '?' . http_build_query($requisicao);
 
-//         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-//         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
+        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+        header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
 
-//         return false;
-//     }
+        return false;
+    }
 
-//     # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
-//     $dados = guardaFotoinfo($dados);
+    # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
+    $dados = guardaFotoinfo($dados);
 
-//     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
-//     $sucesso = registarinfo($dados);
+    # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
+    $sucesso = registarinfo($dados);
 
-//     # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
-//     if ($sucesso) {
+    # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
+    if ($sucesso) {
 
-//         # DEFINE MENSAGEM DE SUCESSO
-//         $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
+        # DEFINE MENSAGEM DE SUCESSO
+        $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
 
-//         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-//         header('location: /src/Pages/Admin/index.php');
+        # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
+        header('location: /src/Pages/Admin/index.php');
         
-//     }
-// }
+    }
+}
 
 
 function salvarInformacao($info, $foto)
@@ -173,15 +173,12 @@ function atualizarinfoPerfil($requisicao)
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /src/Pages/Perfil/perfil.php' . $params);
     } else {
-
-        // $info=lerinfo($dados['id']);
-        // $dados['id']=$info;
         
-        // # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
-        // if (!empty($_FILES['foto']['name'])) {
-        //     # GUARDA FOTOS EM DIRETÓRIO LOCAL
-        //     $dados = guardaFotoinfo($dados,$info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
-        // }
+         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
+         if (!empty($_FILES['foto']['name'])) {
+             # GUARDA FOTOS EM DIRETÓRIO LOCAL
+             $dados = guardaFotoinfo($dados,$requisicao); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+         }
 
         # ATUALIZA UTILIZADOR
         $sucesso = atualizarinfos($dados);

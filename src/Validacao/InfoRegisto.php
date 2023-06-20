@@ -23,7 +23,6 @@ function infoValida($requisicao)
     if (isset($erros)) {
         return ['invalido' => $erros];
     }
-
     # RETORNA UTILIZADOR VALIDADO
     return $requisicao;
 }

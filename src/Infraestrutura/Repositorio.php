@@ -265,11 +265,6 @@ function atualizarUtilizador($utilizador)
 }
 function atualizarinfos($info)
 {
-    # VERIFICA SE AS CHAVES EXISTEM NO ARRAY
-    if (!isset($info['id']) || !isset($info['foto'])) {
-        # LIDA COM O ERRO AQUI (REDIRECIONAMENTO, EXIBIÇÃO DE MENSAGEM DE ERRO, ETC.)
-        return false;
-    }
     # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
     $sqlUpdate = "UPDATE  
     info SET
