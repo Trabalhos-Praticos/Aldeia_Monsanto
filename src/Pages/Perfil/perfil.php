@@ -2,7 +2,7 @@
 # CARREGA MIDDLEWARE PARA GARANTIR QUE APENAS UTILIZADORES AUTENTICADOS ACESSEM ESTE SITIO
 require_once __DIR__ . '../../../middleware/middleware-utilizador.php';
 
-# CARREGA O CABECALHO PADRÃO COM O TÍTULO
+# CARREGA O CABEÇALHO PADRÃO COM O TÍTULO
 $titulo = ' - Perfil';
 //include_once __DIR__ . '/templates/cabecalho.php';
 
