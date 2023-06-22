@@ -16,7 +16,7 @@ function infoValida($requisicao)
     }
 
     # VALIDANDO O CAMPO APELIDO
-    if (empty($requisicao['texto']) || strlen($requisicao['texto']) < 3 || strlen($requisicao['texto']) > 255) {
+    if (empty($requisicao['texto']) || strlen($requisicao['texto']) < 3 || strlen($requisicao['texto']) > 700) {
         $erros['texto'] = 'O campo Texto não pode estar vazio e deve ter entre 3 e 255 caracteres.';
     }
     # RETORNA ERROS
