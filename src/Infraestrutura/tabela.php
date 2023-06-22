@@ -151,7 +151,7 @@ $pdo->exec(
     nome CHAR,  
     texto TEXT, 
     tipo CHAR,
-    foto char  
+    foto BLOB
     );'
 );
 

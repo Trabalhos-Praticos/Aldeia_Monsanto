@@ -32,7 +32,7 @@ $titulo = '- Registro';
         }
         ?>
       </section>
-      <form action="../../Controladores/controladorRegisto-Info.php" method="post">
+      <form  enctype="multipart/form-data" action="../../Controladores/controlar-infos.php" method="post">
         <h1 class="h3 mb-3 fw-normal">Registo</h1>
         <div class="form-floating mb-2">
           <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
@@ -54,7 +54,7 @@ $titulo = '- Registro';
         <label class="input-group-text" for="inputGroupFile01">Imagem</label>
         <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
       </div>
-        <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="info" value="registo">Registar</button>
+      <button type="submit" class="w-100 btn btn-success" name="info" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Registar</button>
       </form>
       <a href="/index.php"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
     </main>

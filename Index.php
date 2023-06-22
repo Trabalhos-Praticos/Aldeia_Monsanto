@@ -29,8 +29,20 @@ include_once __DIR__ . '/src/nf/nav.php';*/
 
 
 <span class="background"></span>
+<?php
+        //include_once __DIR__ . '../../nf/nav.php';
+        # MOSTRA AS MENSAGENS DE ERRO CASO LOGIN SEJA INVÁLIDO
+        if (isset($_SESSION['erros'])) {
+          echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+          foreach ($_SESSION['erros'] as $erro) {
+            echo $erro . '<br>';
+          }
+          echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+          unset($_SESSION['erros']);
+        }
+        ?>
         <span class="centering">
-            <form class="my-form">
+            <form class="my-form" action="src/Controladores/Autenticacao.php" method="post">
                 <span class="login-welcome-row">
                     <img
                         class="login-welcome"
@@ -41,16 +53,20 @@ include_once __DIR__ . '/src/nf/nav.php';*/
                     <p class="lead ">Para aceder ao site primeiro precisa de estar logado.</p>
                 </span>
                 <div class="text-field">
-                    <label for="email">Email:</label>
-                    <input
+                    <label for="Email">Email:</label>
+                    <!-- <input
                         aria-label="Email"
                         type="email"
-                        id="email"
+                        class="form-control"
+                        id="Email"
                         name="email"
                         placeholder="Your Email"
+                        maxlength="255"
                         required
-                    >
+                    > -->
+                    <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">
                     <img
+                    
                         alt="Email Icon"
                         title="Email Icon"
                         src="./src/Assets/Index/email.svg"
@@ -58,33 +74,38 @@ include_once __DIR__ . '/src/nf/nav.php';*/
                 </div>
                 <div class="text-field">
                     <label for="password">Password:</label>
-                    <input
-                        id="password"
+                    <!-- <input
+                        id="palavra_passe"
                         type="password"
+                        class="form-control"
                         aria-label="Password"
-                        name="password"
+                        name="palavra_passe"
                         placeholder="Your Password"
+                        maxlength="255"
                         title="Minimum 6 characters at least 1 Alphabet and 1 Number"
                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
                         required
-                    >
+                    > -->
+                    <input type="password" class="form-control" id="palavra_passe" placeholder="Palavra Passe" name="palavra_passe" maxlength="255" value="<?= isset($_REQUEST['palavra_passe']) ? $_REQUEST['palavra_passe'] : null ?>" >
                     <img
                         alt="Password Icon"
                         title="Password Icon"
                         src="./src/Assets/Index/password.svg"
                     >
                 </div>
-                <input type="submit" class="my-form__button" value="Login" />
+                <!-- <input type="submit" class="my-form__button" name="utilizador" value="login" /> -->
+                <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="utilizador" value="login">Entrar</button>
                 <div class="my-form__actions">
                     <div class="my-form__row">
                         <span>Esqueceste-te da palavra-passe?</span>
                         <a href="#" title="Reset Password">Mudar palavra-passe</a>
                     </div>
                     <div class="my-form__signup">
-                        <a href="./src/Pages/CrudSitios/registo.php" title="Create Account">Criar conta</a>
+                        <a href="./src/Pages/Registo/registo.php" title="Create Account">Criar conta</a>
                     </div>
                 </div>
             </form>
+            
         </span>
         
 

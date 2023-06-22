@@ -55,10 +55,14 @@ $titulo = 'Atualizar info';
             <span class="input-group-text">Texto</span>
             <input type="text" class="form-control" name="texto" maxlength="100" size="100" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : $info['texto'] ?>" required>
           </div>
-          <div class="input-group mb-3">
-            <span class="input-group-text">Tipo</span>
-            <input type="text" class="form-control" name="tipo" maxlength="100" size="100" value="<?= isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : $info['tipo'] ?>" required>
-          </div>
+          <div class='input-group mb-2'>
+        <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>
+            <select id="TipoDeRegisto" class="form-control" name='tipo'>
+                <option value='Estadia'>Estadia</option>
+                <option value='Programa Turistico'>Programa Turistico</option>
+                <option value='Monumento'>Monumento</option>
+            </select>
+        </div>
           <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupFile01">Foto</label>
             <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />

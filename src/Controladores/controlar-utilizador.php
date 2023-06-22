@@ -33,7 +33,6 @@ if (isset($_POST['utilizador'])) {
 
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
     if ($_POST['utilizador'] == 'perfil') {
-
         # ATUALIZA UM UTILIZADOR
         atualizarPerfil($_POST);
     }
@@ -343,7 +342,7 @@ function guardaFoto($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '../../assets/Uploads';
+    $caminhoFicheiro = __DIR__ . '/../Assets/uploads/';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;

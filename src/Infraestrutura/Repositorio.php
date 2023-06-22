@@ -263,14 +263,14 @@ function atualizarUtilizador($utilizador)
         ':administrador' => $utilizador['administrador']
     ]);
 }
-function atualizarinfos($info)
+function AtualizarInfo($info)
 {
-    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
+    # INSERE info COM PROTEÇÃO CONTRA SQLINJECTION
     $sqlUpdate = "UPDATE  
     info SET
-    nome = :nome, 
-    texto = :texto, 
-    tipo = :tipo,  
+    nome = :nome,
+    texto = :texto,
+    tipo = :tipo,
     foto = :foto 
     WHERE id = :id;";
 
@@ -281,8 +281,8 @@ function atualizarinfos($info)
         ':id' => $info['id'],
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
-        ':tipo' => $info['tipo'],
-        ':foto' => $info['foto']
+        ':tipo'=> $info['tipo'],
+        ':foto' => $info['foto'],
     ]);
 }
 

@@ -89,6 +89,4 @@ $titulo = ' - Utilizador';
 <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <?php
-# CARREGA O RODAPE PADRÃO
-require_once __DIR__ . '/templates/rodape.php';
 ?>
