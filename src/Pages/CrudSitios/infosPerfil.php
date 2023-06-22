@@ -53,7 +53,7 @@ $titulo = 'Atualizar info';
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text">Texto</span>
-            <input type="text" class="form-control" name="texto" maxlength="100" size="100" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : $info['texto'] ?>" required>
+            <input type="text" class="form-control" name="texto" maxlength="700" size="700" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : $info['texto'] ?>" required>
           </div>
           <div class='input-group mb-2'>
         <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>

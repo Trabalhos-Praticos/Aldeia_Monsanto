@@ -21,25 +21,38 @@ $info = lerinfosProgramasTuristicos();
 include_once __DIR__ . '../../nf/nav.php';
 
 ?>
+
+
 <div class="title_box_prog">
         <h1 style="text-align: center;">Programas Turísticos</h1>
     </div>
-<div class='container d-flex flex-row mb-3'>
+
+    
+ <div class='d-flex align-items-center justify-content-center mt-3'>
   <?php 
     foreach($info as $infos){
   ?>
- <div class="card" style="width: 18rem;">
-  <?php echo '<img class="card-img-top" alt="..." src="../../Assets/uploads/'.$infos['foto']. '">'; ?>
-  <div class="card-body">
-  <h5><?= $infos['nome'] ?></h5>
-        <p><?= $infos['texto'] ?></p>
-  </div>
-</div>
+    <div class="card mb-3 align-items-center" >
+      <div class="row d-flex align-items-center w-100">
+        <div class="col p-2">
+          <?php echo '<img class="card-img-top" alt="..." src="../../Assets/uploads/'.$infos['foto']. '">'; ?> 
+        </div> 
+          <div class="col-md-8">
+            <div class="card-body"> 
+              <h5><?= $infos['nome'] ?></h5>
+              <p><?= $infos['texto'] ?></p>
+            </div>
+          </div>
+
+      </div>
+    
   <?php 
     }
-  ?>
+  ?> 
+   </div>
   </div>
-</div> 
+  
+  
 <?php
 require_once __DIR__ . '/../nf/footer.php';
 ?>

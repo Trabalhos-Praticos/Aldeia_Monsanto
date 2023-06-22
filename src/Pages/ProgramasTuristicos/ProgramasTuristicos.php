@@ -139,7 +139,7 @@ include_once __DIR__ . '../../nf/nav.php';
     <img src="../../Assets/img/imagens carrossel/pexels-pixabay-38296.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-black">
         <h5>PASSEIO DE BTT NAS ALDEIAS HISTÓRICAS PORTUGUESAS</h5>
-        <p>Viaje no tempo. Pise caminhos percorridos por romanos, visigodos e templários. Sinta e respire História na antiga cidade de Egitânia, um local com mais de 2 mil anos, onde deuses foram adorados e diferentes povos se cruzaram.</p>
+        <p>Visite as remotas Aldeias Históricas do Século XII. Passeio, pousada a pousada, em trilhas romanas e desfrutar de incríveis trilhas únicas. Os mais desafiantes passeios de BTT em Portugal!</p>
       </div>
     </div>
     <div class="carousel-item">
