@@ -172,34 +172,34 @@ function lerinfosMonumentos()
     # ININIA ARRAY DE UTILIZADORES
     $infos = [];
 
-    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS.
     while ($infoslista = $PDOStatement->fetch()) {
         $infos[] = $infoslista;
     }
 
-    # RETORNA UTLIZADORES
+    # RETORNA UTLIZADORES.
     return $infos;
 }
 function lerinfosEstadias()
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipo = "Estadia";');
 
-    # ININIA ARRAY DE UTILIZADORES
+    # ININIA ARRAY DE UTILIZADORES.
     $infos = [];
 
-    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS.
     while ($infoslista = $PDOStatement->fetch()) {
         $infos[] = $infoslista;
     }
 
-    # RETORNA UTLIZADORES
+    # RETORNA UTLIZADORES.
     return $infos;
 }
 
 
 /**
- * FUNÇÃO RESPONSAVEL POR ATUALIZAR OS DADOS DE UM UTILIZADOR NO SISTEMA
+ * FUNÇÃO RESPONSAVEL POR ATUALIZAR OS DADOS DE UM UTILIZADOR NO SISTEMA.
  */
 function atualizarUtilizador($utilizador)
 {
