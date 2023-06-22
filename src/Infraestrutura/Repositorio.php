@@ -304,7 +304,7 @@ function atualizarPalavraPasse($utilizador)
 
         $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
 
-        # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+        # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
         return $PDOStatement->execute([
             ':id' => $utilizador['id'],
             ':nome' => $utilizador['nome'],
@@ -314,17 +314,17 @@ function atualizarPalavraPasse($utilizador)
 }
 
 /**
- * FUNÇÃO RESPONSÁVEL POR DELETAR UM UTILIZADOR DO SISTEMA
+ * FUNÇÃO RESPONSÁVEL POR DELETAR UM UTILIZADOR DO SISTEMA.
  */
 function deletarUtilizador($id)
 {
-    # PREPARA A CONSULTA
+    # PREPARA A CONSULTA.
     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM utilizadores WHERE id = ?;');
 
-    # REALIZA O BIND
+    # REALIZA O BIND.
     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
-    # EXECUTA A CONSULTA E RETORNA OS DADOS
+    # EXECUTA A CONSULTA E RETORNA OS DADOS.
     return $PDOStatement->execute();
 }
 
