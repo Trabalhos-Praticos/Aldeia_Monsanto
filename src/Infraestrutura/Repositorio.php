@@ -49,11 +49,11 @@ function criarUtilizador($utilizador)
         ':palavra_passe' => $utilizador['palavra_passe']
     ]);
 
-    # RECUPERA ID DO UTILIZADOR CRIADO
+    # RECUPERA ID DO UTILIZADOR CRIADO.
     if ($sucesso) {
         $utilizador['id'] = $GLOBALS['pdo']->lastInsertId();
     }
-    # RETORNO RESULTADO DA INSERSÃO 
+    # RETORNO RESULTADO DA INSERSÃO.
     return $sucesso;
 }
 
@@ -61,115 +61,115 @@ function criarUtilizador($utilizador)
 
 
 /**
- * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR
+ * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR.
  */
 function lerUtilizador($id)
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM utilizadores WHERE id = ?;');
 
-    # FAZ O BIND
+    # FAZ O BIND.
     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
-    # EXECUTA A CONSULTA
+    # EXECUTA A CONSULTA.
     $PDOStatement->execute();
 
-    # RETORNA OS DADOS
+    # RETORNA OS DADOS.
     return $PDOStatement->fetch();
 }
 /**
- * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR
+ * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR.
  */
 function lerinfo($id)
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM info WHERE id = ?;');
 
-    # FAZ O BIND
+    # FAZ O BIND.
     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
-    # EXECUTA A CONSULTA
+    # EXECUTA A CONSULTA.
     $PDOStatement->execute();
 
-    # RETORNA OS DADOS
+    # RETORNA OS DADOS.
     return $PDOStatement->fetch();
 }
 
 
 /**
- * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR PELO EMAIL
+ * FUNÇÃO RESPONSÁVEL POR LER UM UTILIZADOR PELO EMAIL.
  */
 function lerUtilizadorPorEmail($email)
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM utilizadores WHERE email = ? LIMIT 1;');
 
-    # FAZ O BIND
+    # FAZ O BIND.
     $PDOStatement->bindValue(1, $email);
 
-    # EXECUTA A CONSULTA
+    # EXECUTA A CONSULTA.
     $PDOStatement->execute();
 
-    # RETORNA OS DADOS
+    # RETORNA OS DADOS.
     return $PDOStatement->fetch();
 }
 
 /**
- * FUNÇÃO RESPONSÁVEL POR RETORNAR TODOS OS UTILIZADORES
+ * FUNÇÃO RESPONSÁVEL POR RETORNAR TODOS OS UTILIZADORES.
  */
 function lerTodosUtilizadores()
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM utilizadores;');
 
-    # ININIA ARRAY DE UTILIZADORES
+    # ININIA ARRAY DE UTILIZADORES.
     $utilizadores = [];
 
-    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS.
     while ($listaDeUtilizadores = $PDOStatement->fetch()) {
         $utilizadores[] = $listaDeUtilizadores;
     }
 
-    # RETORNA UTLIZADORES
+    # RETORNA UTLIZADORES.
     return $utilizadores;
 }
 function lerTodasinfos()
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info;');
 
-    # INICIA ARRAY DE UTILIZADORES
+    # INICIA ARRAY DE UTILIZADORES.
     $info = [];
 
-    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS.
     while ($listaDeInfos = $PDOStatement->fetch()) {
         $info[] = $listaDeInfos;
     }
-    # RETORNA UTLIZADORES
+    # RETORNA UTLIZADORES.
     return $info;
 }
 function lerinfosProgramasTuristicos()
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipo = "Programa Turistico";');
 
-    # ININIA ARRAY DE UTILIZADORES
+    # ININIA ARRAY DE UTILIZADORES.
     $infos = [];
 
-    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS.
     while ($infoslista = $PDOStatement->fetch()) {
         $infos[] = $infoslista;
     }
 
-    # RETORNA UTLIZADORES
+    # RETORNA UTLIZADORES.
     return $infos;
 }
 function lerinfosMonumentos()
 {
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM info WHERE tipo = "Monumento";');
 
-    # ININIA ARRAY DE UTILIZADORES
+    # ININIA ARRAY DE UTILIZADORES.
     $infos = [];
 
     # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS.
