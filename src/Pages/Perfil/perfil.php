@@ -7,7 +7,7 @@ $titulo = ' - Perfil';
 //include_once __DIR__ . '/templates/cabecalho.php';
 
 # ACESSA DE FUNÇÕES AUXILIADORAS. 
-# NOTA: O SIMBOLO ARROBA SERVE PARA NÃO MOSTRAR MENSAGEM DE WARNING, POIS A FUNÇÃO ABAIXO TAMBÉM INICIA SESSÕES
+# NOTA: O SIMBOLO ARROBA (@) SERVE PARA NÃO MOSTRAR MENSAGEM DE WARNING, POIS A FUNÇÃO ABAIXO TAMBÉM INICIA SESSÕES
 @require_once __DIR__ . '../../../auxiliadores/auxiliador.php';
 $utilizador = utilizador();
 ?>
