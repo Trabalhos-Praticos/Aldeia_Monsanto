@@ -236,7 +236,7 @@ function atualizarUtilizador($utilizador)
         ]);
     }
 
-    # SE NÃO HOUVER PALAVRA PASSE ALTERADA, INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION SEM A PALAVRA PASSE
+    # SE NÃO HOUVER PALAVRA PASSE ALTERADA, INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION SEM A PALAVRA PASSE.
     $sqlUpdate = "UPDATE  
     utilizadores SET
         nome = :nome, 
@@ -248,10 +248,10 @@ function atualizarUtilizador($utilizador)
         administrador = :administrador
     WHERE id = :id;";
 
-    # PREPARA A CONSULTA
+    # PREPARA A CONSULTA.
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
 
-    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
     return $PDOStatement->execute([
         ':id' => $utilizador['id'],
         ':nome' => $utilizador['nome'],
@@ -265,7 +265,7 @@ function atualizarUtilizador($utilizador)
 }
 function AtualizarInfo($info)
 {
-    # INSERE info COM PROTEÇÃO CONTRA SQLINJECTION
+    # INSERE info COM PROTEÇÃO CONTRA SQLINJECTION.
     $sqlUpdate = "UPDATE  
     info SET
     nome = :nome,
