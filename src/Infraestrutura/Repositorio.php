@@ -330,23 +330,23 @@ function deletarUtilizador($id)
 
 function deletarinfo($id)
 {
-    # PREPARA A CONSULTA
+    # PREPARA A CONSULTA.
     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM info WHERE id = ?;');
-    # REALIZA O BIND
+    # REALIZA O BIND.
     $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
 
-    # EXECUTA A CONSULTA E RETORNA OS DADOS
+    # EXECUTA A CONSULTA E RETORNA OS DADOS.
     return $PDOStatement->execute();
 }
 /**
- * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
+ * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR.
  */
 function registarUtilizador($utilizador)
 {
-    # CRIPTOGRAFA PALAVRA PASSE
+    # CRIPTOGRAFA PALAVRA PASSE.
     $utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
 
-    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION
+    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION.
     $sqlCreate = "INSERT INTO 
     utilizadores (
         nome, 
@@ -358,28 +358,28 @@ function registarUtilizador($utilizador)
         :palavra_passe
     )";
 
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
 
-    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
     $sucesso = $PDOStatement->execute([
         ':nome' => $utilizador['nome'],
         ':email' => $utilizador['email'],
         ':palavra_passe' => $utilizador['palavra_passe']
     ]);
 
-    # RECUPERA ID DO UTILIZADOR CRIADO
+    # RECUPERA ID DO UTILIZADOR CRIADO.
     if ($sucesso) {
         $utilizador['id'] = $GLOBALS['pdo']->lastInsertId();
 
-        # RETORNO RESULTADO DA INSERSÃO 
+        # RETORNO RESULTADO DA INSERSÃO.
         return $utilizador;
     }
     return false;
 }
 function registarinfo($info)
 {
-    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION
+    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION.
     $sqlCreate = "INSERT INTO 
     info (
         nome, 
@@ -393,10 +393,10 @@ function registarinfo($info)
         :tipo, 
         :foto
     )";
-    # PREPARA A QUERY
+    # PREPARA A QUERY.
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
 
-    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
     $sucesso = $PDOStatement->execute([
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
@@ -404,11 +404,11 @@ function registarinfo($info)
         ':foto' => $info['foto']
     ]);
 
-    # RECUPERA ID DO UTILIZADOR CRIADO
+    # RECUPERA ID DO UTILIZADOR CRIADO.
     if ($sucesso) {
         $info['id'] = $GLOBALS['pdo']->lastInsertId();
 
-        # RETORNO RESULTADO DA INSERSÃO 
+        # RETORNO RESULTADO DA INSERSÃO.
         return $info;
     }
     return false;
