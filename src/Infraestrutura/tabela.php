@@ -187,5 +187,3 @@ $sucesso2 = $PDOStatement->execute([
     ':foto' => $info['foto']
 ]);
 echo 'Tabela infos padrão criada!';
-
-?>

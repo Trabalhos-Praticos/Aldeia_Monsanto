@@ -1,10 +1,11 @@
 <style>
-  #imagem{
-    width:13%;
+  #imagem {
+    width: 13%;
   }
 </style>
+
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -18,31 +19,32 @@
           <a class="nav-link active" aria-current="page" href="../Index/index.php">Home</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../Historia/Historia.php">História</a>
+          <a class="nav-link" href="../Historia/Historia.php">História</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../Estadias/Estadias_p.php">Estadias</a>
+          <a class="nav-link" href="../Estadias/Estadias_p.php">Estadias</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../ProgramasTuristicos/ProgramasTuristicos_p.php">Programas Turísticos</a>
+          <a class="nav-link" href="../ProgramasTuristicos/ProgramasTuristicos_p.php">Programas Turísticos</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../Visitar/Visitar_p.php">Monumentos</a>
+          <a class="nav-link" href="../Visitar/Visitar_p.php">Monumentos</a>
         </li>
       </ul>
 
       <span class="navbar-text">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-info" style="margin-right: 10px;" type="button">Editar Perfil</button></a></li>
-      </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-info" style="margin-right: 10px;" type="button">Editar Perfil</button></a></li>
+        </ul>
       </span>
       <span class="navbar-text">
-      <ul class="nav navbar-nav navbar-right">
-        <li><form action="/src/Controladores/Autenticacao.php" method="post">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form action="/src/Controladores/Autenticacao.php" method="post">
               <button class="btn btn-outline-danger " type="submit" name="utilizador" value="logout">Logout</button>
             </form>
-        </li>
-      </ul>
+          </li>
+        </ul>
       </span>
     </div>
   </div>

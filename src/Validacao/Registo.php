@@ -39,7 +39,3 @@
         # RETORNA UTILIZADOR VALIDADO
         return $requisicao;
     }
-    
-
-
-?>

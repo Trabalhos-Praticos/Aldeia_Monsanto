@@ -10,9 +10,10 @@ $titulo = 'Atualizar info';
 # NOTA: O SIMBOLO ARROBA SERVE PARA NÃO MOSTRAR MENSAGEM DE WARNING, POIS A FUNÇÃO ABAIXO TAMBÉM INICIA SESSÕES
 @require_once __DIR__ . '../../../auxiliadores/auxiliador.php';
 ?>
+
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
 </head>
 <div class="container bg-light">
   <div class="pt-1 ">
@@ -56,13 +57,13 @@ $titulo = 'Atualizar info';
             <input type="text" class="form-control" name="texto" maxlength="700" size="700" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : $info['texto'] ?>" required>
           </div>
           <div class='input-group mb-2'>
-        <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>
+            <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>
             <select id="TipoDeRegisto" class="form-control" name='tipo'>
-                <option value='Estadia'>Estadia</option>
-                <option value='Programa Turistico'>Programa Turistico</option>
-                <option value='Monumento'>Monumento</option>
+              <option value='Estadia'>Estadia</option>
+              <option value='Programa Turistico'>Programa Turistico</option>
+              <option value='Monumento'>Monumento</option>
             </select>
-        </div>
+          </div>
           <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupFile01">Foto</label>
             <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
@@ -76,7 +77,7 @@ $titulo = 'Atualizar info';
     <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </div>
-      </div>
-    <?php
-    include_once __DIR__ . '../../nf/footer.php';
-    ?>
+</div>
+<?php
+include_once __DIR__ . '../../nf/footer.php';
+?>

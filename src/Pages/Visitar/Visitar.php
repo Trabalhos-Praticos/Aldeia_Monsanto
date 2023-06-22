@@ -5,6 +5,7 @@ require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,37 +15,38 @@ require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
 
     <title>O Que Visitar</title>
 </head>
+
 <body>
-<?php
+    <?php
 
-include_once __DIR__ . '../../nf/nav.php';
+    include_once __DIR__ . '../../nf/nav.php';
 
-?>
-    
+    ?>
+
     <div class="container">
-            <div class="title_box_visitar">
-                <h1>Monumentos</h1>
-            </div>
-            <div class="container_visitar">
-                <div class="box_visitar">
-                    <div class="info_visitar">
-                        <div class="imgs"><img src="../../Assets/img/capela.jpg" alt=""></div>
-                            <h3></h3>
-                            <h5>Monsanto</h5>
-                            <p>
-                                
-                            </p> 
+        <div class="title_box_visitar">
+            <h1>Monumentos</h1>
+        </div>
+        <div class="container_visitar">
+            <div class="box_visitar">
+                <div class="info_visitar">
+                    <div class="imgs"><img src="../../Assets/img/capela.jpg" alt=""></div>
+                    <h3></h3>
+                    <h5>Monsanto</h5>
+                    <p>
 
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-  <h5 class="card-title">ANTIGA CAPELA DA SENHORA DO SOCORRO</h5>
-    <p class="card-text">Capela barroca construída em 1692 por iniciativa particular e com administração privada. É de nave única com portal axial de lintel reto, onde se encontra extensa inscrição referente a sua instituição, encimado por cornija que serve de apoio a uma janela em capialço. Após prolongado abandono e encontrando-se em estado de ruína foi reconstruída na década de 1940, acrescentada de um piso para habitação; no rés-do-chão instalou-se uma loja de comércio. Estas obras profundamente alteradoras da volumetria e organização espacial do templo, deixam, ainda assim, reconhecer a antiga tipologia pela permanência dos elegantes cunhais em forma de pilastras toscanas; no interior conserva-se apenas a pia de água benta.</p>
-  </div>
-</div>
-            
+                    </p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">ANTIGA CAPELA DA SENHORA DO SOCORRO</h5>
+                    <p class="card-text">Capela barroca construída em 1692 por iniciativa particular e com administração privada. É de nave única com portal axial de lintel reto, onde se encontra extensa inscrição referente a sua instituição, encimado por cornija que serve de apoio a uma janela em capialço. Após prolongado abandono e encontrando-se em estado de ruína foi reconstruída na década de 1940, acrescentada de um piso para habitação; no rés-do-chão instalou-se uma loja de comércio. Estas obras profundamente alteradoras da volumetria e organização espacial do templo, deixam, ainda assim, reconhecer a antiga tipologia pela permanência dos elegantes cunhais em forma de pilastras toscanas; no interior conserva-se apenas a pia de água benta.</p>
+                </div>
+            </div>
+
             <!-- <div class="box_visitar">
                 <div class="info_visitar">
                         <div class="imgs"><img src="../../Assets/img/baluarte-1.jpg" alt=""></div>
@@ -159,9 +161,10 @@ include_once __DIR__ . '../../nf/nav.php';
         </div>
     </div>
     <?php
-require_once __DIR__ . '/../nf/footer.php';
-?>
+    require_once __DIR__ . '/../nf/footer.php';
+    ?>
 <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>-->
+
 </html>

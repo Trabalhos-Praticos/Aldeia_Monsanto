@@ -6,9 +6,11 @@
 $titulo = '- Registro';
 //include_once __DIR__ . '/templates/cabecalho.php';
 ?>
+
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
+
 <body class="container vh-100 d-flex align-items-center justify-content-center text-center bg-light">
   <div class="w-75">
     <main>
@@ -32,7 +34,7 @@ $titulo = '- Registro';
         }
         ?>
       </section>
-      <form  enctype="multipart/form-data" action="../../Controladores/controlar-infos.php" method="post">
+      <form enctype="multipart/form-data" action="../../Controladores/controlar-infos.php" method="post">
         <h1 class="h3 mb-3 fw-normal">Registo</h1>
         <div class="form-floating mb-2">
           <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
@@ -43,18 +45,18 @@ $titulo = '- Registro';
           <label for="texto">Texto:</label>
         </div>
         <div class='input-group mb-2'>
-        <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>
-            <select id="TipoDeRegisto" class="form-control" name='tipo'>
-                <option value='Estadia'>Estadia</option>
-                <option value='Programa Turistico'>Programa Turistico</option>
-                <option value='Monumento'>Monumento</option>
-            </select>
+          <label class="input-group-text" for="TipoDeRegisto">Tipo de registo</label>
+          <select id="TipoDeRegisto" class="form-control" name='tipo'>
+            <option value='Estadia'>Estadia</option>
+            <option value='Programa Turistico'>Programa Turistico</option>
+            <option value='Monumento'>Monumento</option>
+          </select>
         </div>
-         <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupFile01">Imagem</label>
-        <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
-      </div>
-      <button type="submit" class="w-100 btn btn-success" name="info" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Registar</button>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Imagem</label>
+          <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
+        </div>
+        <button type="submit" class="w-100 btn btn-success" name="info" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Registar</button>
       </form>
       <a href="/index.php"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
     </main>

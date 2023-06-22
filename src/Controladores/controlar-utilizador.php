@@ -94,7 +94,6 @@ if (isset($_GET['utilizador'])) {
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
             header('location: /src/Pages/Admin/index.php');
-            
         }
     }
 }
@@ -140,7 +139,6 @@ function criar($requisicao)
 
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
         header('location: /src/Pages/Admin/index.php');
-        
     }
 }
 
@@ -234,7 +232,7 @@ function atualizarPerfil($requisicao)
         # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
         $utilizador = utilizador(); // RECUPERA UTILIZADOR LOGADO
         $dados['id'] = $utilizador['id']; // ATRIBUI O PRÓPRIO ID
-        
+
 
         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
         if (!empty($_FILES['foto']['name'])) {
