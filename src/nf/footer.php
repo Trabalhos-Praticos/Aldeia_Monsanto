@@ -39,8 +39,8 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    All Rights reserved to André Carvalho and Lucas Cruz
+    
+    All Rights reserved to André Carvalho and Lucas Cruz, Programação Web, José Viana, Marcelo Fernandes e Wenderson Wanzeller 
   </div>
   <!-- Copyright -->
  
