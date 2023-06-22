@@ -287,11 +287,11 @@ function AtualizarInfo($info)
 }
 
 /**
- * FUNÇÃO RESPONSAVEL POR ATUALIZAR A PALAVRA PASSE DO UTILIZADOR NO SISTEMA
+ * FUNÇÃO RESPONSÁVEL POR ATUALIZAR A PALAVRA PASSE DO UTILIZADOR NO SISTEMA
  */
 function atualizarPalavraPasse($utilizador)
 {
-    # CRIPTOGRAFA PALAVRA PASSE E ALTERAR DADOS DO UTILIZDOR MAIS A PALAVRA PASSA, SE FOR INFORMADA
+    # CRIPTOGRAFAR PALAVRA PASSE E ALTERAR DADOS DO UTILIZDOR MAIS A PALAVRA PASSA, SE FOR INFORMADA
     if (isset($utilizador['palavra_passe']) && !empty($utilizador['palavra_passe'])) {
         $utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
 
