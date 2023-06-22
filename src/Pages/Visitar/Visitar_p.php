@@ -1,6 +1,7 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES ACESSE O SITIO
 require_once __DIR__ . '/../../middleware/middleware-utilizador.php';
+require_once __DIR__ . '../../../Infraestrutura/Repositorio.php';
 $info=lerinfosMonumentos();
 ?>
 <!DOCTYPE html>
