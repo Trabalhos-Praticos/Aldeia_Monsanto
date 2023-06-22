@@ -157,7 +157,7 @@ $pdo->exec(
 
 $info = [
     'nome' => 'BIKE TOUR',
-    'texto'=>'A beleza desta Bike Tour permite pedalar em locais de elevada natureza histórica',
+    'texto' => 'A beleza desta Bike Tour permite pedalar em locais de elevada natureza histórica',
     'tipo' => 'Programa Turistico',
     'foto' => null
 ];
