@@ -359,6 +359,6 @@ function guardaFoto($dados, $fotoAntiga = null)
         }
     }
 
-    # RETORNA OS DADOS DO FICHEIRO PARA GARDAR NA BASE DE DADOS
+    # RETORNA OS DADOS DO FICHEIRO PARA GUARDAR NA BASE DE DADOS
     return $dados;
 }
