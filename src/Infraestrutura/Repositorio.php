@@ -1,15 +1,15 @@
 <?php
-# INSERE DADOS DA CONEXÃO COM O PDO
+# INSERE DADOS DA CONEXÃO COM O PDO.
 require_once __DIR__ . '../../Infraestrutura/conexao.php';
 /**
- * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR
+ * FUNÇÃO RESPONSÁVEL POR CRIAR UM NOVO UTILIZADOR.
  */
 function criarUtilizador($utilizador)
 {
     # CRIPTOGRAFA PALAVRA PASSE
     $utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
 
-    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION
+    # INSERE UTILIZADOR COM PROTEÇÃO CONTRA SQLINJECTION.
     $sqlCreate = "INSERT INTO 
     utilizadores (
         nome, 
@@ -33,10 +33,10 @@ function criarUtilizador($utilizador)
         :palavra_passe
     )";
 
-    # PREPARA A QUERY
+    # PREPARA A QUERY..
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
 
-    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
     $sucesso = $PDOStatement->execute([
         ':nome' => $utilizador['nome'],
         ':apelido' => $utilizador['apelido'],
