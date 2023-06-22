@@ -203,7 +203,7 @@ function lerinfosEstadias()
  */
 function atualizarUtilizador($utilizador)
 {
-    # CRIPTOGRAFA PALAVRA PASSE E ALTERAR DADOS DO UTILIZDOR MAIS A PALAVRA PASSA, SE FOR INFORMADA
+    # CRIPTOGRAFA PALAVRA PASSE E ALTERAR DADOS DO UTILIZDOR MAIS A PALAVRA PASSA, SE FOR INFORMADA.
     if (isset($utilizador['palavra_passe']) && !empty($utilizador['palavra_passe'])) {
         $utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
 
@@ -222,7 +222,7 @@ function atualizarUtilizador($utilizador)
 
         $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
 
-        # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+        # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
         return $PDOStatement->execute([
             ':id' => $utilizador['id'],
             ':nome' => $utilizador['nome'],
