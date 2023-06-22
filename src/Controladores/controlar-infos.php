@@ -141,7 +141,7 @@ function AtualizarPerfilInfo($requisicao)
     
         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
         if (!empty($_FILES['foto']['name'])) {
-            $dados = guardaFotoinfo($dados);
+            $dados = guardaFotoinfo($dados,$requisicao);
         }
     
         # ATUALIZA UTILIZADOR (REPOSITÓRIO PDO)
@@ -160,7 +160,7 @@ function AtualizarPerfilInfo($requisicao)
             $params = '?' . http_build_query($dados);
     
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
+            header('location: /src/Pages/CrudSitios/index.php' . $params);
         }
 }
 

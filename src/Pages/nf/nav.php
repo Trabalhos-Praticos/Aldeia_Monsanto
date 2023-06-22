@@ -21,13 +21,13 @@
         <a class="nav-link" href="../Historia/Historia.php">História</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../Estadias/Estadias.php">Estadias</a>
+        <a class="nav-link" href="../Estadias/Estadias_p.php">Estadias</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../ProgramasTuristicos/ProgramasTuristicos.php">Programas Turísticos</a>
+        <a class="nav-link" href="../ProgramasTuristicos/ProgramasTuristicos_p.php">Programas Turísticos</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="../Visitar/Visitar.php">Monumentos</a>
+        <a class="nav-link" href="../Visitar/Visitar_p.php">Monumentos</a>
         </li>
       </ul>
       <span class="navbar-text">

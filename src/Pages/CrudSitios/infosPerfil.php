@@ -14,7 +14,7 @@ $titulo = 'Atualizar info';
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
 </head>
-<body class="container bg-light">
+<div class="container bg-light">
   <div class="pt-1 ">
     <div class="p-5 mb-2 bg-info text-white">
       <h1><?php echo $titulo ?></h1>
@@ -46,7 +46,7 @@ $titulo = 'Atualizar info';
         ?>
       </section>
       <section>
-        <form enctype="multipart/form-data" action="../../Controladores/controlar-infos.php" method="post" class="form-control py-3">
+        <form enctype="multipart/form-data" action="../../Controladores/controlar-infos.php" method="post">
           <div class="input-group mb-3">
             <span class="input-group-text">Nome</span>
             <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : $info['nome'] ?>" required>
@@ -75,7 +75,8 @@ $titulo = 'Atualizar info';
     </main>
     <script src="https://kit.fontawesome.com/f3e7e2778c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
+  </div>
+      </div>
     <?php
     include_once __DIR__ . '../../nf/footer.php';
     ?>

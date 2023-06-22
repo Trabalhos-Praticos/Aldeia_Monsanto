@@ -39,7 +39,6 @@ $info = lerinfosEstadias();
         <div class="col-md-8">
             <div class="card-body">
             <h3><?= $infos['nome'] ?></h3>
-                <h5 class="card-title">R. do Pardieiro nº 6 e 7, 6060-094 Monsanto - 6060-094 Monsanto 351960281677</h5> 
                 <p class="card-text"><?= $infos['texto'] ?></p>
             </div>
         </div>
