@@ -5,7 +5,7 @@ require_once __DIR__ . '../../../Infraestrutura/Repositorio.php';
 require_once __DIR__ . '../../../middleware/middleware-administrador.php';
 
 # FAZ O CARREGAMENTO DE TODOS OS UTILIZADORES PARA MOSTRAR AO ADMINISTRADOR
-$info = lerTodasinfos();
+$infos = lerTodasinfos();
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = 'Painel de Administração de Informações';
@@ -54,6 +54,7 @@ $titulo = 'Painel de Administração de Informações';
           <table class="table">
             <thead class="table-secondary">
               <tr>
+                <th scope="col">Foto</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Texto</th>
                 <th scope="col">Tipo</th>
@@ -62,12 +63,14 @@ $titulo = 'Painel de Administração de Informações';
             <tbody>
               <?php
               # VARRE TODOS OS UTILIZADORES PARA CONSTRUÇÃO DA TABELA
-              foreach ($info as $info) {
+              foreach ($infos as $info) {
               ?>
                 <tr>
+                <td><?php echo '<img class="card-img-top" alt="..." src="../../Assets/uploads/' . $info['foto'] . '">'; ?></td>
                   <th scope="row"><?= $info['nome'] ?></th>
                   <td><?= $info['texto'] ?></td>
                   <td><?= $info['tipo'] ?></td>
+                  
                   <td>
                     <div class="d-flex justify-content">
                       <a href="../../Controladores/controlar-infos.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>

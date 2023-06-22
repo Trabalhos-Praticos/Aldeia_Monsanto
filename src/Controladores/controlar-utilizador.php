@@ -307,7 +307,7 @@ function alterarPalavraPasse($requisicao)
 function deletar($utilizador)
 {
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/Uploads';
+    $caminhoFicheiro = __DIR__ . '/src/Assets/uploads';
 
     # VALIDA DADOS DO UTILIZADOR
     $retorno = deletarUtilizador($utilizador['id']);

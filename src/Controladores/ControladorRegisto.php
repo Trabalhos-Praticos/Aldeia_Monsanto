@@ -28,7 +28,7 @@ function registo($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../Pages/Registo/registo.php' . $params);
+        header('location: /src/Pages/Registo/registo.php' . $params);
     } else {
 
         # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
@@ -48,7 +48,7 @@ function registo($requisicao)
 
 
             # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Bem-vindo(a) ao nosso sistema. Por vaor, atualize o seu perfil.';
+            $_SESSION['sucesso'] = 'Bem-vindo(a) ao nosso sistema. Por favor, atualize o seu perfil.';
 
             # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
             header('location: ../Pages/Perfil/perfil.php');

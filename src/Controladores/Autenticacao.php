@@ -19,14 +19,14 @@ if (isset($_POST['utilizador'])) {
     ## CONTROLA A ROTA PARA O LOGIN DE UTILIZADORES
     if ($_POST['utilizador'] == 'login') {
 
-        # CRIA UM UTILIZADOR
+        # loga o utilizador
         login($_POST);
     }
 
     ## CONTROLA A ROTA PARA O LOGOUT DE UTILIZADORES
     if ($_POST['utilizador'] == 'logout') {
 
-        # CRIA UM UTILIZADOR
+        # Desloga o utilizador
         logout();
     }
 }

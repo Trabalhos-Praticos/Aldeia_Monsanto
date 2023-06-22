@@ -21,11 +21,6 @@ if (isset($_POST['info'])) {
         criarin($_POST);
     }
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
-    if ($_POST['info'] == 'atualizar') {
-        # ATUALIZA UM UTILIZADOR
-        AtualizarPerfilInfo($_POST);
-    }
-    ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
     if ($_POST['info'] == 'perfil') {
         # ATUALIZA UM UTILIZADOR
         AtualizarPerfilInfo($_POST);
@@ -103,7 +98,7 @@ function criarin($requisicao)
     if ($sucesso) {
 
         # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
+        $_SESSION['sucesso'] = 'Info criada com sucesso!';
 
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
         header('location: /src/Pages/CrudSitios/index.php');
@@ -125,40 +120,40 @@ function AtualizarPerfilInfo($requisicao)
         # RECUPERA MENSAGEM DE ERRO, CASO EXISTA
         $_SESSION['erros'] = $dados['invalido'];
 
-        # CRIA A SESSÃO AÇÃO ATUALIZAR PARA MANIPULAR O BOTÃO DE ENVIO DO FORMULÁRIO UTILIZADOR
-        $_SESSION['acao'] = 'atualizar';
-
         # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
+    } else {
+        $info=lerinfo($dados['id']);
+       $dados['id'] = $info['id'];
 
-        return false;
-    }
+        # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
+        if (!empty($_FILES['foto']['nome'])) {
 
-    # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
-    if (!empty($_FILES['foto']['name'])) {
-        $dados = guardaFotoinfo($dados, $requisicao);
-    }
+            $dados = guardaFotoinfo($dados,$requisicao);
 
-    # ATUALIZA UTILIZADOR (REPOSITÓRIO PDO)
-    $sucesso = AtualizarInfo($dados);
+        }
 
-    # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
-    if ($sucesso) {
+        # ATUALIZA UTILIZADOR (REPOSITÓRIO PDO)
+        $sucesso = AtualizarInfo($dados);
 
-        # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Info alterado com sucesso!';
+        # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
+        if ($sucesso) {
 
-        # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
-        $dados['acao'] = 'atualizar';
+            # DEFINE MENSAGEM DE SUCESSO
+            $_SESSION['sucesso'] = 'Info alterado com sucesso!';
 
-        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-        $params = '?' . http_build_query($dados);
+            # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
+            $_SESSION['acao'] = 'atualizar';
 
-        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/CrudSitios/index.php' . $params);
+            # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+            $params = '?' . http_build_query($dados);
+
+            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+            header('location: /src/Pages/CrudSitios/index.php' . $params);
+        }
     }
 }
 
