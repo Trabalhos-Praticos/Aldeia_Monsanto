@@ -19,7 +19,7 @@ include_once __DIR__ . '../../nf/nav.php';
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Accordion Item #1
+        Parte I
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -32,7 +32,7 @@ include_once __DIR__ . '../../nf/nav.php';
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Accordion Item #2
+        Parte II
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -42,7 +42,7 @@ include_once __DIR__ . '../../nf/nav.php';
   <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingThree">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #3
+            Parte III
         </button>
         </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -52,7 +52,7 @@ include_once __DIR__ . '../../nf/nav.php';
     <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingFourth">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourth" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #4
+            Parte IV
         </button>
         </h2>
             <div id="flush-collapseFourth" class="accordion-collapse collapse" aria-labelledby="flush-headingFourth" data-bs-parent="#accordionFlushExample">
@@ -62,7 +62,7 @@ include_once __DIR__ . '../../nf/nav.php';
         <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingFifth">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifth" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #5
+            Parte V
         </button>
         </h2>
             <div id="flush-collapseFifth" class="accordion-collapse collapse" aria-labelledby="flush-headingFifth" data-bs-parent="#accordionFlushExample">
@@ -72,7 +72,7 @@ include_once __DIR__ . '../../nf/nav.php';
         <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingSixth">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixth" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #6
+            Parte VI
         </button>
         </h2>
             <div id="flush-collapseSixth" class="accordion-collapse collapse" aria-labelledby="flush-headingSixth" data-bs-parent="#accordionFlushExample">
@@ -82,7 +82,7 @@ include_once __DIR__ . '../../nf/nav.php';
         <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingSeventh">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventh" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #7
+            Parte VII
         </button>
         </h2>
             <div id="flush-collapseSeventh" class="accordion-collapse collapse" aria-labelledby="flush-headingSeventh" data-bs-parent="#accordionFlushExample">
