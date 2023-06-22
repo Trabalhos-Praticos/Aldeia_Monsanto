@@ -32,7 +32,9 @@ $utilizador = utilizador();
       </section>
       <section>
         <?php
-        # MOSTRA AS MENSAGENS DE SUCESSO E DE ERRO VINDA DO CONTROLADOR-UTILIZADOR
+
+        # MOSTRA AS MENSAGENS DE SUCESSO E DE ERRO VINDA DO CONTROLAR-UTILIZADOR
+
         if (isset($_SESSION['sucesso'])) {
           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
           echo $_SESSION['sucesso'] . '<br>';
