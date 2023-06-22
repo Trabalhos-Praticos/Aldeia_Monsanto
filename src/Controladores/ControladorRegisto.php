@@ -1,18 +1,18 @@
-<?php 
-    //Começa ou continua uma sessão a partir do identificador passado atravez dos cockies ou com os metodos get ou post 
-    session_start();
+<?php
+//Começa ou continua uma sessão a partir do identificador passado atravez dos cockies ou com os metodos get ou post 
+session_start();
 
-    require_once __DIR__ .'..\..\Infraestrutura\Repositorio.php';
-    require_once __DIR__ .'/../Validacao/Registo.php';
+require_once __DIR__ . '..\..\Infraestrutura\Repositorio.php';
+require_once __DIR__ . '/../Validacao/Registo.php';
 
-    //Se for criado um metodo post do tipo utilizador
-    if(isset($_POST['utilizador'])){
-        //e se esse metodo estiver como registo
-        if($_POST['utilizador']=='registo'){
-            //então criamos um utilizador com o post que nos foi enviado
-            registo($_POST);
-        }
+//Se for criado um metodo post do tipo utilizador
+if (isset($_POST['utilizador'])) {
+    //e se esse metodo estiver como registo
+    if ($_POST['utilizador'] == 'registo') {
+        //então criamos um utilizador com o post que nos foi enviado
+        registo($_POST);
     }
+}
 function registo($requisicao)
 {
     # VALIDA DADOS DO UTILIZADOR
@@ -40,7 +40,7 @@ function registo($requisicao)
             # FAZ LOGIN DE UTILIZADOR
             $_SESSION['id'] = $utilizador['id'];
             $_SESSION['nome'] = $utilizador['nome'];
-            
+
             // 30 Dias = Data atual + 60 minutos * 60 segundos * 24 horas * 30 dias
             setcookie("id", $dados['id'], time() + (60 * 60 * 24 * 30), "/");
             setcookie("nome", $dados['nome'], time() + (60 * 60 * 24 * 30), "/");
