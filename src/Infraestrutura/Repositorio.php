@@ -276,7 +276,7 @@ function AtualizarInfo($info)
 
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
 
-    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA.
     return $PDOStatement->execute([
         ':id' => $info['id'],
         ':nome' => $info['nome'],
@@ -287,11 +287,11 @@ function AtualizarInfo($info)
 }
 
 /**
- * FUNÇÃO RESPONSÁVEL POR ATUALIZAR A PALAVRA PASSE DO UTILIZADOR NO SISTEMA
+ * FUNÇÃO RESPONSÁVEL POR ATUALIZAR A PALAVRA PASSE DO UTILIZADOR NO SISTEMA.
  */
 function atualizarPalavraPasse($utilizador)
 {
-    # CRIPTOGRAFAR PALAVRA PASSE E ALTERAR DADOS DO UTILIZDOR MAIS A PALAVRA PASSA, SE FOR INFORMADA
+    # CRIPTOGRAFAR PALAVRA PASSE E ALTERAR DADOS DO UTILIZDOR MAIS A PALAVRA PASSA, SE FOR INFORMADA.
     if (isset($utilizador['palavra_passe']) && !empty($utilizador['palavra_passe'])) {
         $utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
 
