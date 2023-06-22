@@ -30,11 +30,16 @@
         <a class="nav-link" href="../Visitar/Visitar_p.php">Monumentos</a>
         </li>
       </ul>
+
       <span class="navbar-text">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-light" type="button">Editar Perfil</button></a></li>
+        <li><a href="/src/Pages/Perfil/perfil.php"><button class="btn btn-outline-info" style="margin-right: 10px;" type="button">Editar Perfil</button></a></li>
+      </ul>
+      </span>
+      <span class="navbar-text">
+      <ul class="nav navbar-nav navbar-right">
         <li><form action="/src/Controladores/Autenticacao.php" method="post">
-              <button class="btn btn-outline-danger" type="submit" name="utilizador" value="logout">Logout</button>
+              <button class="btn btn-outline-danger " type="submit" name="utilizador" value="logout">Logout</button>
             </form>
         </li>
       </ul>
