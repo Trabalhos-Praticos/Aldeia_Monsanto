@@ -27,11 +27,10 @@ include_once __DIR__ . '../../nf/nav.php';
         <h1 style="text-align: center;">Programas Turísticos</h1>
     </div>
 
-    
- <div class='d-flex align-items-center justify-content-center mt-3'>
-  <?php 
+    <?php 
     foreach($info as $infos){
-  ?>
+  ?>  
+ <div class='d-flex align-items-center justify-content-center mt-3'>
     <div class="card mb-3 align-items-center" >
       <div class="row d-flex align-items-center w-100">
         <div class="col p-2">
@@ -43,16 +42,12 @@ include_once __DIR__ . '../../nf/nav.php';
               <p><?= $infos['texto'] ?></p>
             </div>
           </div>
-
       </div>
-    
+      </div>
+      </div>
   <?php 
     }
   ?> 
-   </div>
-  </div>
-  
-  
 <?php
 require_once __DIR__ . '/../nf/footer.php';
 ?>
