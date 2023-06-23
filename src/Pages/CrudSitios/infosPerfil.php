@@ -70,7 +70,7 @@ $titulo = 'Atualizar info';
           </div>
           <div class="d-grid col-4 mx-auto">
           <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
-          <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
+            <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
           <button type="submit" class="w-100 btn btn-success" name="info" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Alterar</button>
           </div>
         </form>
