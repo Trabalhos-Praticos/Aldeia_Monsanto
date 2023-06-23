@@ -160,7 +160,7 @@ function AtualizarPerfilInfo($requisicao)
 function deleteinfo($info)
 {
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/upload';
+    $caminhoFicheiro = __DIR__ . '/src/Assets/upload/';
 
     # VALIDA DADOS DO UTILIZADOR
     $retorno = deletarinfo($info);
@@ -198,7 +198,6 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
 
-    # MOVE O FICHEIRO TEMPORÁRIO PARA O LOCAL DEFINITIVO
     if (move_uploaded_file($ficheiroTemporario, $ficheiro)) {
 
         # ATRIBUI NOME DO FICHEIRO NO ARRAY DE DADOS PARA ARMAZENAMENTO NA BASE DE DADOS
