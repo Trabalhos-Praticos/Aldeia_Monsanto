@@ -69,7 +69,9 @@ $titulo = 'Atualizar info';
             <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
           </div>
           <div class="d-grid col-4 mx-auto">
-            <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="info" value="perfil">Alterar</button>
+          <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
+          <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
+          <button type="submit" class="w-100 btn btn-success" name="info" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Alterar</button>
           </div>
         </form>
       </section>

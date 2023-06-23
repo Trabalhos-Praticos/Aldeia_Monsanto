@@ -265,6 +265,7 @@ function atualizarUtilizador($utilizador)
 }
 function AtualizarInfo($info)
 {
+
     # INSERE info COM PROTEÇÃO CONTRA SQLINJECTION.
     $sqlUpdate = "UPDATE  
     info SET
@@ -282,7 +283,7 @@ function AtualizarInfo($info)
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
         ':tipo' => $info['tipo'],
-        ':foto' => $info['foto']
+        ':foto' => $info['foto'],
     ]);
 }
 

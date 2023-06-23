@@ -21,7 +21,7 @@ if (isset($_POST['info'])) {
         criarin($_POST);
     }
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
-    if ($_POST['info'] == 'perfil') {
+    if ($_POST['info'] == 'atualizar') {
         # ATUALIZA UM UTILIZADOR
         AtualizarPerfilInfo($_POST);
     }
@@ -126,9 +126,9 @@ function AtualizarPerfilInfo($requisicao)
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
     } else {
+
         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
         if (!empty($_FILES['foto']['nome'])) {
-
             $dados = guardaFotoinfo($dados,$requisicao);
         }
 
