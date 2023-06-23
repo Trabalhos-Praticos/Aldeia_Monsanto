@@ -282,7 +282,7 @@ function AtualizarInfo($info)
         ':nome' => $info['nome'],
         ':texto' => $info['texto'],
         ':tipo' => $info['tipo'],
-        ':foto' => $info['foto'],
+        ':foto' => $info['foto']
     ]);
 }
 
